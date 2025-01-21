@@ -19,11 +19,11 @@ const SecNav = () => {
             <div className="">
                 {
                     menuopen === false? 
-                    <div className="">
+                    <div className="cursor-pointer">
                         <TiThMenu className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
                     </div>
                     :
-                    <div className="">
+                    <div className="cursor-pointer">
                         <IoClose className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
                     </div>
                 }
