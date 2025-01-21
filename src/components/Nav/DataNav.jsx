@@ -2,27 +2,27 @@ const MainNavData = [
     {
         id: 1,
         name: 'Directory',
-        link: '',
+        link: '#',
     },
     {
         id: 2,
         name: 'WebMail',
-        link: '',
+        link: '#',
     },
     {
         id: 3,
         name: 'Login',
-        link: '',
+        link: '#',
     },      
     {
         id: 4,
         name: 'Emergency',
-        link: '',
+        link: '#',
     },
     {
         id: 5,
         name: 'ONLINE PAYMENTS',
-        link: '',
+        link: '#',
     },        
 ]
 
