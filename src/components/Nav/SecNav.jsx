@@ -3,6 +3,8 @@ import { secNavData } from './DataNav'
 import { TiThMenu } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import uoplogo from '../../assets/uoplogo.png'
+import { FaFacebook, FaYoutube, FaLinkedin  } from "react-icons/fa";
+
 
 const SecNav = () => {
     const [menuopen, setmenuopen] = useState(false)
@@ -39,7 +41,25 @@ const SecNav = () => {
                                 <img src={uoplogo} alt="" className='h-10 w-auto'/>
                             </div>
                         :
-                            <div className=""></div> 
+                            <div className="">
+                                <div className="flex">
+                                    <div className="mx-4">
+                                        <a href="#" target='_blank'>
+                                            <FaFacebook className='h-6 w-auto fill-white'/>
+                                        </a>
+                                    </div>
+                                    <div className="mx-4">
+                                        <a href="#" target='_blank'>
+                                            <FaYoutube className='h-6 w-auto fill-white'/>
+                                        </a>
+                                    </div>
+                                    <div className="mx-4">
+                                        <a href="#" target='_blank'>
+                                            <FaLinkedin className='h-6 w-auto fill-white'/>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div> 
                     }
 
                 </div>
