@@ -59,11 +59,11 @@ const SecNav = () => {
         </div>
 
         <div 
-            className={`p-8 w-auto absolute ${atTop ? 'top-48' : 'top-[75px]' } right-8 ml-8 bg-[#560606] text-white shadow-lg rounded-lg p-4 transform transition-opacity duration-300 ease-in-out ${
+            className={`pb-12 md:my-4 my-8 p-8 w-auto absolute mt-2 right-8 ml-8 bg-[#560606] text-white shadow-lg rounded-lg p-4 transform transition-opacity duration-300 ease-in-out ${
                 menuopen ? 'opacity-100' : 'opacity-0 pointer-events-none' 
             }`}
         >         
-            <div className="md:grid grid-cols-4 gap-4 ">
+            <div className="md:grid grid-cols-4 gap-4 max-h-screen overflow-y-auto scrollbar-hidden">
                 {
                     secNavData.map((data, index) => {
                         return (
@@ -74,7 +74,25 @@ const SecNav = () => {
                                             if(data.id && Array.isArray(data.submenu) && data.submenu.length > 0 ){
                                                 return(
                                                     <div className="">
-                                                        <h1 className="text-xl font-semibold">{data.name}</h1> 
+                                                        <h1 className="text-xl font-semibold mb-4 uppercase">{data.name}</h1> 
+
+                                                        {
+                                                            data.submenu?.map((submenu, submenuIndex) => (
+                                                                <div key={submenuIndex}>
+                                                                    <a href=""><h2 className="pl-2 font-medium text-lg py-4 underline">{submenu.name}</h2></a>
+                                                                    
+                                                                    <ul>
+                                                                        {submenu.menusubL?.map((item, itemIndex) => (
+                                                                            <li key={itemIndex} className='pl-6 py-2'>
+                                                                                <a href={item.link} className="hover:underline">
+                                                                                    {item.name}
+                                                                                </a>
+                                                                            </li>
+                                                                        ))}
+                                                                    </ul>
+                                                                </div>
+                                                            ))
+                                                        }
                                                     </div>
                                                 )
                                             }
@@ -92,6 +110,7 @@ const SecNav = () => {
                         )
                     })
                 }
+                <div className="my-16"></div>
             </div>
         </div>
     </div>

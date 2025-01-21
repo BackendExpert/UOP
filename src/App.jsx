@@ -46,16 +46,16 @@ export default function App() {
             showNavBar ? "translate-y-0" : "-translate-y-full"
           } ${
             isTopOfPage
-              ? "bg-transparent transition-colors duration-500 hidden"
+              ? "md:mt-28 mt-[70px]"
               : "shadow-md transition-colors duration-500"
           }`}
           >
             <SecNav />
           </div>
         )}
-        <div className={`${isTopOfPage ? 'block' : 'hidden' }`}>
+        {/* <div className={`${isTopOfPage ? 'block' : 'hidden' }`}>
           <SecNav />
-        </div>
+        </div> */}
         <Routes>
           <Route path="/" element={<HomePage /> } />
         </Routes>
