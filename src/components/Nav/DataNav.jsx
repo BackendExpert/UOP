@@ -1,5 +1,3 @@
-import React from 'react'
-
 const MainNavData = [
     {
         id: 1,
