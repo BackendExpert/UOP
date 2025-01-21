@@ -1,6 +1,6 @@
 import React from 'react'
 import UopLogo from '../../assets/uoplogo.png'
-import MainNavData from './DataNav'
+import {MainNavData} from './DataNav'
 
 const MainNav = () => {
   return (
