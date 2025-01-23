@@ -38,7 +38,7 @@ const SecNav = () => {
 
 
   return (
-    <div className="">
+    <div className="border-t border-[#e8b910]">
         <div className='md:px-28 px-4 py-4 bg-[#560606] text-white'>
             <div className="flex justify-between">
                 <div className="">
@@ -87,7 +87,7 @@ const SecNav = () => {
                         {
                             secNavData.map((data, index) => {
                                 return (
-                                    <div className={`${atTop ? 'mx-4' : 'mx-4'} mt-1`} key={index} >
+                                    <div className={`${atTop ? 'mx-6 mt-0' : 'mt-1 mx-4'}`} key={index} >
                                         <div className="flex cursor-pointer">
                                             {
                                                 data.id && Array.isArray(data.submenu) && data.submenu.length ?
