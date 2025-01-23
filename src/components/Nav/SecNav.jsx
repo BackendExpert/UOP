@@ -119,7 +119,7 @@ const SecNav = () => {
                                 <div
                                     className={`${atTop ? 'mx-6 mt-0' : 'mt-1 mx-4'} relative`}
                                     key={index}
-                                    onMouseEnter={() => setdksubmenu(data.id)} // Pass unique ID
+                                    onMouseEnter={() => setdksubmenu(data.id)}
                                     onMouseLeave={() => setdksubmenu(false)}
                                 >
                                     <div className="flex cursor-pointer">
@@ -147,7 +147,6 @@ const SecNav = () => {
                                     {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
                                         <div
                                             className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg p-4 z-50"
-                                             // Adjust width as needed
                                         >
                                             {data.submenu.map((submenu, submenuIndex) => (
                                                 <div key={submenuIndex} className="py-2">
