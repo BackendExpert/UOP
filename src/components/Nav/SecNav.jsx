@@ -104,7 +104,6 @@ const SecNav = () => {
                                                     </Link>
                                                 </div>
                                             }
-
                                         </div>
                                     </div>
                                 )
