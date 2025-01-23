@@ -3,7 +3,8 @@ import { secNavData } from './DataNav'
 import { TiThMenu } from "react-icons/ti";
 import { IoClose } from "react-icons/io5";
 import uoplogo from '../../assets/uoplogo.png'
-import { FaFacebook, FaYoutube, FaLinkedin  } from "react-icons/fa";
+import { FaFacebook, FaYoutube, FaLinkedin, FaChevronDown  } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 const SecNav = () => {
@@ -28,6 +29,12 @@ const SecNav = () => {
             window.removeEventListener('scroll', checkScroll);
         };
     }, []);
+
+    const [dksubmenu, setdksubmenu] = useState(false)
+
+    const opensubmenu = () => {
+        setdksubmenu(!dksubmenu)
+    }
 
 
   return (
@@ -75,14 +82,46 @@ const SecNav = () => {
                         </div>
                     }
                 </div>
+                <div className="md:block hidden">
+                    <div className="flex">
+                        {
+                            secNavData.map((data, index) => {
+                                return (
+                                    <div className={`${atTop ? 'mx-6' : 'mx-4'} mt-1`} key={index} onTouchMove={opensubmenu}>
+                                        <div className="flex cursor-pointer">
+                                            {
+                                                data.id && Array.isArray(data.submenu) && data.submenu.length ?
+                                                <div className="flex">
+                                                    <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>{data.name}</h1>
+                                                    <p className="mt-2 ml-2">
+                                                        <FaChevronDown className='h-3 w-auto'/>
+                                                    </p>
+                                                </div>
+                                                :
+                                                <div className="">
+                                                    <Link to={data.link}>
+                                                        <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>{data.name}</h1>
+                                                    </Link>
+                                                </div>
+                                            }
+
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
+                </div>    
             </div>            
         </div>
+
 
         <div 
             className={`pb-12 md:my-4 my-8 p-8 w-auto absolute mt-2 right-8 ml-8 bg-[#560606] text-white shadow-lg rounded-lg p-4 transform transition-opacity duration-300 ease-in-out ${
                 menuopen ? 'opacity-100' : 'opacity-0 pointer-events-none' 
             }`}
-        >         
+        >
+     
             <div className="md:grid grid-cols-4 gap-4 max-h-screen overflow-y-auto scrollbar-hidden">
                 {
                     secNavData.map((data, index) => {
