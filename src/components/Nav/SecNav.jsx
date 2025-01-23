@@ -32,9 +32,9 @@ const SecNav = () => {
 
     const [dksubmenu, setdksubmenu] = useState(false)
 
-    const opensubmenu = () => {
-        setdksubmenu(!dksubmenu)
-    }
+    // const opensubmenu = () => {
+    //     setdksubmenu(!dksubmenu)
+    // }
 
 
   return (
@@ -82,7 +82,7 @@ const SecNav = () => {
                         </div>
                     }
                 </div>
-                <div className="md:block hidden">
+                {/* <div className="md:block hidden">
                     <div className="flex">
                         {
                             secNavData.map((data, index) => {
@@ -91,7 +91,7 @@ const SecNav = () => {
                                         <div className="flex cursor-pointer">
                                             {
                                                 data.id && Array.isArray(data.submenu) && data.submenu.length ?
-                                                <div className="flex" onTouchMove={opensubmenu}>
+                                                <div className="flex"     onMouseEnter={() => setdksubmenu(true)} onMouseLeave={() => setdksubmenu(false)}>
                                                     <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>{data.name}</h1>
                                                     <p className="mt-2 ml-2">
                                                         <FaChevronDown className='h-3 w-auto'/>
@@ -110,9 +110,63 @@ const SecNav = () => {
                             })
                         }
                     </div>
-                </div>    
+                </div>     */}
+
+                <div className="md:block hidden">
+                    <div className="flex relative">
+                        {secNavData.map((data, index) => {
+                            return (
+                                <div
+                                    className={`${atTop ? 'mx-6 mt-0' : 'mt-1 mx-4'} relative`}
+                                    key={index}
+                                    onMouseEnter={() => setdksubmenu(data.id)} // Pass unique ID
+                                    onMouseLeave={() => setdksubmenu(false)}
+                                >
+                                    <div className="flex cursor-pointer">
+                                        {data.id && Array.isArray(data.submenu) && data.submenu.length ? (
+                                            <div className="flex">
+                                                <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>
+                                                    {data.name}
+                                                </h1>
+                                                <p className="mt-2 ml-2">
+                                                    <FaChevronDown className="h-3 w-auto" />
+                                                </p>
+                                            </div>
+                                        ) : (
+                                            <div>
+                                                <Link to={data.link}>
+                                                    <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>
+                                                        {data.name}
+                                                    </h1>
+                                                </Link>
+                                            </div>
+                                        )}
+                                    </div>
+
+                                    {/* Submenu */}
+                                    {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
+                                        <div
+                                            className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg p-4 z-50"
+                                             // Adjust width as needed
+                                        >
+                                            {data.submenu.map((submenu, submenuIndex) => (
+                                                <div key={submenuIndex} className="py-2">
+                                                    <a href={submenu.link} className="hover:underline">
+                                                        {submenu.name}
+                                                    </a>
+                                                </div>
+                                            ))}
+                                        </div>
+                                    )}
+                                </div>
+                            );
+                        })}
+                    </div>
+                </div>
             </div>            
         </div>
+
+
 
 
         <div 
