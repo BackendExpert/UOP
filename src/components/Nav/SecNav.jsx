@@ -41,7 +41,7 @@ const SecNav = () => {
                                 <img src={uoplogo} alt="" className='h-10 w-auto'/>
                             </div>
                         :
-                            <div className="">
+                            <div className="md:hidden block">
                                 <div className="flex">
                                     <div className="mx-4">
                                         <a href="#" target='_blank'>
@@ -63,7 +63,7 @@ const SecNav = () => {
                     }
 
                 </div>
-                <div className="">
+                <div className="md:hidden block">
                     {
                         menuopen === false? 
                         <div className="cursor-pointer">
