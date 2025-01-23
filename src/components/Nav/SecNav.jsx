@@ -87,11 +87,11 @@ const SecNav = () => {
                         {
                             secNavData.map((data, index) => {
                                 return (
-                                    <div className={`${atTop ? 'mx-6' : 'mx-4'} mt-1`} key={index} onTouchMove={opensubmenu}>
+                                    <div className={`${atTop ? 'mx-4' : 'mx-4'} mt-1`} key={index} >
                                         <div className="flex cursor-pointer">
                                             {
                                                 data.id && Array.isArray(data.submenu) && data.submenu.length ?
-                                                <div className="flex">
+                                                <div className="flex" onTouchMove={opensubmenu}>
                                                     <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>{data.name}</h1>
                                                     <p className="mt-2 ml-2">
                                                         <FaChevronDown className='h-3 w-auto'/>
