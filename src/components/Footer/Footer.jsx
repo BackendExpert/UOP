@@ -1,5 +1,6 @@
 import React from 'react'
 import UopLogo from '../../assets/uoplogo.png'
+import { mainNavigation, informationFor, quickLinks } from './FooterData'
 
 const Footer = () => {
   return (
@@ -23,14 +24,50 @@ const Footer = () => {
                 </div>
                 <div className="md:w-2/3">
                     <div className="md:grid grid-cols-3 gap-4">
-                        <div className="w-full">
+                        <div className="w-full md:my-0 my-8">
                             <h1 className="uppercase font-semibold text-xl">main navigation</h1>
+                            <hr className='w-3/4 my-2'/>
+                            <div className="mt-8">
+                                {
+                                    mainNavigation.map((data, index) => {
+                                        return (
+                                            <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-2 font text-lg' key={index}>
+                                                <a href={data.link}>{data.name}</a>
+                                            </ul>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-                        <div className="w-full">
+                        <div className="w-full md:my-0 my-8">
                             <h1 className="uppercase font-semibold text-xl">Information for</h1>
+                            <hr className='w-3/4 my-2'/>
+                            <div className="mt-8">
+                                {
+                                    informationFor.map((data, index) => {
+                                        return (
+                                            <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-2 font text-lg' key={index}>
+                                                <a href={data.link}>{data.name}</a>
+                                            </ul>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
-                        <div className="w-full">
+                        <div className="w-full md:my-0 my-8">
                             <h1 className="uppercase font-semibold text-xl">quick links</h1>
+                            <hr className='w-3/4 my-2'/>
+                            <div className="mt-8">
+                                {
+                                    quickLinks.map((data, index) => {
+                                        return (
+                                            <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-2 font text-lg' key={index}>
+                                                <a href={data.link}>{data.name}</a>
+                                            </ul>
+                                        )
+                                    })
+                                }
+                            </div>
                         </div>
                     </div>
                 </div>
