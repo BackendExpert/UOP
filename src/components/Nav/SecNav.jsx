@@ -31,6 +31,7 @@ const SecNav = () => {
     }, []);
 
     const [dksubmenu, setdksubmenu] = useState(false)
+    const [dksecsubmenu, setdksecsubmenu] = useState(false)
 
     // const opensubmenu = () => {
     //     setdksubmenu(!dksubmenu)
@@ -145,9 +146,7 @@ const SecNav = () => {
 
                                     {/* Submenu */}
                                     {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
-                                        <div
-                                            className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg  z-50 pt-4"
-                                        >
+                                        <div className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg  z-50 pt-4">
                                             {data.submenu.map((submenu, submenuIndex) => (
                                                 <div key={submenuIndex} className="hover:bg-[#e8b910] px-4 cursor-pointer hover:text-[#560606] hover:font-semibold duration-500 hover:pl-6">
                                                     <div className="py-4">
