@@ -33,47 +33,31 @@ const SecNav = () => {
     const [dksubmenu, setdksubmenu] = useState(false)
     const [dksecsubmenu, setdksecsubmenu] = useState(false)
 
-    // const opensubmenu = () => {
-    //     setdksubmenu(!dksubmenu)
-    // }
-
 
   return (
     <div className="border-t border-[#e8b910]">
-        <div className='md:px-28 px-4 py-4 bg-[#560606] text-white'>
-            <div className="flex justify-between">
+        <div className='md:px-[6%] px-4 py-4 bg-[#560606] text-white'>
+
+
+        <div className={`${atTop ? '' : 'flex'}  justify-between sm:block`}>
+
                 <div className="">
                     {
                         !atTop ?
                             <div className="">
-                                <img src={uoplogo} alt="" className='h-10 w-auto'/>
+                                {/* <img src={uoplogo} alt="" className='h-10 w-auto'/> */}
+                                asdasd
                             </div>
                         :
                             <div className="md:hidden block">
-                                <div className="flex">
-                                    <div className="mx-4">
-                                        <a href="#" target='_blank'>
-                                            <FaFacebook className='h-6 w-auto fill-white'/>
-                                        </a>
-                                    </div>
-                                    <div className="mx-4">
-                                        <a href="#" target='_blank'>
-                                            <FaYoutube className='h-6 w-auto fill-white'/>
-                                        </a>
-                                    </div>
-                                    <div className="mx-4">
-                                        <a href="#" target='_blank'>
-                                            <FaLinkedin className='h-6 w-auto fill-white'/>
-                                        </a>
-                                    </div>
-                                </div>
+
                             </div> 
                     }
 
                 </div>
-                <div className="md:hidden block">
+                <div className="md:hidden block flex justify-end">
                     {
-                        menuopen === false? 
+                        menuopen === false ? 
                         <div className="cursor-pointer">
                             <TiThMenu className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
                         </div>
@@ -83,42 +67,14 @@ const SecNav = () => {
                         </div>
                     }
                 </div>
-                {/* <div className="md:block hidden">
-                    <div className="flex">
-                        {
-                            secNavData.map((data, index) => {
-                                return (
-                                    <div className={`${atTop ? 'mx-6 mt-0' : 'mt-1 mx-4'}`} key={index} >
-                                        <div className="flex cursor-pointer">
-                                            {
-                                                data.id && Array.isArray(data.submenu) && data.submenu.length ?
-                                                <div className="flex"     onMouseEnter={() => setdksubmenu(true)} onMouseLeave={() => setdksubmenu(false)}>
-                                                    <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>{data.name}</h1>
-                                                    <p className="mt-2 ml-2">
-                                                        <FaChevronDown className='h-3 w-auto'/>
-                                                    </p>
-                                                </div>
-                                                :
-                                                <div className="">
-                                                    <Link to={data.link}>
-                                                        <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>{data.name}</h1>
-                                                    </Link>
-                                                </div>
-                                            }
-                                        </div>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                </div>     */}
+
 
                 <div className="md:block hidden">
                     <div className="flex relative">
                         {secNavData.map((data, index) => {
                             return (
                                 <div
-                                    className={`${atTop ? 'mx-6 mt-0' : 'mt-1 mx-4'} relative`}
+                                    className={`${atTop ? ' mx-[1%] mt-0' : 'mt-1 mx-4'} relative`}
                                     key={index}
                                     onMouseEnter={() => setdksubmenu(data.id)}
                                     onMouseLeave={() => setdksubmenu(false)}
@@ -126,7 +82,7 @@ const SecNav = () => {
                                     <div className="flex cursor-pointer">
                                         {data.id && Array.isArray(data.submenu) && data.submenu.length ? (
                                             <div className="flex">
-                                                <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>
+                                                <h1 className={`${atTop ? '' : ''} font-semibold uppercase`}>
                                                     {data.name}
                                                 </h1>
                                                 <p className="mt-2 ml-2">
@@ -136,7 +92,7 @@ const SecNav = () => {
                                         ) : (
                                             <div>
                                                 <Link to={data.link}>
-                                                    <h1 className={`${atTop ? 'text-xl' : ''} font-semibold`}>
+                                                    <h1 className={`${atTop ? '' : ''} font-semibold uppercase`}>
                                                         {data.name}
                                                     </h1>
                                                 </Link>
