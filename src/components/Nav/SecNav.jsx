@@ -39,22 +39,8 @@ const SecNav = () => {
         <div className='md:px-[6%] px-4 py-4 bg-[#560606] text-white'>
 
 
-        <div className={`${atTop ? '' : 'flex'}  justify-between sm:block`}>
+        <div className=''>
 
-                <div className="">
-                    {
-                        !atTop ?
-                            <div className="">
-                                {/* <img src={uoplogo} alt="" className='h-10 w-auto'/> */}
-
-                            </div>
-                        :
-                            <div className="md:hidden block">
-
-                            </div> 
-                    }
-
-                </div>
                 
                 <div className="flex justify-between">
                     <div className="md:hidden block">
