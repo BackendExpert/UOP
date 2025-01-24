@@ -146,13 +146,15 @@ const SecNav = () => {
                                     {/* Submenu */}
                                     {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
                                         <div
-                                            className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg p-4 z-50"
+                                            className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg  z-50 pt-4"
                                         >
                                             {data.submenu.map((submenu, submenuIndex) => (
-                                                <div key={submenuIndex} className="py-2">
-                                                    <a href={submenu.link} className="hover:underline">
-                                                        {submenu.name}
-                                                    </a>
+                                                <div key={submenuIndex} className="hover:bg-[#e8b910] px-4 cursor-pointer hover:text-[#560606] hover:font-semibold duration-500 hover:pl-6">
+                                                    <div className="py-4">
+                                                        <a href={submenu.link} className="">
+                                                            {submenu.name}
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             ))}
                                         </div>
