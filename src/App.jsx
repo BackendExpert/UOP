@@ -38,7 +38,7 @@ export default function App() {
 
   return (
       <BrowserRouter>
-        <div className="">
+        <div className="md:block hidden">
           <MainNav />
         </div>
         {shouldShowNavBar && (
@@ -47,16 +47,13 @@ export default function App() {
             showNavBar ? "translate-y-0" : "-translate-y-full"
           } ${
             isTopOfPage
-              ? "md:mt-28 mt-[70px]"
+              ? "md:mt-28"
               : "shadow-md transition-colors duration-500"
           }`}
           >
             <SecNav />
           </div>
         )}
-        {/* <div className={`${isTopOfPage ? 'block' : 'hidden' }`}>
-          <SecNav />
-        </div> */}
         <Routes>
           <Route path="/" element={<HomePage /> } />
         </Routes>

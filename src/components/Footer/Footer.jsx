@@ -3,9 +3,10 @@ import UopLogo from '../../assets/uoplogo.png'
 import { mainNavigation, informationFor, quickLinks } from './FooterData'
 
 const Footer = () => {
+    const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-[#560606]">
-        <div className='md:px-28 px-4 text-white py-16'>
+    <div className="bg-[#560606] md:px-28 px-4 text-white">
+        <div className='py-16'>
             <div className="md:flex">
                 <div className="md:w-1/3">
                     <img src={UopLogo} alt="" className='h-20 w-auto'/>
@@ -72,6 +73,10 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+        </div>
+
+        <div className="py-2 border-t border-[#e8b910]">            
+            Copyright © {currentYear} University of Peradeniya . All rights reserved.
         </div>
     </div>
   )

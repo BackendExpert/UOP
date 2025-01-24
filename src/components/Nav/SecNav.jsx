@@ -55,18 +55,28 @@ const SecNav = () => {
                     }
 
                 </div>
-                <div className="md:hidden block flex justify-end">
-                    {
-                        menuopen === false ? 
-                        <div className="cursor-pointer">
-                            <TiThMenu className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
+                
+                <div className="flex justify-between">
+                    <div className="md:hidden block">
+                        <img src={uoplogo} alt="" className='h-8 w-auto'/>
+                    </div>  
+                    <div className="md:hidden block flex justify-end">
+
+                        {
+                            menuopen === false ? 
+                            <div className="cursor-pointer">
+                                <TiThMenu className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
+                            </div>
+                            :
+                            <div className="cursor-pointer">
+                                <IoClose className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
+                            </div>
+                        }
                         </div>
-                        :
-                        <div className="cursor-pointer">
-                            <IoClose className='h-8 w-auto fill-white' onClick={headleopenmenu}/>
-                        </div>
-                    }
                 </div>
+                
+
+                
 
 
                 <div className="md:block hidden flex justify-end">
@@ -144,9 +154,12 @@ const SecNav = () => {
                             );
                         })}
                     </div>
+                    
                 </div>
-            </div>            
+
+            </div>      
         </div>
+        
 
 
 
