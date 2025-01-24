@@ -3,6 +3,7 @@ import HomePage from "./pages/HomePage/HomePage";
 import SecNav from "./components/Nav/SecNav";
 import MainNav from "./components/Nav/MainNav";
 import { useEffect, useState } from "react";
+import Footer from "./components/Footer/Footer";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -59,6 +60,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage /> } />
         </Routes>
+        <Footer />
       </BrowserRouter>
   )
 }
