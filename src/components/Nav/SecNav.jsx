@@ -46,7 +46,7 @@ const SecNav = () => {
                         !atTop ?
                             <div className="">
                                 {/* <img src={uoplogo} alt="" className='h-10 w-auto'/> */}
-                                asdasd
+
                             </div>
                         :
                             <div className="md:hidden block">
@@ -69,7 +69,7 @@ const SecNav = () => {
                 </div>
 
 
-                <div className="md:block hidden">
+                <div className="md:block hidden flex justify-end">
                     <div className="flex relative">
                         {secNavData.map((data, index) => {
                             return (
