@@ -75,7 +75,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="py-2 border-t border-[#e8b910]">            
+        <div className="py-2 border-t border-[#e8b910] md:text-left text-center">            
             Copyright © {currentYear} University of Peradeniya . All rights reserved.
         </div>
     </div>
