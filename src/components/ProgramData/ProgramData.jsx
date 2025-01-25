@@ -65,8 +65,29 @@ const programData = [
                 id: 4,
                 name: 'Short Courses',
                 link: '#'
+            },            
+        ]
+    },
+    {
+        id: 1,
+        name: 'Short Courses',
+        desc: 'Outsiders also may follow these  short courses in different institutions attached to the University of Peradeniya.',
+        courses: [
+            {
+                id: 1,
+                name: 'CISCO Certified Network Associate Certification',
+                link: '#',
             },
-            
+            {
+                id: 2,
+                name: 'Online Short Course on ISO 14001:2015 Environmental Management System',
+                link: '#',
+            },
+            {
+                id: 3,
+                name: 'NVQ Level 4 course in Photography and Video Production',
+                link: '#',
+            },
         ]
     }
 ]
