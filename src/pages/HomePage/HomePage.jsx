@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Slider from '../../components/SliderImg/Slider'
 import DataCount from '../../components/DataCount/DataCount';
 import Events from '../Events/Events';
+import News from '../News/News';
 
 
 const HomePage = () => {
@@ -27,6 +28,7 @@ const HomePage = () => {
         <DataCount />
       </div>
       <Events />
+      <News />
     </div>
   )
 }
