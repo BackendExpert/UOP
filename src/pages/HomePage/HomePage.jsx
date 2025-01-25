@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Slider from '../../components/SliderImg/Slider'
 import DataCount from '../../components/DataCount/DataCount';
+import Events from '../../components/Events/Events';
 
 
 const HomePage = () => {
@@ -25,6 +26,7 @@ const HomePage = () => {
       <div className="md:px-28 px-4">
         <DataCount />
       </div>
+      <Events />
     </div>
   )
 }
