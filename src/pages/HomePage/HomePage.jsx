@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import Slider from '../../components/SliderImg/Slider'
+import DataCount from '../../components/DataCount/DataCount';
 
 const HomePage = () => {
       const [atTop, setAtTop] = useState(true);
@@ -20,6 +21,7 @@ const HomePage = () => {
   return (
     <div className={`${ atTop ? 'mt-12' : 'mt-0'}`}>
       <Slider />
+      <DataCount />
     </div>
   )
 }
