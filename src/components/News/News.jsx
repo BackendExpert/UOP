@@ -6,6 +6,7 @@ const newsdata = [
         desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
         date: 'Febrary 5, 2025',
         img: newsimg,
+        link: '#'
     },
     {
         id: 2,
@@ -13,6 +14,7 @@ const newsdata = [
         desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
         date: 'Febrary 5, 2025',
         img: newsimg,
+        link: '#'
     },
     {
         id: 3,
@@ -20,6 +22,7 @@ const newsdata = [
         desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
         date: 'Febrary 5, 2025',
         img: newsimg,
+        link: '#'
     },
     {
         id: 4,
@@ -27,6 +30,7 @@ const newsdata = [
         desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
         date: 'Febrary 5, 2025',
         img: newsimg,
+        link: '#'
     },
     {
         id: 5,
@@ -34,6 +38,7 @@ const newsdata = [
         desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
         date: 'Febrary 5, 2025',
         img: newsimg,
+        link: '#'
     },
 ]
 
