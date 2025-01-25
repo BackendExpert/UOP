@@ -1,12 +1,11 @@
 import React from 'react';
 import { testeventdata } from './EventData';
 import DefaultBtn from '../Buttons/DefaultBtn';
-import Ribbon from '../Ribbon/DefaultRibbon';
 
 
 const Events = () => {
   return (
-    <div className="relative z-10 text-white md:px-28 px-4 py-16 text-[#560606] bg-gray-200">
+    <div className="relative z-10 md:px-28 px-4 py-16 text-[#560606] bg-gray-200">
         <h1 className="text-center font-semibold text-4xl">Events</h1>      
         <p className="py-4 text-center">All Upcoming Events of the University will appear here</p>
 
