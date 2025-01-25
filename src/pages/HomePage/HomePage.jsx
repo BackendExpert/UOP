@@ -21,7 +21,9 @@ const HomePage = () => {
   return (
     <div className={`${ atTop ? 'mt-12' : 'mt-0'}`}>
       <Slider />
-      <DataCount />
+      <div className="md:px-28 px-4">
+        <DataCount />
+      </div>
     </div>
   )
 }

@@ -5,17 +5,19 @@ import CountUp from 'react-countup'
 
 const DataCount = () => {
   return (
-    <div>
-        <div className="md:grid grid-cols-5 gap-4">
+    <div className='my-8'>
+        <div className="md:grid grid-cols-5 gap-8">
             {
                 dataforcount.map((data, index) => {
                     return (
-                        <div className="bg-[#560606] text-white text-center" key={index}>
-                            <h1 className="">{data.name}</h1>
-                            <div className="">
-                                <data.icon className='h-8 w-auto'/>
-                            </div>
-                            <h1 className=""><CountUp end={data.value} /> </h1>
+                        <div className="bg-[#560606] text-white text-center py-8 rounded-lg shadow-lg px-4" key={index}>
+                            <h1 className="py-2 text-lg uppercase font-semibold">{data.name}</h1>
+                            <center>
+                                <div className="py-2">
+                                    <data.icon className='h-10 w-auto'/>
+                                </div>
+                            </center>
+                            <h1 className="py-2 text-xl"><CountUp end={data.value} /> </h1>
                         </div>
                     )
                 })
