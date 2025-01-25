@@ -1,33 +1,38 @@
+import { FaUserGraduate } from "react-icons/fa";
+import { FaSchool, FaUserTie, FaUserLock } from "react-icons/fa6";
+import { IoIosSchool } from "react-icons/io";
+
+
 const dataforcount = [
     {
         id: 1,
         name: 'Internal Students',
         value: 2000,
-        icon: '',
+        icon: FaUserGraduate,
     },
     {
         id: 2,
         name: 'External Students',
         value: 2000,
-        icon: '',
+        icon: IoIosSchool,
     },
     {
         id: 3,
         name: 'Faculties',
         value: 9,
-        icon: '',
+        icon: FaSchool,
     },
     {
         id: 4,
         name: 'Academic Staff',
         value: 150,
-        icon: '',
+        icon: FaUserTie,
     },
     {
         id: 5,
         name: 'Administrative Staff',
-        value: '',
-        icon: '',
+        value: 24,
+        icon: FaUserLock,
     },
 ]
 
