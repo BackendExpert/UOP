@@ -10,14 +10,14 @@ const DataCount = () => {
             {
                 dataforcount.map((data, index) => {
                     return (
-                        <div className="bg-[#560606] text-white text-center py-8 rounded-lg shadow-lg px-4" key={index}>
+                        <div className="bg-[#560606] text-white text-center py-8 rounded-lg shadow-lg px-2" key={index}>
                             <h1 className="py-2 text-lg uppercase font-semibold">{data.name}</h1>
                             <center>
                                 <div className="py-2">
                                     <data.icon className='h-10 w-auto'/>
                                 </div>
                             </center>
-                            <h1 className="py-2 text-xl"><CountUp end={data.value} /> </h1>
+                            <h1 className="py-2 text-xl"><CountUp end={data.value} />+ </h1>
                         </div>
                     )
                 })

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Slider from '../../components/SliderImg/Slider'
 import DataCount from '../../components/DataCount/DataCount';
 
+
 const HomePage = () => {
       const [atTop, setAtTop] = useState(true);
       const checkScroll = () => {

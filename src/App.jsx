@@ -4,6 +4,7 @@ import SecNav from "./components/Nav/SecNav";
 import MainNav from "./components/Nav/MainNav";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
+import 'aos/dist/aos.css';
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
