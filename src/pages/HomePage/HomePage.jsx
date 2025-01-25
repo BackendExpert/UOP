@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Slider from '../../components/SliderImg/Slider'
 import DataCount from '../../components/DataCount/DataCount';
-import Events from '../../components/Events/Events';
+import Events from '../Events/Events';
 
 
 const HomePage = () => {

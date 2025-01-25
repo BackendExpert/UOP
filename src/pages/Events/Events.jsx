@@ -1,6 +1,6 @@
 import React from 'react';
-import { testeventdata } from './EventData';
-import DefaultBtn from '../Buttons/DefaultBtn';
+import { testeventdata } from '../../components/Events/EventData';
+import DefaultBtn from '../../components/Buttons/DefaultBtn';
 
 
 const Events = () => {
