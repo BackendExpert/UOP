@@ -10,6 +10,7 @@ const SeasonsGreetings = () => {
             <WasakFunction />
             <AssalaPerahera />
             <MarryCrismistmas />  
+            <DefultSG />
         </div>
         {/* <div className="">
             {
