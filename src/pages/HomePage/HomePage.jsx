@@ -3,6 +3,7 @@ import Slider from '../../components/SliderImg/Slider'
 import DataCount from '../../components/DataCount/DataCount';
 import Events from '../Events/Events';
 import News from '../News/News';
+import SeasonsGreetings from '../SeasonsGreetings/SeasonsGreetings';
 
 
 const HomePage = () => {
@@ -28,6 +29,7 @@ const HomePage = () => {
         <DataCount />
       </div>
       <Events />
+      <SeasonsGreetings />
       <News />
     </div>
   )
