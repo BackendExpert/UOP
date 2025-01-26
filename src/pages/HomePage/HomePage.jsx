@@ -4,6 +4,7 @@ import DataCount from '../../components/DataCount/DataCount';
 import Events from '../Events/Events';
 import News from '../News/News';
 import SeasonsGreetings from '../SeasonsGreetings/SeasonsGreetings';
+import Programs from '../Programs/Programs';
 
 
 const HomePage = () => {
@@ -31,6 +32,7 @@ const HomePage = () => {
       <Events />
       <SeasonsGreetings />
       <News />
+      <Programs />
     </div>
   )
 }
