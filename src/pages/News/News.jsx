@@ -30,7 +30,7 @@ const News = () => {
                     <div className=""></div>
                 }
             </div>
-            <div className="w-full ml-4 md:my-0 my-4">
+            <div className="w-full md:ml-4 md:my-0 my-4">
                 {
                     newsdata.map((news, index) => {
                         return (
