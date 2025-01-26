@@ -4,7 +4,7 @@ import { JanNewYear, Aprilfunction, WasakFunction, AssalaPerahera, MarryCrismist
 const SeasonsGreetings = () => {
   return (
     <div className="">
-        <div className="">
+        <div className="" >
             <JanNewYear />
             <Aprilfunction />
             <WasakFunction />
