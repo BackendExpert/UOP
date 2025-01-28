@@ -5,6 +5,7 @@ import Events from '../Events/Events';
 import News from '../News/News';
 import SeasonsGreetings from '../SeasonsGreetings/SeasonsGreetings';
 import Programs from '../Programs/Programs';
+import Programmes from '../Programs/Programmes';
 
 
 const HomePage = () => {
@@ -32,7 +33,7 @@ const HomePage = () => {
       <Events />
       <SeasonsGreetings />
       <News />
-      <Programs />
+      <Programmes />
     </div>
   )
 }

@@ -3,6 +3,7 @@ const programData = [
         id: 1,
         name: 'Postgraduate Programs',
         desc: 'Postgraduate Programs of University of Peradeniya',
+        link: '#',
         courses: [
             {
                 id: 1,
@@ -45,6 +46,7 @@ const programData = [
         id: 2,
         name: 'Distance Education',
         desc: 'The University of Peradeniya is the pioneering institution that initiated offering external degrees in the country since 1964.',
+        link: '#',
         courses: [
             {
                 id: 1,
@@ -72,6 +74,7 @@ const programData = [
         id: 1,
         name: 'Short Courses',
         desc: 'Outsiders also may follow these  short courses in different institutions attached to the University of Peradeniya.',
+        link: '#',
         courses: [
             {
                 id: 1,
