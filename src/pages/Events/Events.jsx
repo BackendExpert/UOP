@@ -10,7 +10,7 @@ const Events = () => {
             {
                 testeventdata.map((event, index) => {
                     return (
-                        <div data-aos="zoom-in" className="mb-4 rounded shadow-xl bg-white p-4" key={index}>
+                        <div data-aos="zoom-in" className="mb-4 rounded shadow-xl bg-white duration-500 p-4 hover:border hover:border-[#560606]/50" key={index}>
                             <h1 className="text-xl font-semibold text-[#560606]">{event.name}</h1>
                             <p className="pt-2">{event.decs}</p>
 

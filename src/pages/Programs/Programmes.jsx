@@ -6,7 +6,7 @@ const Programmes = () => {
   return (
     <div className='bg-gray-200 py-8 md:px-28 px-4'>
         <div className="md:flex mr-4">
-            <div className="md:mb-0 mb-8 md:w-1/2 md:px-16 px:8 md:flex items-center justify-center">
+            <div  data-aos="zoom-in" className="md:mb-0 mb-8 md:w-1/2 md:px-16 px:8 md:flex items-center justify-center">
                 <div className="">
                     <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Study at UOP</h1>
 
@@ -18,7 +18,7 @@ const Programmes = () => {
             <div className="md:w-1/2">
                 <div className="md:flex ">
 
-                    <div className="rounded md:my-0 my-4 md:mr-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                    <div  data-aos="zoom-in" className="rounded md:my-0 my-4 md:mr-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                         <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                             <h1 className="text-xl font-semibold">{programData[0].name}</h1>
@@ -37,7 +37,7 @@ const Programmes = () => {
                         </div>
                     </div>
 
-                    <div className="rounded md:ml-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                    <div  data-aos="zoom-in" className="rounded md:ml-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                         <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                             <h1 className="text-xl font-semibold">{programData[1].name}</h1>
@@ -58,7 +58,7 @@ const Programmes = () => {
 
 
                 </div>
-                <div className="rounded mt-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                <div  data-aos="zoom-in" className="rounded mt-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                     <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                     <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                         <h1 className="text-xl font-semibold">{programData[2].name}</h1>
