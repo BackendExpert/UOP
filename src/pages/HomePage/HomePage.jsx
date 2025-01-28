@@ -6,6 +6,7 @@ import News from '../News/News';
 import SeasonsGreetings from '../SeasonsGreetings/SeasonsGreetings';
 import Programs from '../Programs/Programs';
 import Programmes from '../Programs/Programmes';
+import AllComponent from '../Events/AllComponent';
 
 
 const HomePage = () => {
@@ -30,8 +31,9 @@ const HomePage = () => {
       <div className="md:px-28 px-4">
         <DataCount />
       </div>
-      <Events />
-      <SeasonsGreetings />
+      {/* <Events /> */}
+      <AllComponent />
+      {/* <SeasonsGreetings /> */}
       <News />
       <Programmes />
     </div>

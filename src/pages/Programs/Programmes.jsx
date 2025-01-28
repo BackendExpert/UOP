@@ -6,10 +6,19 @@ const Programmes = () => {
   return (
     <div className='bg-gray-200 py-8 md:px-28 px-4'>
         <div className="md:flex mr-4">
-            <div className="w-1/2">
+            <div className="w-1/2 px-16 md:flex items-center justify-center">
+                <div className="">
+                    <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Study at UOP</h1>
+
+                    <p className="my-4 text-center">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reprehenderit enim voluptatem a numquam? Obcaecati nam fugit delectus excepturi sint amet nostrum consequuntur, earum minima nisi aliquid error? Quibusdam, nam!
+                    </p>
+                </div>
+            </div>
+            <div className="md:w-1/2">
                 <div className="md:flex ">
 
-                    <div className="rounded mr-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                    <div className="rounded md:my-0 my-4 md:mr-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                         <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                             <h1 className="text-xl font-semibold">{programData[0].name}</h1>
@@ -28,7 +37,7 @@ const Programmes = () => {
                         </div>
                     </div>
 
-                    <div className="rounded ml-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                    <div className="rounded md:ml-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                         <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                             <h1 className="text-xl font-semibold">{programData[1].name}</h1>
@@ -68,15 +77,6 @@ const Programmes = () => {
                     </div>
                 </div>
 
-            </div>
-            <div className="w-1/2 px-4 flex items-center justify-center">
-                <div className="">
-                    <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Study at UOP</h1>
-
-                    <p className="my-4 text-center">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reprehenderit enim voluptatem a numquam? Obcaecati nam fugit delectus excepturi sint amet nostrum consequuntur, earum minima nisi aliquid error? Quibusdam, nam!
-                    </p>
-                </div>
             </div>
         </div>
     </div>
