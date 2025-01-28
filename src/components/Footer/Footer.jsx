@@ -79,7 +79,7 @@ const Footer = () => {
                 <div className="">
                     Copyright © {currentYear} University of Peradeniya . All rights reserved.
                 </div>
-                <div className="">
+                <div className="mt-4 flex justify-center items-center">
                     <div className="flex">
                         <a href="#">
                             <p className="px-4"><FaFacebook /></p>
