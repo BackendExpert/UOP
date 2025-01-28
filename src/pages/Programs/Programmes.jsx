@@ -6,7 +6,7 @@ const Programmes = () => {
   return (
     <div className='bg-gray-200 py-8 md:px-28 px-4'>
         <div className="md:flex mr-4">
-            <div className="w-1/2 px-16 md:flex items-center justify-center">
+            <div className="md:mb-0 mb-8 md:w-1/2 md:px-16 px:8 md:flex items-center justify-center">
                 <div className="">
                     <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Study at UOP</h1>
 
