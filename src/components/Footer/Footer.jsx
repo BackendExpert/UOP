@@ -75,12 +75,12 @@ const Footer = () => {
         </div>
 
         <div className="py-2 px-4 border-t border-[#e8b910] md:text-left text-center">            
-            <div className="flex justify-between">
+            <div className="md:flex justify-between">
                 <div className="">
                     Copyright © {currentYear} University of Peradeniya . All rights reserved.
                 </div>
                 <div className="">
-                    <div className="md:flex">
+                    <div className="flex">
                         <a href="#">
                             <p className="px-4"><FaFacebook /></p>
                         </a>
