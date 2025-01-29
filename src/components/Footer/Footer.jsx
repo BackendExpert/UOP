@@ -2,6 +2,12 @@ import React from 'react'
 import UopLogo from '../../assets/uoplogo.png'
 import { mainNavigation, informationFor, quickLinks } from './FooterData'
 import { FaFacebook, FaXTwitter, FaInstagram, FaYoutube, FaLinkedin } from "react-icons/fa6";
+import FB from '../../assets/FB.png'
+import X from '../../assets/X.png'
+import Inster from '../../assets/Inster.png'
+import Youtube from '../../assets/Youtube.png'
+import Linkedin from '../../assets/Linked.png'
+
 
 const Footer = () => {
     const currentYear = new Date().getFullYear();
@@ -63,32 +69,32 @@ const Footer = () => {
                                 <div className="grid grid-cols-2 gap-4 mt-4">
                                         <a href="#" className='duration-500 hover:text-[#e8b910]'>
                                             <div className="flex">
-                                                <p className="px-2"><FaFacebook className='h-6 w-auto'/></p>
+                                                <p className="px-2"><img src={FB} alt="" className='h-8 w-auto'/></p>
                                                 <h1 className="">Facebook</h1>
                                             </div>
                                         </a>
                                         <a href="#" className='duration-500 hover:text-[#e8b910]'>
                                             <div className="flex">
-                                                <p className="px-2"><FaXTwitter className='h-6 w-auto'/></p>
+                                                <p className="px-2"><img src={X} alt="" className='h-8 w-auto'/></p>
                                                 <h1 className="">Twitter</h1>
                                             </div>
                                         </a>
                                         <a href="#" className='duration-500 hover:text-[#e8b910]'>
                                             <div className="flex">
-                                                <p className="px-2"><FaInstagram className='h-6 w-auto'/></p>
+                                                <p className="px-2"><img src={Inster} alt="" className='h-8 w-auto'/></p>
                                                 <h1 className="">Instagram</h1>
                                             </div>
                                         </a>
                                         <a href="#" className='duration-500 hover:text-[#e8b910]'>
                                             <div className="flex">
-                                                <p className="px-2"><FaYoutube className='h-6 w-auto'/></p>
+                                                <p className="px-2"><img src={Youtube} alt="" className='h-8 w-auto'/></p>
                                                 <h1 className="">Youtube</h1>
                                             </div>
                                         </a>
 
                                         <a href="#" className='duration-500 hover:text-[#e8b910]'>
                                             <div className="flex">
-                                                <p className="px-2"><FaLinkedin className='h-6 w-auto'/></p>
+                                                <p className="px-2"><img src={Linkedin} alt="" className='h-8 w-auto'/></p>
                                                 <h1 className="">Linkedin</h1>
                                             </div>
                                         </a>
