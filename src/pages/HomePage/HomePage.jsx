@@ -5,8 +5,9 @@ import Events from '../Events/OldEvents';
 import News from '../News/News';
 import SeasonsGreetings from '../SeasonsGreetings/SeasonsGreetings';
 import Programs from '../Programs/Programs';
-import Programmes from '../Programs/Programmes';
+// import Programmes from '../Programs/OLDProgrammes';
 import AllComponent from '../Events/AllComponent';
+import Programmes from '../Programs/Programmes';
 
 
 const HomePage = () => {

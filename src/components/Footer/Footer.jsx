@@ -58,9 +58,9 @@ const Footer = () => {
                                 </div>
                             </div>
                             <div className="mt-4">
-                                <h1 className="uppercase font-semibold text-xl">Information for</h1>
+                                <h1 className="uppercase font-semibold text-xl">Get in Touch</h1>
                                 <hr className='w-3/4 my-2'/>
-                                <div className="md:grid grid-cols-2 gap-4 mt-4">
+                                <div className="grid grid-cols-2 gap-4 mt-4">
                                         <a href="#" className='duration-500 hover:text-[#e8b910]'>
                                             <div className="flex">
                                                 <p className="px-2"><FaFacebook className='h-6 w-auto'/></p>
