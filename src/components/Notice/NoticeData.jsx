@@ -30,6 +30,12 @@ const noticeData = [
         desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate eveniet, repellat quod quia optio laboriosam hic quos ducimus reiciendis consequuntur expedita eaque possimus inventore deleniti, sed tenetur! Voluptatem, ipsam!',
         link: '#',
     },
+    {
+        id: 6,
+        name: "Notice 6",
+        desc: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate eveniet, repellat quod quia optio laboriosam hic quos ducimus reiciendis consequuntur expedita eaque possimus inventore deleniti, sed tenetur! Voluptatem, ipsam!',
+        link: '#',
+    },
 ]
 
 export { noticeData }

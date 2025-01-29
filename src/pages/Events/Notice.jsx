@@ -7,7 +7,7 @@ const Notice = () => {
     <div>
         <h1 className="text-center text-2xl font-semibold uppercase text-[#560606]">Notice</h1>
 
-        <div className="my-4">
+        <div className="md:grid grid-cols-2 gap-4">
             {
                 noticeData.map((notice, index) => {
                     return (

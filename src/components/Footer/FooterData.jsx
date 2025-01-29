@@ -65,6 +65,11 @@ const quickLinks = [
         name: 'Counselling and Psychological Support Unit',
         link: '#'
     },
+    {
+        id: 6,
+        name: 'Contact Us',
+        link: '#'
+    },
 ]
 
 export {mainNavigation, informationFor, quickLinks}

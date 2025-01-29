@@ -10,14 +10,14 @@ const AllComponent = () => {
             <div className="md:w-1/2 md:mx-8 md:my-0 my-4">
                 <Events />
             </div>
-            <div className="">
+            <div className="md:w-1/2">
                 <div className="w-full md:mr-2 md:my-0 my-4">
                     <QuickLinks />
                 </div>
-                <div className="w-full md:ml-2 md:my-0 my-4">
-                    <Notice />
-                </div>
             </div>
+        </div>
+        <div className="w-full md:ml-2 md:my-0 my-4">
+            <Notice />
         </div>
     </div>
   )
