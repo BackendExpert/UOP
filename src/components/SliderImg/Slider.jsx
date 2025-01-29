@@ -1,13 +1,14 @@
 import React, { useState, useEffect } from "react";
 import logo from '../../assets/logo.png'
+import UopSci from '../../assets/UopSci.jpg'
 
 const Slider = () => {
     const images = [
-        "https://wallpapercave.com/wp/wp7617813.jpg",
-        "https://wallpapercave.com/wp/wp11440838.jpg",
+        "https://eng.pdn.ac.lk/wp-content/uploads/2022/12/slide-4.jpg",
+        UopSci,
         "https://wallpapercave.com/wp/wp11440840.jpg",
         "https://wallpapercave.com/wp/wp9482512.jpg",
-        "https://wallpapercave.com/wp/wp7617813.jpg",
+        "https://roar.media/english/life/wp-content/uploads/2017/10/31-1180x843.jpg",
         "https://wallpapercave.com/wp/wp11440838.jpg",
         "https://wallpapercave.com/wp/wp11440840.jpg",
         "https://wallpapercave.com/wp/wp9482512.jpg",
