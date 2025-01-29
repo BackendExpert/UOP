@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="flex justify-center space-x-6 mb-4">
+        <div className="md:flex justify-center md:space-x-6 mb-4 grid grid-cols-2 gap-2">
             <a href="#" className='duration-500 hover:text-[#e8b910]'>
                 <div className="flex">
                     <p className="px-2"><img src={FB} alt="" className='h-8 w-auto'/></p>
