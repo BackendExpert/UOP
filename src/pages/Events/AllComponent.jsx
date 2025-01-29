@@ -7,14 +7,16 @@ const AllComponent = () => {
   return (
     <div className='my-4 md:px-28 px-4 bg-gray-200 py-16'>
         <div className="md:flex">
-            <div className="md:w-1/3 md:mx-4">
-                <QuickLinks />
-            </div>
-            <div className="md:w-1/3 md:mr-2">
+            <div className="md:w-1/2 md:mx-4">
                 <Events />
             </div>
-            <div className="md:w-1/3 md:ml-2">
-                <Notice />
+            <div className="">
+                <div className="w-full md:mr-2">
+                    <QuickLinks />
+                </div>
+                <div className="w-full md:ml-2">
+                    <Notice />
+                </div>
             </div>
         </div>
     </div>
