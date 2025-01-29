@@ -34,7 +34,8 @@ const Programmes = () => {
                         <div key={courseIndex}>
                             <div 
                                 data-aos="zoom-in" 
-                                className="rounded w-full relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden"
+                                style={{ backgroundImage: `url(${course.img})` }}
+                                className="rounded w-full relative bg-cover bg-center py-32 text-center text-white group overflow-hidden"
                             >
                                 <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                                 
