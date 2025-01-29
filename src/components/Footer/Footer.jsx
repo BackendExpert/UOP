@@ -82,46 +82,48 @@ const Footer = () => {
             </div>
         </div>
 
+        <div className="flex justify-center space-x-6 mb-4">
+            <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                <div className="flex">
+                    <p className="px-2"><img src={FB} alt="" className='h-8 w-auto'/></p>
+                    <h1 className="mt-1">Facebook</h1>
+                </div>
+            </a>
+            <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                <div className="flex">
+                    <p className="px-2"><img src={X} alt="" className='h-8 w-auto'/></p>
+                    <h1 className="mt-1">Twitter</h1>
+                </div>
+            </a>
+            <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                <div className="flex">
+                    <p className="px-2"><img src={Inster} alt="" className='h-8 w-auto'/></p>
+                    <h1 className="mt-1">Instagram</h1>
+                </div>
+            </a>
+            <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                    <div className="flex">
+                    <p className="px-2"><img src={Youtube} alt="" className='h-8 w-auto'/></p>
+                    <h1 className="mt-1">Youtube</h1>
+                </div>
+            </a>
+
+            <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                <div className="flex">
+                    <p className="px-2"><img src={Linkedin} alt="" className='h-8 w-auto'/></p>
+                    <h1 className="mt-1"mt-1>Linkedin</h1>
+                </div>
+            </a>
+        </div>
+
+
+
+
         <div className="py-2 px-4 border-t border-[#e8b910] md:text-left text-center">            
             <div className="md:flex justify-between">
                 <div className="">
                     Copyright © {currentYear} University of Peradeniya . All rights reserved.
                 </div>
-
-                <div className="flex">
-                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
-                                            <div className="flex">
-                                                <p className="px-2"><img src={FB} alt="" className='h-8 w-auto'/></p>
-                                                <h1 className="">Facebook</h1>
-                                            </div>
-                                        </a>
-                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
-                                            <div className="flex">
-                                                <p className="px-2"><img src={X} alt="" className='h-8 w-auto'/></p>
-                                                <h1 className="">Twitter</h1>
-                                            </div>
-                                        </a>
-                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
-                                            <div className="flex">
-                                                <p className="px-2"><img src={Inster} alt="" className='h-8 w-auto'/></p>
-                                                <h1 className="">Instagram</h1>
-                                            </div>
-                                        </a>
-                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
-                                            <div className="flex">
-                                                <p className="px-2"><img src={Youtube} alt="" className='h-8 w-auto'/></p>
-                                                <h1 className="">Youtube</h1>
-                                            </div>
-                                        </a>
-
-                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
-                                            <div className="flex">
-                                                <p className="px-2"><img src={Linkedin} alt="" className='h-8 w-auto'/></p>
-                                                <h1 className="">Linkedin</h1>
-                                            </div>
-                                        </a>
-                                </div>
-
             </div>
         </div>
     </div>
