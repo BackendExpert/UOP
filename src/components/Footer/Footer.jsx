@@ -42,18 +42,58 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="w-full md:my-0 my-8">
-                            <h1 className="uppercase font-semibold text-xl">Information for</h1>
-                            <hr className='w-3/4 my-2'/>
-                            <div className="mt-8">
-                                {
-                                    informationFor.map((data, index) => {
-                                        return (
-                                            <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
-                                                <a href={data.link}>{data.name}</a>
-                                            </ul>
-                                        )
-                                    })
-                                }
+                            <div className="">
+                                <h1 className="uppercase font-semibold text-xl">Information for</h1>
+                                <hr className='w-3/4 my-2'/>
+                                <div className="mt-8">
+                                    {
+                                        informationFor.map((data, index) => {
+                                            return (
+                                                <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
+                                                    <a href={data.link}>{data.name}</a>
+                                                </ul>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                            <div className="mt-4">
+                                <h1 className="uppercase font-semibold text-xl">Information for</h1>
+                                <hr className='w-3/4 my-2'/>
+                                <div className="md:grid grid-cols-2 gap-4 mt-4">
+                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                                            <div className="flex">
+                                                <p className="px-2"><FaFacebook className='h-6 w-auto'/></p>
+                                                <h1 className="">Facebook</h1>
+                                            </div>
+                                        </a>
+                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                                            <div className="flex">
+                                                <p className="px-2"><FaXTwitter className='h-6 w-auto'/></p>
+                                                <h1 className="">Twitter</h1>
+                                            </div>
+                                        </a>
+                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                                            <div className="flex">
+                                                <p className="px-2"><FaInstagram className='h-6 w-auto'/></p>
+                                                <h1 className="">Instagram</h1>
+                                            </div>
+                                        </a>
+                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                                            <div className="flex">
+                                                <p className="px-2"><FaYoutube className='h-6 w-auto'/></p>
+                                                <h1 className="">Youtube</h1>
+                                            </div>
+                                        </a>
+
+                                        <a href="#" className='duration-500 hover:text-[#e8b910]'>
+                                            <div className="flex">
+                                                <p className="px-2"><FaLinkedin className='h-6 w-auto'/></p>
+                                                <h1 className="">Linkedin</h1>
+                                            </div>
+                                        </a>
+
+                                </div>
                             </div>
                         </div>
                         <div className="w-full md:my-0 my-8">
@@ -79,27 +119,7 @@ const Footer = () => {
                 <div className="">
                     Copyright © {currentYear} University of Peradeniya . All rights reserved.
                 </div>
-                <div className="md:mt-0 mt-4 flex justify-center items-center">
-                    <div className="flex">
-                        <a href="#">
-                            <p className="px-4"><FaFacebook /></p>
-                        </a>
-                        <a href="#">
-                            <p className="px-4"><FaXTwitter /></p>
-                        </a>
-                        <a href="#">
-                            <p className="px-4"><FaInstagram /></p>
-                        </a>
-                        <a href="#">
-                            <p className="px-4"><FaYoutube /></p>
-                        </a>
-                        <a href="#">
-                            <p className="px-4"><FaLinkedin /></p>   
-                        </a>                    
-                             
-                                                     
-                    </div>
-                </div>
+
             </div>
         </div>
     </div>
