@@ -19,7 +19,7 @@ const LearnAtUop = () => {
                 </div>
             </div>
         </div>        
-    ))}
+        ))}
 
         <center>
             <a href="#">
