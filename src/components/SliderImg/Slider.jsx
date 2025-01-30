@@ -12,6 +12,10 @@ const Slider = () => {
         UopImg1,
         UopImg2,
         UopImg3,
+        "https://wallpapercave.com/wp/wp11440838.jpg",
+        "https://wallpapercave.com/wp/wp11440840.jpg",
+        "https://wallpapercave.com/wp/wp9482512.jpg",
+        "https://wallpapercave.com/wp/wp9482512.jpg",
     ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
