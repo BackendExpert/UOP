@@ -10,7 +10,7 @@ const DataCount = () => {
             {
                 dataforcount.map((data, index) => {
                     return (
-                        <div className="bg-[#560606] text-white text-center py-4 rounded-lg shadow-lg px-2 md:my-0 my-4" key={index}>
+                        <div className="text-[#560606] text-center py-4 px-2 md:my-0 my-4" key={index}>
                             <h1 className="py-2 text-lg uppercase font-semibold">{data.name}</h1>
                             <center>
                                 <div className="py-2">
