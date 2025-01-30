@@ -1,5 +1,6 @@
 import React from 'react'
 import { serviceData } from '../../components/ServiceData/ServiceData'
+import { FaLink } from 'react-icons/fa6'
 
 const Services = () => {
   return (
@@ -10,9 +11,12 @@ const Services = () => {
             {
                 serviceData.map((service, index) => {
                     return (
-                        <div className="" key={index}>
-
-                        </div>
+                        <a href="" key={index}>
+                            <div className="flex p-4 border-b border-[#560606]/20 duration-500 hover:bg-[#e8b910] hover:text-[#560606]" >
+                                <div className="mt-2"><FaLink className='h-4 w-auto'/> </div>
+                                <h1 className="text-lg pl-2">{service.name}</h1>
+                            </div>
+                        </a>
                     )
                 })
             }

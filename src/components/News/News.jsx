@@ -32,14 +32,6 @@ const newsdata = [
         img: newsimg,
         link: '#'
     },
-    {
-        id: 5,
-        name: 'NEWS 5',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
 ]
 
 export { newsdata }
