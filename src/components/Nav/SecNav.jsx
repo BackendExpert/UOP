@@ -36,17 +36,17 @@ const SecNav = () => {
 
   return (
     <div className="border-t border-[#e8b910]">
-        <div className='md:px-[6%] px-4 py-4 bg-[#560606] text-white'>
+        <div className='lg:px-[6%] px-4 py-4 bg-[#560606] text-white'>
 
 
         <div className=''>
 
                 
                 <div className="flex justify-between">
-                    <div className="md:hidden block">
+                    <div className="lg:hidden block">
                         <img src={uoplogo} alt="" className='h-8 w-auto'/>
                     </div>  
-                    <div className="md:hidden block flex justify-end">
+                    <div className="lg:hidden block flex justify-end">
 
                         {
                             menuopen === false ? 
@@ -65,7 +65,7 @@ const SecNav = () => {
                 
 
 
-                <div className="md:block hidden flex justify-end">
+                <div className="lg:block hidden flex justify-end">
                     <div className="flex relative">
                         {secNavData.map((data, index) => {
                             return (
@@ -151,12 +151,12 @@ const SecNav = () => {
 
 
         <div 
-            className={`pb-12 md:my-4 my-8 p-8 w-auto absolute mt-2 right-8 ml-8 bg-[#560606] text-white shadow-lg rounded-lg p-4 transform transition-opacity duration-300 ease-in-out ${
+            className={`pb-12 lg:my-4 my-8 p-8 w-auto absolute mt-2 right-8 ml-8 bg-[#560606] text-white shadow-lg rounded-lg p-4 transform transition-opacity duration-300 ease-in-out ${
                 menuopen ? 'opacity-100' : 'opacity-0 pointer-events-none' 
             }`}
         >
      
-            <div className="md:grid grid-cols-4 gap-4 max-h-screen overflow-y-auto scrollbar-hidden">
+            <div className="lg:grid grid-cols-4 gap-4 max-h-screen overflow-y-auto scrollbar-hidden">
                 {
                     secNavData.map((data, index) => {
                         return (

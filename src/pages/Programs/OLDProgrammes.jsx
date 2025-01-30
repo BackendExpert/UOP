@@ -4,9 +4,9 @@ import DefaultBtn from '../../components/Buttons/DefaultBtn'
 
 const OLDProgrammes = () => {
   return (
-    <div className='bg-gray-200 py-8 md:px-28 px-4'>
-        <div className="md:flex mr-4">
-            <div  data-aos="zoom-in" className="md:mb-0 mb-8 md:w-1/2 md:px-16 px:8 md:flex items-center justify-center">
+    <div className='bg-gray-200 py-8 lg:px-28 px-4'>
+        <div className="lg:flex mr-4">
+            <div  data-aos="zoom-in" className="lg:mb-0 mb-8 lg:w-1/2 lg:px-16 px:8 lg:flex items-center justify-center">
                 <div className="">
                     <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Study at UOP</h1>
 
@@ -15,10 +15,10 @@ const OLDProgrammes = () => {
                     </p>
                 </div>
             </div>
-            <div className="md:w-1/2">
-                <div className="md:flex ">
+            <div className="lg:w-1/2">
+                <div className="lg:flex ">
 
-                    <div  data-aos="zoom-in" className="rounded md:my-0 my-4 md:mr-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                    <div  data-aos="zoom-in" className="rounded lg:my-0 my-4 lg:mr-4 w-full lg:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                         <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                             <h1 className="text-xl font-semibold">{programData[0].name}</h1>
@@ -37,7 +37,7 @@ const OLDProgrammes = () => {
                         </div>
                     </div>
 
-                    <div  data-aos="zoom-in" className="rounded md:ml-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                    <div  data-aos="zoom-in" className="rounded lg:ml-4 w-full lg:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                         <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                         <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                             <h1 className="text-xl font-semibold">{programData[1].name}</h1>
@@ -58,7 +58,7 @@ const OLDProgrammes = () => {
 
 
                 </div>
-                <div  data-aos="zoom-in" className="rounded mt-4 w-full md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
+                <div  data-aos="zoom-in" className="rounded mt-4 w-full lg:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white group overflow-hidden">
                     <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                     <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                         <h1 className="text-xl font-semibold">{programData[2].name}</h1>

@@ -14,7 +14,7 @@ const monthNames = [
 const JanNewYear = () => {
     const currentYear = new Date().getFullYear();
   return (
-    <div data-aos="zoom-in" className='md:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white'>
+    <div data-aos="zoom-in" className='lg:px-28 px-4 relative bg-[url(https://wallpapercave.com/wp/wp11704432.jpg)] bg-cover bg-center py-32 text-center text-white'>
         <div className="absolute inset-0 bg-black opacity-80"></div> 
         <div className="relative">
             <h1 className="py-2 text-2xl sg-font">A new year is a blank page, write your best story yet</h1>
@@ -29,7 +29,7 @@ const JanNewYear = () => {
 const Aprilfunction = () => {
         const currentYear = new Date().getFullYear();
     return (
-    <div data-aos="zoom-in" className='md:px-28 px-4 relative bg-[url(https://t4.ftcdn.net/jpg/07/19/98/07/240_F_719980764_TTbvQ423nXXYgN8mcPxP6XXLDVIHUg4T.jpg)] bg-cover bg-center py-32 text-center text-white'>
+    <div data-aos="zoom-in" className='lg:px-28 px-4 relative bg-[url(https://t4.ftcdn.net/jpg/07/19/98/07/240_F_719980764_TTbvQ423nXXYgN8mcPxP6XXLDVIHUg4T.jpg)] bg-cover bg-center py-32 text-center text-white'>
         <div className="absolute inset-0 bg-black opacity-80"></div> 
         <div className="relative">
             <h1 className="py-2 text-2xl sg-font">Have an Enjoyable New Year !!!</h1>

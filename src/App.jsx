@@ -39,7 +39,7 @@ export default function App() {
 
   return (
       <BrowserRouter>
-        <div className="md:block hidden">
+        <div className="lg:block hidden">
           <MainNav />
         </div>
         {shouldShowNavBar && (
@@ -48,7 +48,7 @@ export default function App() {
             showNavBar ? "translate-y-0" : "-translate-y-full"
           } ${
             isTopOfPage
-              ? "md:mt-28"
+              ? "lg:mt-28"
               : "shadow-md transition-colors duration-500"
           }`}
           >

@@ -6,14 +6,14 @@ const News = () => {
   return (
     <div className='px-4 ' >
         <h1 className=" text-center font-semibold text-2xl text-[#560606] mb-1">NEWS</h1>
-        <div className="md:flex">
-            <div className="md:grid grid-cols-1 gap-6">
+        <div className="lg:flex">
+            <div className="lg:grid grid-cols-1 gap-6">
                 {
                     newsdata.map((news, index) => {
                         return (
                             <div data-aos="zoom-in" className="py-8 bg-white my-2 p-4 rounded shadow-xl" key={index}>
                                 <div className="">
-                                    <div className="w-full  md:my-0 my-2">
+                                    <div className="w-full  lg:my-0 my-2">
                                         <h1 className="font-semibold text-xl">{news.name}</h1>
                                         <p className="">{news.desc}</p>
                                         <div className="flex justify-between pt-2">

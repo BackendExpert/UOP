@@ -6,11 +6,11 @@ import CountUp from 'react-countup'
 const DataCount = () => {
   return (
     <div className='my-8'>
-        <div className="md:grid grid-cols-5 gap-8">
+        <div className="grid lg:grid-cols-5 grid-cols-2 lg:gap-8">
             {
                 dataforcount.map((data, index) => {
                     return (
-                        <div className="text-[#560606] text-center py-4 px-2 md:my-0 my-4" key={index}>
+                        <div className="text-[#560606] text-center py-4 px-2 lg:my-0 my-4" key={index}>
                             <h1 className="py-2 text-lg uppercase font-semibold">{data.name}</h1>
                             <center>
                                 <div className="py-2">
