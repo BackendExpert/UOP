@@ -7,31 +7,25 @@ const dataforcount = [
     {
         id: 1,
         name: 'Internal Students',
-        value: 2000,
+        value: 10000,
         icon: FaUserGraduate,
     },
     {
         id: 2,
-        name: 'External Students',
-        value: 2000,
-        icon: IoIosSchool,
-    },
-    {
-        id: 3,
         name: 'Faculties',
         value: 9,
         icon: FaSchool,
     },
     {
-        id: 4,
+        id: 3,
         name: 'Academic Staff',
-        value: 150,
+        value: 500,
         icon: FaUserTie,
     },
     {
-        id: 5,
+        id: 4,
         name: 'Administrative Staff',
-        value: 24,
+        value: 1000,
         icon: FaUserLock,
     },
 ]

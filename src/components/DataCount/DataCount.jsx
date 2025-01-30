@@ -6,7 +6,7 @@ import CountUp from 'react-countup'
 const DataCount = () => {
   return (
     <div className='my-8'>
-        <div className="md:grid grid-cols-5 gap-8">
+        <div className="md:grid grid-cols-4 gap-8">
             {
                 dataforcount.map((data, index) => {
                     return (
@@ -17,7 +17,7 @@ const DataCount = () => {
                                     <data.icon className='h-10 w-auto'/>
                                 </div>
                             </center>
-                            <h1 className="py-2 text-xl"><CountUp end={data.value} duration={10}/>+ </h1>
+                            <h1 className="py-2 text-xl"><CountUp end={data.value} duration={10}/> {data.id === 2 ? <span></span> : <span>+</span>}</h1>
                         </div>
                     )
                 })
