@@ -35,7 +35,7 @@ const HomePage = () => {
       {/* <Events /> */}
       <AllComponent />
       {/* <SeasonsGreetings /> */}
-      <News />
+      {/* <News /> */}
       <Programmes />
     </div>
   )

@@ -2,22 +2,36 @@ import React from 'react'
 import Events from './Events'
 import QuickLinks from './QuickLinks'
 import Notice from './Notice'
+import News from '../News/News'
+import LearnAtUop from './LearnAtUop'
+import Services from './Services'
 
 const AllComponent = () => {
   return (
-    <div className='my-4 md:px-28 px-4 bg-gray-200 py-16'>
-        <div className="md:flex">
-            <div className="md:w-1/2 md:mx-8 md:my-0 my-4">
+    <div className='my-4 md:px-16 px-4 bg-gray-200 py-16'>
+        <div className="md:grid grid-cols-4 gap-4">
+            <div className="">
                 <Events />
             </div>
-            <div className="md:w-1/2">
-                <div className="w-full md:mr-2 md:my-0 my-4">
-                    <QuickLinks />
+            <div className="">
+                <News />
+            </div>
+            <div className="">
+                <div className="">
+                    <LearnAtUop />                
+                </div>
+                <div className="">
+                    <Services />
                 </div>
             </div>
-        </div>
-        <div className="w-full md:ml-2 md:my-0 my-4">
-            <Notice />
+            <div className="">
+                <div className="">
+                    <QuickLinks />
+                </div>
+                <div className="">
+                    <Notice />
+                </div>               
+            </div>
         </div>
     </div>
   )
