@@ -1,18 +1,17 @@
 import React, { useState, useEffect } from "react";
 import logo from '../../assets/logo.png'
 import UopSci from '../../assets/UopSci.jpg'
+import UopImg1 from '../../assets/12.jpg'
+import UopImg2 from '../../assets/13.jpg'
+import UopImg3 from '../../assets/14.jpg'
 
 const Slider = () => {
     const images = [
         "https://eng.pdn.ac.lk/wp-content/uploads/2022/12/slide-4.jpg",
         UopSci,
-        "https://wallpapercave.com/wp/wp11440840.jpg",
-        "https://wallpapercave.com/wp/wp9482512.jpg",
-        "https://roar.media/english/life/wp-content/uploads/2017/10/31-1180x843.jpg",
-        "https://wallpapercave.com/wp/wp11440838.jpg",
-        "https://wallpapercave.com/wp/wp11440840.jpg",
-        "https://wallpapercave.com/wp/wp9482512.jpg",
-        "https://wallpapercave.com/wp/wp9482512.jpg",
+        UopImg1,
+        UopImg2,
+        UopImg3,
     ];
 
   const [currentIndex, setCurrentIndex] = useState(0);

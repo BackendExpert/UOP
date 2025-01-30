@@ -32,19 +32,34 @@ const Footer = () => {
                 </div>
                 <div className="md:w-2/3">
                     <div className="md:grid grid-cols-3 gap-4">
-                        <div className="w-full md:my-0 my-8">
-                            <h1 className="uppercase font-semibold text-xl">main navigation</h1>
-                            <hr className='w-3/4 my-2'/>
-                            <div className="mt-8">
-                                {
-                                    mainNavigation.map((data, index) => {
-                                        return (
-                                            <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
-                                                <a href={data.link}>{data.name}</a>
-                                            </ul>
-                                        )
-                                    })
-                                }
+                        <div className="">
+                            <div className="w-full md:my-0 my-8">
+                                <h1 className="uppercase font-semibold text-xl">main navigation</h1>
+                                <hr className='w-3/4 my-2'/>
+                                <div className="mt-4">
+                                    {
+                                        mainNavigation.map((data, index) => {
+                                            return (
+                                                <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
+                                                    <a href={data.link}>{data.name}</a>
+                                                </ul>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                            <div className="w-full md:my-0 my-8">
+                                <h1 className="uppercase font-semibold text-xl mt-4">location</h1>
+                                <hr className='w-3/4 my-2'/>
+                                <div className="mt-4">
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8760289680417!2d80.59481527558846!3d7.254947514230262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368deaaaaaaab%3A0xb5476b88282d47fb!2sUniversity%20of%20Peradeniya!5e0!3m2!1sen!2slk!4v1738049825365!5m2!1sen!2slk" 
+                                        className='h-40 w-auto mt-4'
+                                        style={{ border: '1px'}} 
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade">
+                                    </iframe>
+                                </div>
                             </div>
                         </div>
                         <div className="w-full md:my-0 my-8">
@@ -65,17 +80,19 @@ const Footer = () => {
                             </div>
                         </div>
                         <div className="w-full md:my-0 my-8">
-                            <h1 className="uppercase font-semibold text-xl">location</h1>
+                            <h1 className="uppercase font-semibold text-xl">Quick Links</h1>
                             <hr className='w-3/4 my-2'/>
-                            
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3957.8760289680417!2d80.59481527558846!3d7.254947514230262!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ae368deaaaaaaab%3A0xb5476b88282d47fb!2sUniversity%20of%20Peradeniya!5e0!3m2!1sen!2slk!4v1738049825365!5m2!1sen!2slk" 
-                                className='h-80 w-auto mt-4'
-                                style={{ border: '1px'}} 
-                                allowfullscreen="" 
-                                loading="lazy" 
-                                referrerpolicy="no-referrer-when-downgrade">
-                            </iframe>
-
+                            <div className="mt-8">
+                                    {
+                                        quickLinks.map((quickLink, index) => {
+                                            return (
+                                                <ul className='md:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
+                                                    <a href={quickLink.link}>{quickLink.name}</a>
+                                                </ul>
+                                            )
+                                        })
+                                    }
+                            </div>                          
                         </div>
                     </div>
                 </div>
