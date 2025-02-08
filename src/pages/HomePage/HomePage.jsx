@@ -8,6 +8,7 @@ import Programs from '../Programs/Programs';
 // import Programmes from '../Programs/OLDProgrammes';
 import AllComponent from '../Events/AllComponent';
 import Programmes from '../Programs/Programmes';
+import UpdatedAC from '../Events/UpdatedAC';
 
 
 const HomePage = () => {
@@ -31,6 +32,9 @@ const HomePage = () => {
       <Slider />
 
       {/* <Events /> */}
+      <div className="">
+      {/* <UpdatedAC /> */}
+      </div>
       <AllComponent />
       {/* <SeasonsGreetings /> */}
       {/* <News /> */}
