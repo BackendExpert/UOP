@@ -12,10 +12,10 @@ import Linkedin from '../../assets/Linked.png'
 const Footer = () => {
     const currentYear = new Date().getFullYear();
   return (
-    <div className="bg-[#560606] lg:px-28 px-4 text-white">
+    <div className="bg-[#560606] xl:px-28 px-4 text-white">
         <div className='py-16'>
-            <div className="lg:flex">
-                <div className="lg:w-1/3">
+            <div className="xl:flex">
+                <div className="xl:w-1/3">
                     <img src={UopLogo} alt="" className='h-20 w-auto'/>
 
                     <div className="mt-4 ml-8">
@@ -30,17 +30,17 @@ const Footer = () => {
                         <p className="">Fax : <span>+94 81 238 8102</span></p>
                     </div>
                 </div>
-                <div className="lg:w-2/3">
-                    <div className="lg:grid grid-cols-3 gap-4">
+                <div className="xl:w-2/3">
+                    <div className="xl:grid grid-cols-3 gap-4">
                         <div className="">
-                            <div className="w-full lg:my-0 my-8">
+                            <div className="w-full xl:my-0 my-8">
                                 <h1 className="uppercase font-semibold text-xl">main navigation</h1>
                                 <hr className='w-3/4 my-2'/>
                                 <div className="mt-4">
                                     {
                                         mainNavigation.map((data, index) => {
                                             return (
-                                                <ul className='lg:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
+                                                <ul className='xl:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
                                                     <a href={data.link}>{data.name}</a>
                                                 </ul>
                                             )
@@ -48,7 +48,7 @@ const Footer = () => {
                                     }
                                 </div>
                             </div>
-                            <div className="w-full lg:my-0 my-8">
+                            <div className="w-full xl:my-0 my-8">
                                 <h1 className="uppercase font-semibold text-xl mt-4">location</h1>
                                 <hr className='w-3/4 my-2'/>
                                 <div className="mt-4">
@@ -62,7 +62,7 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full lg:my-0 my-8">
+                        <div className="w-full xl:my-0 my-8">
                             <div className="">
                                 <h1 className="uppercase font-semibold text-xl">Information for</h1>
                                 <hr className='w-3/4 my-2'/>
@@ -70,7 +70,7 @@ const Footer = () => {
                                     {
                                         informationFor.map((data, index) => {
                                             return (
-                                                <ul className='lg:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
+                                                <ul className='xl:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
                                                     <a href={data.link}>{data.name}</a>
                                                 </ul>
                                             )
@@ -79,14 +79,14 @@ const Footer = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="w-full lg:my-0 my-8">
+                        <div className="w-full xl:my-0 my-8">
                             <h1 className="uppercase font-semibold text-xl">Quick Links</h1>
                             <hr className='w-3/4 my-2'/>
                             <div className="mt-8">
                                     {
                                         quickLinks.map((quickLink, index) => {
                                             return (
-                                                <ul className='lg:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
+                                                <ul className='xl:ml-0 ml-8 duration-500 hover:pl-2 hover:text-[#e8b910] hover:font-semibold py-1 font text-lg' key={index}>
                                                     <a href={quickLink.link}>{quickLink.name}</a>
                                                 </ul>
                                             )
@@ -99,7 +99,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className="lg:flex justify-center lg:space-x-6 mb-4 grid grid-cols-2 gap-2">
+        <div className="xl:flex justify-center xl:space-x-6 mb-4 grid grid-cols-2 gap-2">
             <a href="#" className='duration-500 hover:text-[#e8b910]'>
                 <div className="flex">
                     <p className="px-2"><img src={FB} alt="" className='h-8 w-auto'/></p>
@@ -136,8 +136,8 @@ const Footer = () => {
 
 
 
-        <div className="py-2 px-4 border-t border-[#e8b910] lg:text-left text-center">            
-            <div className="lg:flex justify-between">
+        <div className="py-2 px-4 border-t border-[#e8b910] xl:text-left text-center">            
+            <div className="xl:flex justify-between">
                 <div className="">
                     Copyright © {currentYear} University of Peradeniya . All rights reserved.
                 </div>

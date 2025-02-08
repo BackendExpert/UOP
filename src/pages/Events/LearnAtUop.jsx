@@ -8,7 +8,7 @@ const LearnAtUop = () => {
         <div className="">
 
         {programData.map((program, index) => (
-        <div className="lg:flex py-4" key={index}>
+        <div className="xl:flex py-4" key={index}>
             {/* Left Section - Program Info */}
             <div className="w-full">
                 <div data-aos="zoom-in" className="w-full p-8 rounded shadow-xl text-center bg-white">

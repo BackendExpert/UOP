@@ -5,16 +5,16 @@ import DefaultBtn from '../../components/Buttons/DefaultBtn';
 
 const OldEvents = () => {
   return (
-    <div className="relative z-10 lg:px-28 px-4 py-16 text-[#560606] bg-gray-200">
+    <div className="relative z-10 xl:px-28 px-4 py-16 text-[#560606] bg-gray-200">
         <h1 className="text-center font-semibold text-4xl">Events</h1>      
         <p className="py-4 text-center">All Upcoming Events of the University will appear here</p>
 
         <div className="my-4">
-            <div className="lg:grid grid-cols-4 gap-4 py-8">
+            <div className="xl:grid grid-cols-4 gap-4 py-8">
                 {
                     testeventdata.map((event, index) => {
                         return (
-                            <div data-aos="zoom-in" className="relative overflow-hidden bg-white lg:my-0 my-4 py-4 rounded-md shadow-xl text-center px-4 duration-500 hover:border-b-4 hover:border-[#e8b910]" key={index}>
+                            <div data-aos="zoom-in" className="relative overflow-hidden bg-white xl:my-0 my-4 py-4 rounded-md shadow-xl text-center px-4 duration-500 hover:border-b-4 hover:border-[#e8b910]" key={index}>
                                 <h1 className="text-xl font-semibold">{event.name}</h1>
                                 <p className="py-4">
                                     {event.decs}

@@ -35,7 +35,7 @@ const HomePage = () => {
       {/* <SeasonsGreetings /> */}
       {/* <News /> */}
       <Programmes />
-      <div className="lg:px-28 px-4">
+      <div className="xl:px-28 px-4">
         <DataCount />
       </div>
     </div>
