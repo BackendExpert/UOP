@@ -29,14 +29,15 @@ const HomePage = () => {
   return (
     <div className={`${ atTop ? 'mt-12' : 'mt-0'}`}>
       <Slider />
-      <div className="lg:px-28 px-4">
-        <DataCount />
-      </div>
+
       {/* <Events /> */}
       <AllComponent />
       {/* <SeasonsGreetings /> */}
       {/* <News /> */}
       <Programmes />
+      <div className="lg:px-28 px-4">
+        <DataCount />
+      </div>
     </div>
   )
 }
