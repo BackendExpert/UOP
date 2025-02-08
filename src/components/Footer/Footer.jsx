@@ -31,7 +31,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="xl:w-2/3">
-                    <div className="xl:grid grid-cols-3 gap-4">
+                    <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
                         <div className="">
                             <div className="w-full xl:my-0 my-8">
                                 <h1 className="uppercase font-semibold text-xl">main navigation</h1>

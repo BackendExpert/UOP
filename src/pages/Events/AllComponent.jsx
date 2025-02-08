@@ -18,19 +18,16 @@ const AllComponent = () => {
             </div>
             <div className="xl:my-0 my-4">
                 <div className="">
-                    <LearnAtUop />                
-                </div>
-                <div className="my-6">
-                    <Services />
-                </div>
+                    <Notice />
+                </div>   
             </div>
             <div className="xl:my-0 my-4">
                 <div className="">
                     <QuickLinks />
                 </div>
                 <div className="my-6">
-                    <Notice />
-                </div>               
+                    <Services />
+                </div>            
             </div>
         </div>
     </div>
