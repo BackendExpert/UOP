@@ -15,7 +15,7 @@ const RsearchAll = () => {
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quisquam soluta aliquam voluptatum obcaecati magni minus cumque quam at placeat officiis tempora iure ad, eligendi et quidem iste, rem facere!
                     </p>
 
-                    <div className="">
+                    <div className="md:block hidden">
                         <BarChart />
                     </div>
                 </div>

@@ -17,9 +17,9 @@ const BarChart = () => {
         labels,
         datasets: [
             {
-                label: 'Dummy Data',
-                data: labels.map(() => Math.floor(Math.random() * 100) + 10),
-                backgroundColor: 'rgba(75, 192, 192, 0.5)',
+                label: 'Researchs and Innovations',
+                data: [45, 67, 89, 34, 76, 90],
+                backgroundColor: '#560606',
             },
         ],
     };
@@ -32,7 +32,7 @@ const BarChart = () => {
             },
             title: {
                 display: true,
-                text: 'Last 6 Months Data',
+                text: 'Last 6 Months Research and Innovation',
             },
         },
     };
