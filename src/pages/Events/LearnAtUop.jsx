@@ -14,7 +14,7 @@ const LearnAtUop = () => {
                 <div data-aos="zoom-in" className="w-full p-8 rounded shadow-xl text-center bg-white">
                     <h1 className="uppercase text-[#560606] font-semibold text-center py-4">
                         {program.name}
-                    </h1>
+                    </h1>                    
                     <p>{program.desc}</p>
                 </div>
             </div>
