@@ -5,7 +5,7 @@ import MainNav from "./components/Nav/MainNav";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import 'aos/dist/aos.css';
-import ResearchAll from "./pages/RsearchAll/ResearchAll";
+import ResearchAll from './pages/RsearchAll/RsearchAll'
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);

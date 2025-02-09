@@ -251,7 +251,7 @@ const secNavData = [
     {
         id: 6,
         name: 'Research',
-        link: '#'
+        link: '/RsearchAll'
     },
 
     // Centers & Units
