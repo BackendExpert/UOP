@@ -1,4 +1,5 @@
 import React from 'react'
+import { researchdata } from '../../components/ReseachSection/RSdata'
 
 const RSPage = () => {
   return (
@@ -11,6 +12,18 @@ const RSPage = () => {
                 <h1 className="uppercase text-[#560606] font-semibold text-center py-4">Research and Innovation</h1>
                 <p className="text-center py-4 px-8">About Research and Innovation at UOP</p>
             </div>
+        </div>
+
+        <div className="xl:grid grid-cols-4 gap-4">
+            {
+                researchdata.map((data, index) => {
+                    return (
+                        <div className="" key={index}>
+                            
+                        </div>
+                    )
+                })
+            }
         </div>
     
     </div>
