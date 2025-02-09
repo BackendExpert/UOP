@@ -5,6 +5,7 @@ import MainNav from "./components/Nav/MainNav";
 import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import 'aos/dist/aos.css';
+import ResearchAll from "./pages/RsearchAll/ResearchAll";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -57,6 +58,7 @@ export default function App() {
         )}
         <Routes>
           <Route path="/" element={<HomePage /> } />
+          <Route path="/RsearchAll" element={<ResearchAll />} />
         </Routes>
         <Footer />
       </BrowserRouter>
