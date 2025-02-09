@@ -8,7 +8,7 @@ const RSPage = () => {
         <div className="text-center py-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis optio dolorum exercitationem labore consectetur deleniti, sint possimus sequi est alias dolor, repellendus reiciendis! Nobis debitis placeat delectus, tempore esse ab.</div>
 
         <div className="xl:flex">
-            <div className="flex justify-center items-center xl:w-1/5 w-full">
+            <div className="flex justify-center items-center xl:w-1/5 w-full xl:my-0 my-6">
                 <div data-aos="zoom-in" className="w-full p-8 rounded shadow-xl text-center bg-gray-200">
                     <h1 className="uppercase text-[#560606] font-semibold text-center py-4">
                         Research and Innovation
@@ -17,11 +17,11 @@ const RSPage = () => {
                 </div>
             </div>
             <div className="w-full xl:ml-4">
-                <div className="xl:grid grid-cols-4 gap-4">
+                <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-4 ">
                     {
                         researchdata.map((data, index) => {
                             return (
-                                <div className="" key={index}>
+                                <div className="xl:my-0 my-6" key={index}>
                                     <div 
                                         data-aos="zoom-in" 
                                         style={{ backgroundImage: `url(${data.img})` }}
