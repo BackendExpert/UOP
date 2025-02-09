@@ -9,6 +9,7 @@ import Programs from '../Programs/Programs';
 import AllComponent from '../Events/AllComponent';
 import Programmes from '../Programs/Programmes';
 import UpdatedAC from '../Events/UpdatedAC';
+import RSPage from '../ResearchPage/RSPage';
 
 
 const HomePage = () => {
@@ -39,6 +40,7 @@ const HomePage = () => {
       {/* <SeasonsGreetings /> */}
       {/* <News /> */}
       <Programmes />
+      <RSPage />
       <div className="xl:px-28 px-4">
         <DataCount />
       </div>
