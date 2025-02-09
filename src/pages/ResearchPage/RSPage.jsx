@@ -7,7 +7,7 @@ const RSPage = () => {
         <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Research and Innovation</h1>
         <div className="text-center py-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis optio dolorum exercitationem labore consectetur deleniti, sint possimus sequi est alias dolor, repellendus reiciendis! Nobis debitis placeat delectus, tempore esse ab.</div>
 
-        <div className="xl:flex">
+        <div data-aos="zoom-in" className="xl:flex">
             <div className="flex justify-center items-center xl:w-1/5 w-full xl:my-0 my-6">
                 <div data-aos="zoom-in" className="w-full p-8 rounded shadow-xl text-center bg-gray-200">
                     <h1 className="uppercase text-[#560606] font-semibold text-center py-4">
