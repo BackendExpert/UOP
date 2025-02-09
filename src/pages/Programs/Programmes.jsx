@@ -28,8 +28,8 @@ const Programmes = () => {
             </div>
 
             {/* Right Section - Courses */}
-            <div className="w-full xl:ml-4 mt-4 xl:mt-0">
-                <div className="grid grid-cols-1 xl:grid-cols-5 md:grid-cols-3 gap-4">
+            <div className="w-full mt-4 xl:mt-0">
+                <div className="grid grid-cols-1 xl:grid-cols-5 md:grid-cols-3">
                     {program.courses.map((course, courseIndex) => (
                         <div key={courseIndex}>
                             <div 
