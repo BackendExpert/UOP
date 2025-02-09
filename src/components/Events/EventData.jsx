@@ -5,7 +5,11 @@ const testeventdata = [
         name: 'Event 1',
         decs: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate eveniet, repellat quod quia optio laboriosam hic quos ducimus reiciendis consequuntur expedita eaque possimus inventore deleniti, sed tenetur! Voluptatem, ipsam!',
         link: '#',
-        date: '25 May 2025'
+        day: {
+            year: '2025',
+            month: 'FEB',
+            date: '25'
+        }
     },
     {
         id: 2,
@@ -13,7 +17,11 @@ const testeventdata = [
         name: 'Event 1',
         decs: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate eveniet, repellat quod quia optio laboriosam hic quos ducimus reiciendis consequuntur expedita eaque possimus inventore deleniti, sed tenetur! Voluptatem, ipsam!',
         link: '#',
-        date: '25 May 2025'
+        day: {
+            year: '2025',
+            month: 'March',
+            date: '02'
+        }
     },
     {
         id: 3,
@@ -21,7 +29,11 @@ const testeventdata = [
         name: 'Event 1',
         decs: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate eveniet, repellat quod quia optio laboriosam hic quos ducimus reiciendis consequuntur expedita eaque possimus inventore deleniti, sed tenetur! Voluptatem, ipsam!',
         link: '#',
-        date: '25 May 2025'
+        day: {
+            year: '2025',
+            month: 'March',
+            date: '06'
+        }
     },
     // {
     //     id: 4,
@@ -29,7 +41,11 @@ const testeventdata = [
     //     name: 'Event 1',
     //     decs: 'Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolores voluptate eveniet, repellat quod quia optio laboriosam hic quos ducimus reiciendis consequuntur expedita eaque possimus inventore deleniti, sed tenetur! Voluptatem, ipsam!',
     //     link: '#',
-    //     date: '25 May 2025'
+            // day: {
+            //     year: '2025',
+            //     month: 'March',
+            //     date: '06'
+            // }
     // },
 ]
 

@@ -14,6 +14,11 @@ const Events = () => {
                         <div key={index} data-aos="zoom-in" style={{ backgroundImage: `url(${event.img})` }} className="bg-cover bg-center h-auto my-4 shadow-xl rounded w-full relative bg-white bg-cover bg-center py-32  group overflow-hidden">
                             <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
+                                <div className="text-xs text-center p-2 rounded-md absolute top-2 right-4 text-white font-semibold bg-gray-500">
+                                    <h1 className="">{event.day.year}</h1>
+                                    <h1 className="">{event.day.month}</h1>
+                                    <h1 className="">{event.day.date}</h1>
+                                </div>
                                 <h1 className="text-xl font-semibold text-white">{event.name}</h1>
                             </div>
                             <div className="p-4 absolute bg-[#e8b910] inset-0 flex items-center justify-center -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
