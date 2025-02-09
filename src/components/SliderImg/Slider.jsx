@@ -7,7 +7,6 @@ import UopImg3 from '../../assets/14.jpg'
 
 const Slider = () => {
     const images = [
-        "https://eng.pdn.ac.lk/wp-content/uploads/2022/12/slide-4.jpg",
         UopSci,
         UopImg1,
         UopImg2,
