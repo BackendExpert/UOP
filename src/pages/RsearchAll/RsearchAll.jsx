@@ -1,4 +1,5 @@
 import React from 'react'
+import BarChart from '../../components/Charts/BarChart'
 
 const RsearchAll = () => {
   return (
@@ -13,6 +14,10 @@ const RsearchAll = () => {
                     <p className='text-gray-500 mt-2'>
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet quisquam soluta aliquam voluptatum obcaecati magni minus cumque quam at placeat officiis tempora iure ad, eligendi et quidem iste, rem facere!
                     </p>
+
+                    <div className="">
+                        <BarChart />
+                    </div>
                 </div>
             </div>
         </div>
