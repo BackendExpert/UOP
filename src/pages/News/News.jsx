@@ -5,9 +5,9 @@ import { MdDateRange } from "react-icons/md";
 const News = () => {
   return (
     <div className='px-4 ' >
-        <h1 className=" text-center font-semibold text-2xl text-[#560606] mb-1">NEWS</h1>
+        <h1 className="font-semibold text-2xl text-[#560606] mb-1 mt-4">NEWS</h1>
         <div className="xl:flex">
-            <div className="xl:grid grid-cols-1 gap-6">
+            <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
                 {
                     newsdata.map((news, index) => {
                         return (

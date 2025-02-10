@@ -5,9 +5,9 @@ import DefaultBtn from '../../components/Buttons/DefaultBtn'
 const Notice = () => {
   return (
     <div>
-        <h1 className="text-center text-2xl font-semibold uppercase text-[#560606]">Notice</h1>
+        <h1 className="text-2xl font-semibold uppercase text-[#560606] mt-4">Notice</h1>
 
-        <div className="xl:grid grid-cols-1 gap-4">
+        <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
             {
                 noticeData.map((notice, index) => {
                     return (
