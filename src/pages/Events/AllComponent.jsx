@@ -19,11 +19,17 @@ const AllComponent = () => {
     <div className='xl:px-16 px-4 bg-gray-200 py-16'>
         <div className="xl:flex">
             <div className="w-full xl:mr-4">
-                <div className="">
-                    <div className="flex text-xl font-semibold uppercase justify-between w-full bg-[#560606] py-4 px-6 text-white rounded-md shadow-xl">
-                        <h1 className="cursor-pointer" onClick={() => headlemenuflex({ name: "Events"})}>Events</h1>
-                        <h1 className="cursor-pointer" onClick={() => headlemenuflex({ name: "News"})}>News</h1>
-                        <h1 className="cursor-pointer" onClick={() => headlemenuflex({ name: "Notice"})}>Notice</h1>
+                <div className="bg-gray-200">
+                    <div className="flex text-xl font-semibold uppercase justify-around text-[#560606]">
+                        <div className={`${menuflex === "Events" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#560606]' }  md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Events"})}>
+                            <h1 className="" >Events</h1>
+                        </div>
+                        <div className={`${menuflex === "News" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#560606]' }  md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "News"})}>
+                            <h1 className="" >News</h1>
+                        </div>
+                        <div className={`${menuflex === "Notice" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#560606]' }  md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Notice"})}>
+                            <h1 className="" >Notice</h1>
+                        </div>
                     </div>
                 </div>
 
