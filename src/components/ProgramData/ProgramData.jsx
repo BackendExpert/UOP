@@ -73,12 +73,6 @@ const programData = [
                 img: 'https://wallpapercave.com/wp/wp1895394.jpg',
                 link: '#'
             },
-            {
-                id: 4,
-                name: 'Short Courses',
-                img: 'https://wallpapercave.com/wp/wp1895412.jpg',
-                link: '#'
-            },            
         ]
     },
     {
