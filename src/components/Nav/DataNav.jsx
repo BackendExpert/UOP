@@ -210,18 +210,12 @@ const secNavData = [
         link: '#'
     },
 
-    // Alumni
-    
-    {
-        id: 7,
-        name: 'Alumni',
-        link: '#'
-    },
+
 
         // administration
 
         {
-            id: 8,
+            id: 7,
             name: "Administration",
             submenu: [
                 {
@@ -281,6 +275,14 @@ const secNavData = [
                 }
             ]
         },
+
+            // Alumni
+    
+    {
+        id: 8,
+        name: 'Alumni',
+        link: '#'
+    },
 
     // Vacancies
 
