@@ -11,11 +11,13 @@ const News = () => {
                 {
                     newsdata.map((news, index) => {
                         return (
-                            <div data-aos="zoom-in" className="py-8 bg-white my-2 p-4 rounded shadow-xl" key={index}>
+                            <div data-aos="zoom-in" className="bg-white my-2 p-4 rounded shadow-xl" key={index}>
                                 <div className="">
-                                    <div className="w-full  xl:my-0 my-2">
+                                    <div className="">
+                                        <img src={news.img} alt="" className='mb-2'/>
+                                    </div>
+                                    <div className="w-full xl:my-0 my-2">
                                         <h1 className="font-semibold text-xl">{news.name}</h1>
-                                        <p className="">{news.desc}</p>
                                         <div className="flex justify-between pt-2">
                                             <div className="flex">
                                                 <div className=""><MdDateRange className='h-4 w-auto fill-gray-500' /></div>

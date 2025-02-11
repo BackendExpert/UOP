@@ -17,8 +17,13 @@ const Notice = () => {
                                 {notice.desc}
                             </p>
 
-                            <div className="mt-4">
-                                <DefaultBtn type={'button'} btnvalue={'Read More'}/>
+                            <div className="flex justify-between">
+                                <div className="mt-4">
+                                    <DefaultBtn type={'button'} btnvalue={'Read More'}/>
+                                </div>
+                                <div className="mt-4 text-sm text-gray-500 mt-4">
+                                    {notice.date}
+                                </div>
                             </div>
                         </div>
                     )
