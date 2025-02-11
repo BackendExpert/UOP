@@ -156,74 +156,12 @@ const secNavData = [
         ]
     },
 
-    // administration
 
-    {
-        id: 3,
-        name: "Administration",
-        submenu: [
-            {
-                id: 1,
-                name: 'Administrative Division',
-                menusubL: [
-                    { id: 1, link: '#', name: 'Academic Establishments'}, 
-                    { id: 2, link: '#', name: 'Capital Works'}, 
-                    { id: 3, link: '#', name: 'Corporate Management'}, 
-                    { id: 4, link: '#', name: 'Council & Academic'}, 
-                    { id: 5, link: '#', name: 'General Service'}, 
-                    { id: 6, link: '#', name: 'Legal & Documentation'}, 
-                    { id: 7, link: '#', name: 'Non-Academic Estab.'}, 
-                    { id: 8, link: '#', name: 'Student Registration'}, 
-                    { id: 9, link: '#', name: 'Student Service'},                    
-                ]                
-            },
-            {
-                id: 2,
-                name: 'Financial Division',
-                menusubL: [
-                    { id: 1, link: '#', name: 'Final Accounts'}, 
-                    { id: 2, link: '#', name: 'Foriegn Supplies'}, 
-                    { id: 3, link: '#', name: 'Loans & ERP'}, 
-                    { id: 4, link: '#', name: 'Local Supplies'}, 
-                    { id: 5, link: '#', name: 'Payment & Budgetary'}, 
-                    { id: 6, link: '#', name: 'Portfolio Investment'}, 
-                    { id: 7, link: '#', name: 'Research, Funds & Publica.'}, 
-                    { id: 8, link: '#', name: 'Retirement Benefits'}, 
-                    { id: 9, link: '#', name: 'Revenue'},  
-                    { id: 10, link: '#', name: 'Salaries & Wages'},                   
-                    { id: 11, link: '#', name: 'Stores Management'}, 
-                    { id: 12, link: '#', name: 'Student Services'}, 
-                ]                
-            },
-            {
-                id: 3,
-                name: 'Services',
-                menusubL: [
-                    { id: 1, link: '#', name: 'Capital Works'}, 
-                    { id: 2, link: '#', name: 'Maintenance'}, 
-                    { id: 3, link: '#', name: 'Marshals'}, 
-                    { id: 4, link: '#', name: 'Landscape'}, 
-                    { id: 5, link: '#', name: 'Physical Education'}, 
-                    { id: 6, link: '#', name: 'Public Relations'}, 
-                    { id: 7, link: '#', name: 'Security'}, 
-                    { id: 8, link: '#', name: 'Statistics & Information'}, 
-                    { id: 9, link: '#', name: 'Student Accommodation'},  
-                ]                
-            },
-            {
-                id: 4,
-                name: 'Others',
-                menusubL: [
-                    { id: 1, link: '#', name: 'Internal Audit'}, 
-                ]                
-            }
-        ]
-    },
 
     // Students
 
     {
-        id: 4,
+        id: 3,
         name: 'Students',
         submenu: [
             { id: 1, name: 'Student Accomodation', link: '#' },
@@ -241,7 +179,7 @@ const secNavData = [
     // Publications
 
     {
-        id: 5,
+        id: 4,
         name: "Publications",
         submenu: [
             { id: 1, link: '#', name: 'Annual Reports' },
@@ -259,7 +197,7 @@ const secNavData = [
     // Research
 
     {
-        id: 6,
+        id: 5,
         name: 'Research',
         link: '/RsearchAll'
     },
@@ -267,7 +205,7 @@ const secNavData = [
     // Centers & Units
     
     {
-        id: 7,
+        id: 6,
         name: 'Centers & Units',
         link: '#'
     },
@@ -275,10 +213,74 @@ const secNavData = [
     // Alumni
     
     {
-        id: 8,
+        id: 7,
         name: 'Alumni',
         link: '#'
     },
+
+        // administration
+
+        {
+            id: 8,
+            name: "Administration",
+            submenu: [
+                {
+                    id: 1,
+                    name: 'Administrative Division',
+                    menusubL: [
+                        { id: 1, link: '#', name: 'Academic Establishments'}, 
+                        { id: 2, link: '#', name: 'Capital Works'}, 
+                        { id: 3, link: '#', name: 'Corporate Management'}, 
+                        { id: 4, link: '#', name: 'Council & Academic'}, 
+                        { id: 5, link: '#', name: 'General Service'}, 
+                        { id: 6, link: '#', name: 'Legal & Documentation'}, 
+                        { id: 7, link: '#', name: 'Non-Academic Estab.'}, 
+                        { id: 8, link: '#', name: 'Student Registration'}, 
+                        { id: 9, link: '#', name: 'Student Service'},                    
+                    ]                
+                },
+                {
+                    id: 2,
+                    name: 'Financial Division',
+                    menusubL: [
+                        { id: 1, link: '#', name: 'Final Accounts'}, 
+                        { id: 2, link: '#', name: 'Foriegn Supplies'}, 
+                        { id: 3, link: '#', name: 'Loans & ERP'}, 
+                        { id: 4, link: '#', name: 'Local Supplies'}, 
+                        { id: 5, link: '#', name: 'Payment & Budgetary'}, 
+                        { id: 6, link: '#', name: 'Portfolio Investment'}, 
+                        { id: 7, link: '#', name: 'Research, Funds & Publica.'}, 
+                        { id: 8, link: '#', name: 'Retirement Benefits'}, 
+                        { id: 9, link: '#', name: 'Revenue'},  
+                        { id: 10, link: '#', name: 'Salaries & Wages'},                   
+                        { id: 11, link: '#', name: 'Stores Management'}, 
+                        { id: 12, link: '#', name: 'Student Services'}, 
+                    ]                
+                },
+                {
+                    id: 3,
+                    name: 'Services',
+                    menusubL: [
+                        { id: 1, link: '#', name: 'Capital Works'}, 
+                        { id: 2, link: '#', name: 'Maintenance'}, 
+                        { id: 3, link: '#', name: 'Marshals'}, 
+                        { id: 4, link: '#', name: 'Landscape'}, 
+                        { id: 5, link: '#', name: 'Physical Education'}, 
+                        { id: 6, link: '#', name: 'Public Relations'}, 
+                        { id: 7, link: '#', name: 'Security'}, 
+                        { id: 8, link: '#', name: 'Statistics & Information'}, 
+                        { id: 9, link: '#', name: 'Student Accommodation'},  
+                    ]                
+                },
+                {
+                    id: 4,
+                    name: 'Others',
+                    menusubL: [
+                        { id: 1, link: '#', name: 'Internal Audit'}, 
+                    ]                
+                }
+            ]
+        },
 
     // Vacancies
 
