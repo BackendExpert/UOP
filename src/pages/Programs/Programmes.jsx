@@ -4,7 +4,7 @@ import DefaultBtn from '../../components/Buttons/DefaultBtn';
 
 const Programmes = () => {
   return (
-    <div className='bg-gray-200 py-8 xl:px-24 px-4'>
+    <div className='bg-white py-8 xl:px-24 px-4'>
       <div data-aos='zoom-in' className='xl:mb-0 mb-8 w-full xl:px-16 px-8 xl:flex items-center justify-center'>
         <div>
           <h1 className='uppercase text-center text-[#560606] font-semibold text-3xl'>Study at UOP</h1>
@@ -20,7 +20,7 @@ const Programmes = () => {
         <div key={index} className='mb-10'>
           <div className='grid xl:grid-cols-4 md:grid-cols-2 gap-0'>
             <div className='w-auto h-full flex'>
-              <div data-aos='zoom-in' className='w-full p-8 shadow-xl text-center bg-white'>
+              <div data-aos='zoom-in' className='w-full p-8 shadow-xl text-center bg-gray-200'>
                 <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
                 <p>{program.desc}</p>
               </div>

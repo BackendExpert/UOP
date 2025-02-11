@@ -3,7 +3,7 @@ import { researchdata } from '../../components/ReseachSection/RSdata'
 
 const RSPage = () => {
   return (
-    <div className='xl:px-28 px-4 my-8'>
+    <div className='xl:px-28 px-4 my-8 bg-gray-200 py-16'>
         <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Research and Innovation</h1>
         <div className="text-center py-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis optio dolorum exercitationem labore consectetur deleniti, sint possimus sequi est alias dolor, repellendus reiciendis! Nobis debitis placeat delectus, tempore esse ab.</div>
 
@@ -11,7 +11,7 @@ const RSPage = () => {
             {
                 researchdata.map((data, index) => {
                     return (
-                        <div data-aos="zoom-in" className="bg-gray-200 shadow-2xl" key={index}>
+                        <div data-aos="zoom-in" className="bg-white shadow-2xl" key={index}>
                             <div className="">
                                 <div                                      
                                     style={{ backgroundImage: `url(${data.img})` }}

@@ -14,19 +14,36 @@ const MainNav = () => {
                     <div className="flex">
                         {
                             MainNavData.map((item, index) => {
-                                return(
-                                    <div className="mx-2 font-semibold" key={index}>
-                                        <div className="flex">
-                                            <p className='mr-4'><a href={item.link}>{item.name}</a></p> 
-                                            {
-                                                item.id === 5 ?
-                                                <div className=""></div>
-                                                :
-                                                <div className="">|</div>
-                                            }
+                                if(item.name === "ONLINE PAYMENTS"){
+                                    return(
+                                        <div className="font-semibold text-center bg-[#e8b910] pl-4 py-1 rounded text-[#560606]" key={index}>
+                                            <div className="flex">
+                                                <p className='mr-4'><a href={item.link}>{item.name}</a></p> 
+                                                {
+                                                    item.id === 6 ?
+                                                    <div className=""></div>
+                                                    :
+                                                    <div className="">|</div>
+                                                }
+                                            </div>
                                         </div>
-                                    </div>
-                                )
+                                    )
+                                }
+                                else{
+                                    return(
+                                        <div className="mx-2 font-semibold" key={index}>
+                                            <div className="flex">
+                                                <p className='mr-4'><a href={item.link}>{item.name}</a></p> 
+                                                {
+                                                    item.id === 6 ?
+                                                    <div className=""></div>
+                                                    :
+                                                    <div className="">|</div>
+                                                }
+                                            </div>
+                                        </div>
+                                    )
+                                }
                             })
                         }
                     </div>

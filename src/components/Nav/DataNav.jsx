@@ -21,6 +21,11 @@ const MainNavData = [
     },
     {
         id: 5,
+        name: 'Donate Now',
+        link: '#',
+    },
+    {
+        id: 6,
         name: 'ONLINE PAYMENTS',
         link: '#',
     },        
@@ -79,6 +84,11 @@ const secNavData = [
             {
                 id: 5,
                 name: 'Policies',
+                link: '#'
+            },
+            {
+                id: 6,
+                name: 'International Collaborations',
                 link: '#'
             },
         ]
