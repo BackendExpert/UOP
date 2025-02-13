@@ -47,26 +47,31 @@ const quickLinks = [
     },
     {
         id: 2,
-        name: 'Student Registation System',
+        name: 'Vacancies',
         link: '#'
     },
     {
         id: 3,
-        name: 'University Ragging Complaint Portal',
+        name: 'Student Registation System',
         link: '#'
     },
     {
         id: 4,
-        name: 'Complaints on Sexual & Gender-Based Harassment',
+        name: 'University Ragging Complaint Portal',
         link: '#'
     },
     {
         id: 5,
-        name: 'Counselling and Psychological Support Unit',
+        name: 'Complaints on Sexual & Gender-Based Harassment',
         link: '#'
     },
     {
         id: 6,
+        name: 'Counselling and Psychological Support Unit',
+        link: '#'
+    },
+    {
+        id: 7,
         name: 'Contact Us',
         link: '#'
     },

@@ -89,6 +89,15 @@ const allresearchdata = [
         faculty: 'Faculty of Science',
         facultyLink: '#'
     },
+    {
+        id: 11,
+        name: "Research 11",
+        img: 'https://wallpapercave.com/wp/wp4708110.jpg',
+        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus deleniti vero sapiente eaque rerum neque ipsa earum ut assumenda id modi corporis, numquam a ipsum! Minus perspiciatis ducimus adipisci voluptates.',
+        link: '#',
+        faculty: 'Faculty of Science',
+        facultyLink: '#'
+    },
 ]
 
 export {allresearchdata}
