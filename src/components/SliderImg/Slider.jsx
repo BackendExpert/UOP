@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import logo from '../../assets/logo.png'
 import UopSci from '../../assets/UopSci.jpg'
-
 import UopImg1 from '../../assets/top2.jpg'
 import UopImg2 from '../../assets/URS.jpg'
 import UopImg3 from '../../assets/IEEEAwards2022.jpg'
