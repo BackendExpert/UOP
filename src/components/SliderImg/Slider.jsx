@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
-import logo from '../../assets/logo.png'
-import UopSci from '../../assets/UopSci.jpg'
-import UopImg1 from '../../assets/top2.jpg'
-import UopImg2 from '../../assets/URS.jpg'
-import UopImg3 from '../../assets/IEEEAwards2022.jpg'
-import UopImg4 from '../../assets/Lperadeniyae.jpg'
-import UopImg5 from '../../assets/12.jpg'
-import UopImg6 from '../../assets/13.jpg'
-import UopImg7 from '../../assets/14.jpg'
+import logo from '../../assets/logo.png';
+import UopSci from '../../assets/UopSci.jpg';
+import UopImg1 from '../../assets/top2.jpg';
+import UopImg2 from '../../assets/URS.jpg';
+import UopImg3 from '../../assets/IEEEAwards2022.jpg';
+import UopImg4 from '../../assets/Lperadeniyae.jpg';
+import UopImg5 from '../../assets/12.jpg';
+import UopImg6 from '../../assets/13.jpg';
+import UopImg7 from '../../assets/14.jpg';
 
 const Slider = () => {
     const images = [
@@ -21,60 +21,104 @@ const Slider = () => {
         UopImg7
     ];
 
-  const [currentIndex, setCurrentIndex] = useState(0);
+    const texts = [
+        { title: "Welcome!", desc: "Explore the campus and discover our rich history." },
+        { title: "Congratulations!", desc: "Nine researchers from the University of Peradeniya are among the top 2% of world scientists." },
+        { title: "We are among the world's top universities", desc: "We are proud to be ranked among the top 501-600 universities in the world and the number one university in Sri Lanka for the 4th consecutive year based on the Times Higher Education World University Ranking-2023" },
+        { title: "Congratulations!", desc: "IEEE Regional Exemplary Student Branch Award 2022 has been secured by the University of Peradeniya" },
+        { title: "Student Life", desc: "Experience the vibrant culture at University of Peradeniya." },
+        { title: "Legacy of Excellence", desc: "A journey of academic achievements and innovation." },
+        { title: "Future Leaders", desc: "We are shaping the leaders of tomorrow." },
+        { title: "Join Us", desc: "Be a part of our journey towards greatness." }
+    ];
 
-  // Automatically change the image every 3 seconds
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
+    const buttons = [
+        { text: "Visit Campus", link: "/campus" },
+        { text: "Learn More", link: "/about" },
+        { text: "Research", link: "/research" },
+        { text: "IEEE Awards", link: "/ieee" },
+        { text: "Student Life", link: "/life" },
+        { text: "History", link: "/history" },
+        { text: "Our Vision", link: "/vision" },
+        { text: "Join Us", link: "/join" }
+    ];
 
-    return () => clearInterval(interval); // Cleanup on component unmount
-  }, [images.length]);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
-  return (
-    <div className="relative w-full h-[80vh] verflow-hidden bg-gray-100">
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        }, 5000);
 
-        <div className="relative w-full h-full">
-        {images.map((image, index) => (
-            <div
-            key={index}
-            className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity ${
-                currentIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
-            }`}
-            style={{ backgroundImage: `url(${image})` }}
-            />
-        ))}
-            <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
-            {/* Text Content */}
-            <div className="absolute inset-0 flex items-center justify-center z-20">
-                <center>
-                <h1 className="text-3xl font-semibold text-white mb-2">Welcome to</h1>
-                <img src={logo} alt="" className="h-40 w-auto" />
-                <h1 className="text-2xl font-semibold text-white mt-4">University of Peradeniya</h1>
-                </center>
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    const prevSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex === 0 ? images.length - 1 : prevIndex - 1));
+    };
+
+    const nextSlide = () => {
+        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+    };
+
+    return (
+        <div className="relative w-full h-[80vh] overflow-hidden bg-gray-100">
+            {/* Image Slider */}
+            <div className="relative w-full h-full">
+                {images.map((image, index) => (
+                    <div
+                        key={index}
+                        className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
+                            currentIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
+                        }`}
+                        style={{ backgroundImage: `url(${image})` }}
+                    />
+                ))}
+                <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+
+                {/* Text Content & Button */}
+                <div className="absolute inset-0 z-20 my-48 md:ml-16 px-6">
+                    <h1 className="text-4xl font-bold text-white mb-2">{texts[currentIndex].title}</h1>
+                    <p className="text-lg text-white max-w-2xl mb-6">{texts[currentIndex].desc}</p>
+                    <a
+                        href={buttons[currentIndex].link}
+                        className="px-6 py-3 bg-[#560606] text-white rounded text-lg hover:bg-[#560606] transition duration-300"
+                    >
+                        {buttons[currentIndex].text}
+                    </a>
+                </div>
+
+                {/* Left Arrow */}
+                <button
+                    className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-30 hover:bg-opacity-70"
+                    onClick={prevSlide}
+                >
+                    &#10094;
+                </button>
+
+                {/* Right Arrow */}
+                <button
+                    className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-30 hover:bg-opacity-70"
+                    onClick={nextSlide}
+                >
+                    &#10095;
+                </button>
+            </div>
+
+            {/* Navigation Dots */}
+            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
+                {images.map((_, index) => (
+                    <button
+                        key={index}
+                        className={`w-3 h-3 rounded-full ${
+                            currentIndex === index ? "bg-[#560606]" : "bg-gray-400"
+                        }`}
+                        onClick={() => setCurrentIndex(index)}
+                    />
+                ))}
             </div>
         </div>
-
-
-
-
-      {/* Navigation Dots */}
-      <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
-        {images.map((_, index) => (
-          <button
-            key={index}
-            className={`w-3 h-3 rounded-full ${
-              currentIndex === index ? "bg-blue-500" : "bg-gray-400"
-            }`}
-            onClick={() => setCurrentIndex(index)}
-          />
-        ))}
-      </div>
-    </div>
-  );
+    );
 };
 
 export default Slider;
-
-
