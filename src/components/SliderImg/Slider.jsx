@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 import logo from '../../assets/logo.png'
 import UopSci from '../../assets/UopSci.jpg'
-import UopImg1 from '../../assets/12.jpg'
-import UopImg2 from '../../assets/13.jpg'
-import UopImg3 from '../../assets/14.jpg'
+
+import UopImg1 from '../../assets/top2.jpg'
+import UopImg2 from '../../assets/URS.jpg'
+import UopImg3 from '../../assets/IEEEAwards2022.jpg'
+import UopImg4 from '../../assets/Lperadeniyae.jpg'
+import UopImg5 from '../../assets/12.jpg'
+import UopImg6 from '../../assets/13.jpg'
+import UopImg7 from '../../assets/14.jpg'
 
 const Slider = () => {
     const images = [
@@ -11,10 +16,10 @@ const Slider = () => {
         UopImg1,
         UopImg2,
         UopImg3,
-        "https://wallpapercave.com/wp/wp11440838.jpg",
-        "https://wallpapercave.com/wp/wp11440840.jpg",
-        "https://wallpapercave.com/wp/wp9482512.jpg",
-        "https://wallpapercave.com/wp/wp9482512.jpg",
+        UopImg4,
+        UopImg5,
+        UopImg6,
+        UopImg7
     ];
 
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -29,7 +34,7 @@ const Slider = () => {
   }, [images.length]);
 
   return (
-    <div className="relative w-full h-[70vh] verflow-hidden bg-gray-100">
+    <div className="relative w-full h-[80vh] verflow-hidden bg-gray-100">
 
         <div className="relative w-full h-full">
         {images.map((image, index) => (
@@ -41,7 +46,7 @@ const Slider = () => {
             style={{ backgroundImage: `url(${image})` }}
             />
         ))}
-            <div className="absolute inset-0 bg-black opacity-40 z-10"></div>
+            <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
             {/* Text Content */}
             <div className="absolute inset-0 flex items-center justify-center z-20">
                 <center>
