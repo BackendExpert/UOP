@@ -77,7 +77,7 @@ const Slider = () => {
                 <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
                 {/* Text Content & Button */}
-                <div className="absolute inset-0 z-20 md:my-48 my-40 md:ml-16 px-6">
+                <div className="absolute inset-0 z-20 md:my-48 my-20 md:ml-16 px-6">
                     <h1 className="text-4xl font-bold text-white mb-2">{texts[currentIndex].title}</h1>
                     <p className="text-lg text-white max-w-2xl mb-6">{texts[currentIndex].desc}</p>
                     <a
