@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import logo from '../../assets/logo.png';
 import UopSci from '../../assets/UopSci.jpg';
 import UopImg1 from '../../assets/top2.jpg';
 import UopImg2 from '../../assets/URS.jpg';
@@ -10,17 +9,7 @@ import UopImg6 from '../../assets/13.jpg';
 import UopImg7 from '../../assets/14.jpg';
 
 const Slider = () => {
-    const images = [
-        UopSci,
-        UopImg1,
-        UopImg2,
-        UopImg3,
-        UopImg4,
-        UopImg5,
-        UopImg6,
-        UopImg7
-    ];
-
+    const images = [UopSci, UopImg1, UopImg2, UopImg3, UopImg4, UopImg5, UopImg6, UopImg7];
     const texts = [
         { title: "Welcome!", desc: "Explore the campus and discover our rich history." },
         { title: "Congratulations!", desc: "Nine researchers from the University of Peradeniya are among the top 2% of world scientists." },
@@ -49,7 +38,6 @@ const Slider = () => {
         const interval = setInterval(() => {
             setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
         }, 5000);
-
         return () => clearInterval(interval);
     }, [images.length]);
 
@@ -62,55 +50,61 @@ const Slider = () => {
     };
 
     return (
-        <div className="relative w-full h-[80vh] overflow-hidden bg-gray-100">
+        <div className="relative w-full h-[80vh] overflow-hidden">
             {/* Image Slider */}
-            <div className="relative w-full h-full">
-                {images.map((image, index) => (
-                    <div
-                        key={index}
-                        className={`absolute inset-0 w-full h-full bg-cover bg-center transition-opacity duration-1000 ${
-                            currentIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
-                        }`}
-                        style={{ backgroundImage: `url(${image})` }}
-                    />
-                ))}
-                <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
+            {images.map((image, index) => (
+                <img
+                    key={index}
+                    src={image}
+                    alt="Slider"
+                    className={`absolute inset-0 w-full h-full ${
+                        currentIndex === index ? "opacity-100 z-10" : "opacity-0 z-0"
+                    } transition-opacity duration-1000 
+                    object-contain sm:object-contain md:object-cover lg:object-cover`}
+                />
+            ))}
 
-                {/* Text Content & Button */}
-                <div className="absolute inset-0 z-20 md:my-48 my-40 md:ml-16 px-6">
-                    <h1 className="text-4xl font-bold text-white mb-2">{texts[currentIndex].title}</h1>
-                    <p className="text-lg text-white max-w-2xl mb-6">{texts[currentIndex].desc}</p>
-                    <a
-                        href={buttons[currentIndex].link}
-                        className="px-6 py-3 bg-[#560606] text-white rounded text-lg hover:bg-[#560606] transition duration-300"
-                    >
-                        {buttons[currentIndex].text}
-                    </a>
-                </div>
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black opacity-50 z-10"></div>
 
-                {/* Left Arrow */}
-                <button
-                    className="absolute left-5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-30 hover:bg-opacity-70"
-                    onClick={prevSlide}
+            {/* Text Content & Button */}
+            <div className="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-6">
+                <h1 className="text-lg sm:text-2xl md:text-4xl font-bold text-white mb-2">
+                    {texts[currentIndex].title}
+                </h1>
+                <p className="text-sm sm:text-lg md:text-xl text-white max-w-xs sm:max-w-md md:max-w-2xl mb-6">
+                    {texts[currentIndex].desc}
+                </p>
+                <a
+                    href={buttons[currentIndex].link}
+                    className="px-3 sm:px-6 py-2 sm:py-3 bg-[#560606] text-white rounded text-sm sm:text-lg hover:bg-[#800000] transition duration-300"
                 >
-                    &#10094;
-                </button>
-
-                {/* Right Arrow */}
-                <button
-                    className="absolute right-5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-3 rounded-full z-30 hover:bg-opacity-70"
-                    onClick={nextSlide}
-                >
-                    &#10095;
-                </button>
+                    {buttons[currentIndex].text}
+                </a>
             </div>
 
+            {/* Left Arrow */}
+            <button
+                className="absolute left-3 sm:left-5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 sm:p-3 rounded-full z-30 hover:bg-opacity-70"
+                onClick={prevSlide}
+            >
+                &#10094;
+            </button>
+
+            {/* Right Arrow */}
+            <button
+                className="absolute right-3 sm:right-5 top-1/2 transform -translate-y-1/2 bg-black bg-opacity-50 text-white p-2 sm:p-3 rounded-full z-30 hover:bg-opacity-70"
+                onClick={nextSlide}
+            >
+                &#10095;
+            </button>
+
             {/* Navigation Dots */}
-            <div className="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex gap-2 z-30">
+            <div className="absolute bottom-4 sm:bottom-6 left-1/2 transform -translate-x-1/2 flex gap-1 sm:gap-2 z-30">
                 {images.map((_, index) => (
                     <button
                         key={index}
-                        className={`w-3 h-3 rounded-full ${
+                        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full ${
                             currentIndex === index ? "bg-[#560606]" : "bg-gray-400"
                         }`}
                         onClick={() => setCurrentIndex(index)}
