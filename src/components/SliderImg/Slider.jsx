@@ -24,7 +24,7 @@ const Slider = () => {
     const texts = [
         { title: "Welcome!", desc: "Explore the campus and discover our rich history." },
         { title: "Congratulations!", desc: "Nine researchers from the University of Peradeniya are among the top 2% of world scientists." },
-        { title: "We are among the world's top universities", desc: "We are proud to be ranked among the top 501-600 universities in the world and the number one university in Sri Lanka for the 4th consecutive year based on the Times Higher Education World University Ranking-2023" },
+        { title: "We are among the world's top universities", desc: "We are proud to be ranked among the top 501-600 universities." },
         { title: "Congratulations!", desc: "IEEE Regional Exemplary Student Branch Award 2022 has been secured by the University of Peradeniya" },
         { title: "Student Life", desc: "Experience the vibrant culture at University of Peradeniya." },
         { title: "Legacy of Excellence", desc: "A journey of academic achievements and innovation." },
@@ -77,7 +77,7 @@ const Slider = () => {
                 <div className="absolute inset-0 bg-black opacity-60 z-10"></div>
 
                 {/* Text Content & Button */}
-                <div className="absolute inset-0 z-20 my-48 md:ml-16 px-6">
+                <div className="absolute inset-0 z-20 md:my-48 my-40 md:ml-16 px-6">
                     <h1 className="text-4xl font-bold text-white mb-2">{texts[currentIndex].title}</h1>
                     <p className="text-lg text-white max-w-2xl mb-6">{texts[currentIndex].desc}</p>
                     <a
