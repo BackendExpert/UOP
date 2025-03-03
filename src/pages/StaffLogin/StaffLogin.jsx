@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { loginuser } from '../../api/apicalls';
+import secureLocalStorage from 'react-secure-storage'
 
 const StaffLogin = () => {
     const [stafflogin, setstafflogin] = useState({
@@ -21,6 +22,7 @@ const StaffLogin = () => {
             const res = await loginuser(stafflogin)
             if(res.token){
                 localStorage.setItem('authToken', res.token)
+                secureLocalStorage.setItem('loginE', res.useremail)
                 alert("Login Success")
             }
             else{

@@ -21,7 +21,7 @@ const StaffRegistation = () => {
     const headleStaffSignup = async (e) => {
         e.preventDefault()
 
-        if(setstaffsignup.password.length < 6){
+        if(staffsignup.password.length < 6){
             alert("Password Must beat least 6 characters long")
             return
         }
