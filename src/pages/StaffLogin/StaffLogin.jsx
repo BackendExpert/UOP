@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { loginuser } from '../../api/apicalls';
 
 const StaffLogin = () => {
     const [stafflogin, setstafflogin] = useState({
@@ -14,10 +15,17 @@ const StaffLogin = () => {
         }));
     };
 
-    const headleStaffLogin = (e) => {
+    const headleStaffLogin = async (e) => {
         e.preventDefault()
         try{
-            console.log(stafflogin)
+            const res = await loginuser(stafflogin)
+            if(res.token){
+                localStorage.setItem('authToken', res.token)
+                alert("Login Success")
+            }
+            else{
+                alert(res.message)
+            }
         }
         catch(err){
             console.log(err)
