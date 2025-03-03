@@ -7,6 +7,7 @@ import Footer from "./components/Footer/Footer";
 import 'aos/dist/aos.css';
 import ResearchAll from './pages/RsearchAll/RsearchAll'
 import StaffLogin from "./pages/StaffLogin/StaffLogin";
+import StaffRegistation from "./pages/StaffLogin/StaffRegistation";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -62,6 +63,7 @@ export default function App() {
           <Route path="/RsearchAll" element={<ResearchAll />} />
 
           <Route path="/staff-login" element={<StaffLogin />} />
+          <Route path="/staff-signup" element={<StaffRegistation /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

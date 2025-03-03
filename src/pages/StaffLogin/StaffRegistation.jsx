@@ -1,23 +1,24 @@
 import React, { useState } from 'react'
 
-const StaffLogin = () => {
-    const [stafflogin, setstafflogin] = useState({
+const StaffRegistation = () => {
+    const [staffsignup, setstaffsignup] = useState({
+        username: '',
         email: '',
         password: '',
     })
 
     const handleInputChange = (e) => {
         const { name, value } = e.target;
-        setstafflogin((prevData) => ({
+        setstaffsignup((prevData) => ({
           ...prevData,
           [name]: value
         }));
     };
 
-    const headleStaffLogin = (e) => {
+    const headleStaffSignup = (e) => {
         e.preventDefault()
         try{
-            console.log(stafflogin)
+            console.log(staffsignup)
         }
         catch(err){
             console.log(err)
@@ -28,14 +29,29 @@ const StaffLogin = () => {
     <div className=''>
         <div className="xl:px-32 md:px-16 px-4 my-40">
             <div className="md:w-1/2">
-                <form onSubmit={headleStaffLogin} method="post">
+                <form onSubmit={headleStaffSignup} method="post">
+                    <div className="my-2">
+                        <p className="">Username:</p>
+                        <div className="my-2">
+                            <input 
+                                type="text"
+                                name='username'
+                                value={staffsignup.username}
+                                required
+                                placeholder='Enter Username' 
+                                onChange={handleInputChange}
+                                className='w-full h-12 bg-gray-200 border pl-2'
+                            />
+                        </div>
+                    </div>
+
                     <div className="my-2">
                         <p className="">Email:</p>
                         <div className="my-2">
                             <input 
                                 type="email"
                                 name='email'
-                                value={stafflogin.email}
+                                value={staffsignup.email}
                                 required
                                 placeholder='Enter Email Address' 
                                 onChange={handleInputChange}
@@ -50,7 +66,7 @@ const StaffLogin = () => {
                             <input 
                                 type="password"
                                 name='password'
-                                value={stafflogin.password}
+                                value={staffsignup.password}
                                 required
                                 placeholder='Enter Password'
                                 onChange={handleInputChange}
@@ -62,7 +78,7 @@ const StaffLogin = () => {
 
                     <div className="">
                         <button className='bg-[#560606] py-2 px-8 text-[#e8b910] rounded'>
-                            Login as Staff
+                            Register as Staff
                         </button>
                     </div>
                 </form>
@@ -72,4 +88,4 @@ const StaffLogin = () => {
   )
 }
 
-export default StaffLogin
+export default StaffRegistation
