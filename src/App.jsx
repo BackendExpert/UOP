@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage/HomePage";
 import SecNav from "./components/Nav/SecNav";
 import MainNav from "./components/Nav/MainNav";
@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import 'aos/dist/aos.css';
 import ResearchAll from './pages/RsearchAll/RsearchAll'
+import StaffLogin from "./pages/StaffLogin/StaffLogin";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -59,6 +60,8 @@ export default function App() {
         <Routes>
           <Route path="/" element={<HomePage /> } />
           <Route path="/RsearchAll" element={<ResearchAll />} />
+
+          <Route path="/staff-login" element={<StaffLogin />} />
         </Routes>
         <Footer />
       </BrowserRouter>
