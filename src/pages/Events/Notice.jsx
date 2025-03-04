@@ -11,7 +11,7 @@ const Notice = () => {
             {
                 noticeData.map((notice, index) => {
                     return (
-                        <div data-aos="zoom-in" className="bg-white p-4 rounded my-4 shadow-xl duration-500 hover:border hover:border-[#560606]/20" key={index}>
+                        <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white p-4 rounded my-4 shadow-xl duration-500 hover:border hover:border-[#560606]/20`} key={index}>
                             <h1 className="text-[#560606] font-semibold text-xl">{notice.name}</h1>
                             <p className="mt-2">
                                 {notice.desc}

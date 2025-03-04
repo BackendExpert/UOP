@@ -11,7 +11,24 @@ const Events = () => {
                 testeventdata.map((event, index) => {
 
                     return (
-                        <div key={index} data-aos="zoom-in" style={{ backgroundImage: `url(${event.img})` }} className="bg-cover bg-center h-auto my-4 shadow-xl rounded w-full relative bg-white bg-cover bg-center py-32  group overflow-hidden">
+                        <div
+                        key={index}
+                        data-aos="zoom-in"
+                        style={{ backgroundImage: `url(${event.img})` }}
+                        className={`
+                          bg-cover bg-center h-auto my-4 shadow-xl rounded w-full relative bg-white py-32 group overflow-hidden
+                          
+                          // Show only the first item on mobile (sm)
+                          ${index > 0 ? 'hidden sm:block' : ''}
+                
+                          // Show only the first 8 items on medium (md), hide the 9th item (index 8)
+                          ${index >= 8 ? 'hidden md:block' : ''}
+                
+                          // Show all items on extra-large (xl)
+                          ${index >= 9 ? 'hidden xl:block' : ''}
+                        `}
+                      >
+                
                             <div className="absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500"></div>
                             <div className="absolute inset-0 flex items-center justify-center opacity-100 group-hover:opacity-0 transition-opacity duration-500">
                                 <div className="text-xs text-center p-2 rounded-md absolute top-2 right-4 text-white font-semibold bg-gray-500">

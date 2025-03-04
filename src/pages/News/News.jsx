@@ -11,7 +11,7 @@ const News = () => {
                 {
                     newsdata.map((news, index) => {
                         return (
-                            <div data-aos="zoom-in" className="bg-white my-2 p-4 rounded shadow-xl" key={index}>
+                            <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white my-2 p-4 rounded shadow-xl`} key={index}>
                                 <div className="">
                                     <div className="">
                                         <img src={news.img} alt="" className='mb-2'/>
