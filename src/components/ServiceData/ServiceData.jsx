@@ -63,52 +63,52 @@ const serviceData = [
         datamenu: [
             {
                 id:1,
-                name: 'Library Services',
+                name: 'Academic Services',
                 link: '#',
             },
             {
                 id:2,
-                name: 'Guest House & Accommodation',
+                name: 'Financial Assistance',
                 link: '#',
             },
             {
                 id:3,
-                name: 'Public Relations & Media',
+                name: 'Student Accommodation',
                 link: '#',
             },
             {
                 id:4,
-                name: 'General Services',
+                name: 'Counseling & Mental Health',
                 link: '#',
             },
             {
                 id:5,
-                name: 'Event & Venue Booking',
+                name: 'Student Clubs & Societies',
                 link: '#',
             },
             {
                 id:6,
-                name: 'Health & Medical Services',
+                name: 'Sports & Recreation',
                 link: '#',
             },
             {
                 id:7,
-                name: 'University Tours',
+                name: 'Medical & Health Services',
                 link: '#',
             },
             {
                 id:8,
-                name: 'Research & Consultancy',
+                name: 'Cafeterias & Meal Plans',
                 link: '#',
             },
             {
                 id:9,
-                name: 'Career & Job Fairs',
+                name: 'Career Guidance',
                 link: '#',
             },
             {
                 id:10,
-                name: 'IT & Digital Services',
+                name: 'Transport Facilities',
                 link: '#',
             },
         ]
@@ -116,8 +116,59 @@ const serviceData = [
     {
         id: 3,
         name: 'Staff Services',
-        link: '#',
-        datamenu: []
+        link: '',
+        datamenu: [
+            {
+                id:1,
+                name: 'HR & Employment Services',
+                link: '#',
+            },
+            {
+                id:2,
+                name: 'Staff Welfare & Benefits',
+                link: '#',
+            },
+            {
+                id:3,
+                name: 'Training & Development',
+                link: '#',
+            },
+            {
+                id:4,
+                name: 'Staff Accommodation',
+                link: '#',
+            },
+            {
+                id:5,
+                name: 'Medical & Health Services',
+                link: '#',
+            },
+            {
+                id:6,
+                name: 'Payroll & Finance',
+                link: '#',
+            },
+            {
+                id:7,
+                name: 'Library & Research Support',
+                link: '#',
+            },
+            {
+                id:8,
+                name: 'IT Support & Digital Services',
+                link: '#',
+            },
+            {
+                id:9,
+                name: 'Leave & Attendance Management',
+                link: '#',
+            },
+            {
+                id:10,
+                name: 'University Policies & Regulations',
+                link: '#',
+            },
+        ]
     },
     {
         id: 4,

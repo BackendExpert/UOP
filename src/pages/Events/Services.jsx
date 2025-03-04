@@ -24,7 +24,7 @@ const Services = () => {
                 className="relative"
               >
                 {
-                    service.link === '' ?
+                    service.link !== '' ?
                     <div className="">
                         <a href={link}>
                             <div className="flex p-4 border-b border-[#560606]/20 duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
@@ -46,7 +46,7 @@ const Services = () => {
 
                 {/* If hovered and there are datamenu items, display them */}
                 {isHovered && hasDataMenu && (
-                  <ul className="absolute left-0 top-12 bg-[#560606] shadow-lg rounded-md p-4 z-10">
+                  <ul className="absolute left-0 xl:right-8 md:left-4 md:right-72 xl:-left-8 top-12 bg-[#560606] shadow-lg rounded-md p-4 z-10">
                     {service.datamenu.map((item, i) => (
                       <li key={i} className="text-sm text-white py-1 hover:text-[#e8b910]">
                         <a href={item.link}>{item.name}</a>
