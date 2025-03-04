@@ -1,20 +1,23 @@
+import { FaBook, FaUniversity  } from "react-icons/fa";
+
+
 const researchstats = [
     {
         id: 1,
         name: 'Journals',
-        icon: '',
+        icon: FaBook,
         link: '#'
     },
     {
         id: 2,
         name: 'iPURSE',
-        icon: '',
+        icon: FaBook,
         link: '#'
     },
     {
         id: 3,
         name: 'University Research Center',
-        icon: '',
+        icon: FaUniversity,
         link: '#'
     },
     {

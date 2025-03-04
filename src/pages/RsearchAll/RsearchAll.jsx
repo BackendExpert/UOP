@@ -21,7 +21,9 @@ const RsearchAll = () => {
                     </div>
                 </div>
                 <div className="md:w-1/2 ml-2">
-                    
+                    <div className="bg-white p-8 rounded-xl shadow-xl">
+
+                    </div>
                 </div>
             </div>
 
