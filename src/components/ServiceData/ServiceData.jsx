@@ -169,43 +169,7 @@ const serviceData = [
                 link: '#',
             },
         ]
-    },
-    {
-        id: 4,
-        name: 'Health Care',
-        link: '#',
-        datamenu: []
-    },
-    {
-        id: 5,
-        name: 'Veterinary clinics',
-        link: '#',
-        datamenu: []
-    },
-    {
-        id: 6,
-        name: 'Restorative Dentistry',
-        link: '#',
-        datamenu: []
-    },
-    {
-        id: 7,
-        name: 'Counseling',
-        link: '#',
-        datamenu: []
-    },
-    {
-        id: 8,
-        name: 'IT Consultation & Projects',
-        link: '#',
-        datamenu: []
-    },
-    {
-        id: 9,
-        name: 'Human Rights',
-        link: '#',
-        datamenu: []
-    },
+    }
 ]
 
 export { serviceData }

@@ -7,12 +7,7 @@ const Programmes = () => {
     <div className='bg-white py-8 xl:px-24 px-4'>
       <div data-aos='zoom-in' className='xl:mb-0 mb-8 w-full xl:px-16 px-8 xl:flex items-center justify-center'>
         <div>
-          <h1 className='uppercase text-center text-[#560606] font-semibold text-3xl'>Study at UOP</h1>
-          <p className='my-4 text-center'>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam reprehenderit enim voluptatem a numquam?
-            Obcaecati nam fugit delectus excepturi sint amet nostrum consequuntur, earum minima nisi aliquid error?
-            Quibusdam, nam!
-          </p>
+          <h1 className='uppercase text-center text-[#560606] font-semibold text-3xl mb-8'>Study at UOP</h1>
         </div>
       </div>
 

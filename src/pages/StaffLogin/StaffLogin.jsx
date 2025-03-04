@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { loginuser } from '../../api/apicalls';
 import secureLocalStorage from 'react-secure-storage'
 
 const StaffLogin = () => {
@@ -16,23 +15,6 @@ const StaffLogin = () => {
         }));
     };
 
-    const headleStaffLogin = async (e) => {
-        e.preventDefault()
-        try{
-            const res = await loginuser(stafflogin)
-            if(res.token){
-                localStorage.setItem('authToken', res.token)
-                secureLocalStorage.setItem('loginE', res.useremail)
-                alert("Login Success")
-            }
-            else{
-                alert(res.message)
-            }
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
 
   return (
     <div className=''>

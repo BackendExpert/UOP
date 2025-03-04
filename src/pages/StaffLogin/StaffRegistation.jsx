@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { signupuser } from '../../api/apicalls';
 import { useNavigate } from 'react-router-dom';
 
 const StaffRegistation = () => {
@@ -18,30 +17,6 @@ const StaffRegistation = () => {
         }));
     };
 
-    const headleStaffSignup = async (e) => {
-        e.preventDefault()
-
-        if(staffsignup.password.length < 6){
-            alert("Password Must beat least 6 characters long")
-            return
-        }
-
-        try{
-            const res = await signupuser(staffsignup);
-
-            if(res.message === "User registered successfully"){
-                alert("Registaion Success")
-                navigte('/staff-login')         
-            }
-            else{
-                alert(res.message)
-            }
-
-        }
-        catch(err){
-            console.log(err)
-        }
-    }
 
   return (
     <div className=''>
