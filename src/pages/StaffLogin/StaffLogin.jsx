@@ -15,6 +15,16 @@ const StaffLogin = () => {
         }));
     };
 
+    const headleStaffLogin = (e) => {
+        e.preventDefault()
+
+        try{
+
+        }
+        catch(err){
+            console.log(err)
+        }
+    }
 
   return (
     <div className=''>

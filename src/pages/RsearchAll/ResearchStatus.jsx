@@ -1,6 +1,6 @@
 import { FaBook, FaUniversity, FaBookReader } from "react-icons/fa";
 import { FaFaceGrimace, FaSchoolFlag } from "react-icons/fa6";
-import { TbWorld } from "react-icons/tb";
+import { BsGlobe } from "react-icons/bs";
 
 
 const researchstats = [
@@ -31,7 +31,7 @@ const researchstats = [
     {
         id: 5,
         name: 'International Relations Office',
-        icon: TbWorld,
+        icon: BsGlobe,
         link: '#'
     },
     {

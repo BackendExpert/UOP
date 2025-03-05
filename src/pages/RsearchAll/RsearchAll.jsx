@@ -1,6 +1,7 @@
 import React from 'react'
 import BarChart from '../../components/Charts/BarChart'
 import { allresearchdata } from '../../components/ReseachSection/ResearchAllData'
+import { researchstats } from './ResearchStatus'
 
 const RsearchAll = () => {
   return (
@@ -21,8 +22,23 @@ const RsearchAll = () => {
                     </div>
                 </div>
                 <div className="md:w-1/2 ml-2">
-                    <div className="bg-white p-8 rounded-xl shadow-xl">
-
+                    <div className="bg-white p-16 h-full rounded-xl shadow-xl">
+                        <div className="grid grid-cols-3 gap-6">
+                            {
+                                researchstats.map((data, index) => {
+                                    return (
+                                        <div className="" key={index}>
+                                            <center>
+                                                <data.icon className='h-12 w-full fill-[#560606]' />
+                                                <a href={data.link}>
+                                                    <h1 className="mt-8 text-xl text-gray-500 font-semibold duration-500 hover:text-[#e8b910]">{data.name}</h1>
+                                                </a>
+                                            </center>
+                                        </div>
+                                    )
+                                })
+                            }
+                        </div>
                     </div>
                 </div>
             </div>
