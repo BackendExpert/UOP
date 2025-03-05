@@ -1,5 +1,5 @@
-import { FaBook, FaUniversity  } from "react-icons/fa";
-import { FaFaceGrimace } from "react-icons/fa6";
+import { FaBook, FaUniversity, FaBookReader } from "react-icons/fa";
+import { FaFaceGrimace, FaSchoolFlag } from "react-icons/fa6";
 import { TbWorld } from "react-icons/tb";
 
 
@@ -37,16 +37,15 @@ const researchstats = [
     {
         id: 6,
         name: 'Multidisciplinary Research Centre (MDRC)',
-        icon: '',
+        icon: FaSchoolFlag,
         link: '#'
     },
     {
         id: 7,
         name: 'Research Publications',
-        icon: '',
+        icon: FaBookReader,
         link: '#'
     },
-S
 ]
 
 export  { researchstats }
