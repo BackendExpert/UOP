@@ -1,4 +1,6 @@
 import { FaBook, FaUniversity  } from "react-icons/fa";
+import { FaFaceGrimace } from "react-icons/fa6";
+import { TbWorld } from "react-icons/tb";
 
 
 const researchstats = [
@@ -23,13 +25,13 @@ const researchstats = [
     {
         id: 4,
         name: 'Center for Research in Oral Cancer',
-        icon: '',
+        icon: FaFaceGrimace,
         link: '#'
     },
     {
         id: 5,
         name: 'International Relations Office',
-        icon: '',
+        icon: TbWorld,
         link: '#'
     },
     {
