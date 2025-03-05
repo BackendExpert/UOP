@@ -1,6 +1,7 @@
 import React from 'react';
 import { programData } from '../../components/ProgramData/ProgramData';
 import DefaultBtn from '../../components/Buttons/DefaultBtn';
+import HorizontalScorll from './HorizontalScorll';
 
 const Programmes = () => {
   return (
@@ -51,6 +52,10 @@ const Programmes = () => {
           </div>
         </div>
       ))}
+
+      <div className="mt-8">
+        <HorizontalScorll />
+      </div>
     </div>
   );
 };
