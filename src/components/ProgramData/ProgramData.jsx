@@ -75,32 +75,6 @@ const programData = [
             },
         ]
     },
-    {
-        id: 1,
-        name: 'Short Courses',
-        desc: 'Outsiders also may follow these  short courses in different institutions attached to the University of Peradeniya.',
-        link: '#',
-        courses: [
-            {
-                id: 1,
-                name: 'CISCO Certified Network Associate Certification',
-                img: 'https://wallpapercave.com/wp/wp14232911.jpg',
-                link: '#',
-            },
-            {
-                id: 2,
-                name: 'Online Short Course on ISO 14001:2015 Environmental Management System',
-                img: 'https://wallpapercave.com/wp/wp13420215.jpg',
-                link: '#',
-            },
-            {
-                id: 3,
-                name: 'NVQ Level 4 course in Photography and Video Production',
-                img: 'https://wallpapercave.com/wp/wp12681972.jpg',
-                link: '#',
-            },
-        ]
-    }
 ]
 
 export { programData }

@@ -7,7 +7,7 @@ const Services = () => {
     <div className='bg-gray-200 px-4'>
       <h1 className="text-center text-2xl font-semibold uppercase text-[#560606]">Services</h1>
 
-      <div data-aos="zoom-in" className="bg-white my-4 rounded shadow-xl">
+      <div data-aos="zoom-in" className="bg-white my-4 rounded shadow-xl z-20">
         {
           serviceData.map((service, index) => {
             const [isHovered, setIsHovered] = useState(false);
@@ -21,7 +21,7 @@ const Services = () => {
                 key={index} 
                 onMouseEnter={() => setIsHovered(true)} 
                 onMouseLeave={() => setIsHovered(false)} 
-                className="relative"
+                className="relative "
               >
                 {
                     service.link !== '' ?

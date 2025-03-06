@@ -67,14 +67,15 @@ const AllComponent = () => {
                     <Notice />
                 </div>   
             </div> */}
-            <div className="xl:my-0 my-4 xl:w-1/3">
-                <div className="">
-                    <QuickLinks />
-                </div>
-                <div className="my-6">
-                    <Services />
-                </div>            
-            </div>
+<div className="xl:my-0 my-4 xl:w-1/3">
+    <div className="relative z-10">                    
+        <Services />
+    </div>
+    <div className="my-6 relative z-0">
+        <QuickLinks />
+    </div>            
+</div>
+
         </div>
     </div>
   )
