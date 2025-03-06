@@ -123,7 +123,7 @@ const SecNav = () => {
                                                     ) : (
                                                         <div className="py-4">
                                                             <a href={submenu.link} className="">
-                                                                <h1 className="text-xl px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                <h1 className="text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
                                                                     {submenu.name}
                                                                 </h1>
                                                             </a>
