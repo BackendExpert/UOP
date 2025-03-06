@@ -47,7 +47,7 @@ export default function HorizontalScroll() {
     };
   
     return (
-        <div className="relative w-full mx-auto overflow-hidden">
+        <div data-aos="zoom-in" className="relative w-full mx-auto overflow-hidden">
           <button
             className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full"
             onClick={() => scroll("left")}
