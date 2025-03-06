@@ -14,8 +14,8 @@ const Programmes = () => {
 
       {programData.map((program, index) => (
         <div key={index} className='mb-10'>
-          <div className='grid xl:grid-cols-4 md:grid-cols-2 gap-0'>
-            <div className='w-auto h-full flex'>
+          <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-0'>
+            <div className='w-full h-64 flex'>
               <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                 <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
                 <p>{program.desc}</p>
@@ -27,7 +27,7 @@ const Programmes = () => {
                 <div
                   data-aos='zoom-in'
                   style={{ backgroundImage: `url(${course.img})` }}
-                  className='w-full relative bg-cover bg-center py-24 text-center text-white group overflow-hidden'
+                  className='w-full relative h-64 bg-cover bg-center py-24 text-center text-white group overflow-hidden'
                 >
                   <div className='absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500'></div>
 
