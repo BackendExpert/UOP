@@ -6,8 +6,6 @@ import { useEffect, useState } from "react";
 import Footer from "./components/Footer/Footer";
 import 'aos/dist/aos.css';
 import ResearchAll from './pages/RsearchAll/RsearchAll'
-import StaffLogin from "./pages/StaffLogin/StaffLogin";
-import StaffRegistation from "./pages/StaffLogin/StaffRegistation";
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 
 export default function App() {
@@ -64,8 +62,6 @@ export default function App() {
           <Route path="/" element={<HomePage /> } />
           <Route path="/RsearchAll" element={<ResearchAll />} />
 
-          <Route path="/staff-login" element={<StaffLogin />} />
-          <Route path="/staff-signup" element={<StaffRegistation /> } />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -102,7 +102,7 @@ const SecNav = () => {
                                 {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
                                     <div className="absolute top-full -left-20 -right-20 bg-none text-white shadow-lg z-50 pt-4 max-h-[100vh] overflow-y-auto">
                                         <div className="relative"></div>
-                                        <div className='absolute inset-0 bg-black opacity-90 mt-4'></div>
+                                        <div className='absolute inset-0 bg-black opacity-80 mt-4'></div>
                                         <div className="p-8 relative">
                                             <div className="grid grid-cols-4 gap-4">
                                             {data.submenu.map((submenu, submenuIndex) => (
