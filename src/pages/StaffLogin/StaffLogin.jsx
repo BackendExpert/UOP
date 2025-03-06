@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useState } from 'react'
 import secureLocalStorage from 'react-secure-storage'
 
@@ -15,11 +16,18 @@ const StaffLogin = () => {
         }));
     };
 
-    const headleStaffLogin = (e) => {
+    const headleStaffLogin = async (e) => {
         e.preventDefault()
 
         try{
-
+            const res = await axios.post(import.meta.env.VITE_APP_API + {
+                ...stafflogin,
+                action: 'login'
+            }, {
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+            })
         }
         catch(err){
             console.log(err)
