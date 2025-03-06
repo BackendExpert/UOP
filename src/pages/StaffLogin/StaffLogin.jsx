@@ -20,14 +20,29 @@ const StaffLogin = () => {
         e.preventDefault()
 
         try{
-            const res = await axios.post(import.meta.env.VITE_APP_API + {
-                ...stafflogin,
-                action: 'login'
-            }, {
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-            })
+            const res = await axios.post(
+                import.meta.env.VITE_APP_API,  
+                { ...stafflogin, action: 'login' }, 
+                {
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                }
+            );
+
+            const { status, message, user, token } = res.data;
+
+            if(status === "Success"){
+                localStorage.setItem('token', token);
+                secureLocalStorage.setItem('LoginR', user.role)
+                secureLocalStorage.setItem('LoginE', user.email)
+                secureLocalStorage.setItem('LoginU', user.username)
+                alert('Login successful!');
+                // navigate('/Dashboard/Home'); 
+            }
+            else{
+                alert(message)
+            }
         }
         catch(err){
             console.log(err)
