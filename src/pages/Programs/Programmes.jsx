@@ -12,6 +12,19 @@ const Programmes = () => {
         </div>
       </div>
 
+      <div className="flex mb-4 justify-between" data-aos="zoom-in">
+        <div className="w-full">
+          <a href="">
+            <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full mr-2'>International Programs for Sri Lankan Students</button>
+          </a>
+        </div>
+        <div className="w-full">
+          <a href="">
+            <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full ml-2'>Programs for International Students</button>
+          </a>
+        </div>
+      </div>
+
       {programData.map((program, index) => (
         <div key={index} className='mb-10'>
           <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-0'>

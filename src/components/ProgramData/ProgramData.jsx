@@ -1,6 +1,38 @@
 const programData = [
     {
         id: 1,
+        name: 'Distance Education',
+        desc: 'The University of Peradeniya is the pioneering institution that initiated offering external degrees in the country since 1964.',
+        link: '#',
+        courses: [
+            {
+                id: 1,
+                name: 'Degree Programs',
+                img: 'https://wallpapercave.com/wp/wp13669334.jpg',
+                link: '#'
+            },
+            {
+                id: 2,
+                name: 'Diploma Programs',
+                img: 'https://wallpapercave.com/wp/wp8722693.jpg',
+                link: '#'
+            },
+            {
+                id: 3,
+                name: 'Certificate Programs',
+                img: 'https://wallpapercave.com/wp/wp1895394.jpg',
+                link: '#'
+            },
+            {
+                id: 4,
+                name: 'Certificate Programs',
+                img: 'https://wallpapercave.com/wp/wp1895394.jpg',
+                link: '#'
+            },
+        ]
+    },
+    {
+        id: 2,
         name: 'Postgraduate Programs',
         desc: 'Postgraduate Programs of University of Peradeniya',
         link: '#',
@@ -46,35 +78,22 @@ const programData = [
                 name: 'MSc in Energy for Circular Economy',
                 img: 'https://wallpapercave.com/wp/wp2172545.jpg',
                 link: '#',
+            },
+            {
+                id: 8,
+                name: 'MSc. in Nursing from Faculty of Allied Health Sciences',
+                img: 'https://wallpapercave.com/wp/wp4907573.jpg',
+                link: '#',
+            },
+            {
+                id: 9,
+                name: 'MSc in Energy for Circular Economy',
+                img: 'https://wallpapercave.com/wp/wp2172545.jpg',
+                link: '#',
             }
         ]
     },
-    {
-        id: 2,
-        name: 'Distance Education',
-        desc: 'The University of Peradeniya is the pioneering institution that initiated offering external degrees in the country since 1964.',
-        link: '#',
-        courses: [
-            {
-                id: 1,
-                name: 'Degree Programs',
-                img: 'https://wallpapercave.com/wp/wp13669334.jpg',
-                link: '#'
-            },
-            {
-                id: 2,
-                name: 'Diploma Programs',
-                img: 'https://wallpapercave.com/wp/wp8722693.jpg',
-                link: '#'
-            },
-            {
-                id: 3,
-                name: 'Certificate Programs',
-                img: 'https://wallpapercave.com/wp/wp1895394.jpg',
-                link: '#'
-            },
-        ]
-    },
+
 ]
 
 export { programData }
