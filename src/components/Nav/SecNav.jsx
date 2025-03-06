@@ -72,7 +72,7 @@ const SecNav = () => {
                         {secNavData.map((data, index) => {
                             return (
                                 <div
-                                    className={`${atTop ? ' mx-[1%] mt-0' : 'mt-1 mx-4'} relative`}
+                                    className={`${atTop ? ' mx-[1%] mt-0' : 'mt-1 mx-4'} `}
                                     key={index}
                                     onMouseEnter={() => setdksubmenu(data.id)}
                                     onMouseLeave={() => setdksubmenu(false)}
@@ -100,40 +100,39 @@ const SecNav = () => {
 
                                 {/* Submenu */}
                                 {dksubmenu === data.id && data.submenu && Array.isArray(data.submenu) && (
-                                    <div className="min-w-64 absolute top-full -left-2 bg-[#560606] text-white shadow-lg z-50 pt-4">
-                                        {data.submenu.map((submenu, submenuIndex) => (
-                                            <div
-                                                key={submenuIndex}
-                                                className="relative hover:bg-[#e8b910] px-4 cursor-pointer hover:text-[#560606] hover:font-semibold duration-500 hover:pl-6"
-                                                onMouseEnter={() => setdksecsubmenu(submenuIndex)} // Track submenu index
-                                                onMouseLeave={() => setdksecsubmenu(null)} // Reset on mouse leave
-                                            >
-                                                {submenu.menusubL && Array.isArray(submenu.menusubL) && submenu.menusubL.length > 0 ? (
-                                                    <div className="flex py-4">
-                                                        <h1>{submenu.name}</h1>
-                                                        <p className="mt-2 ml-2">
-                                                            <FaChevronRight className="h-3 w-auto" />
-                                                        </p>
-                                                    </div>
-                                                ) : (
-                                                    <div className="py-4">
-                                                        <a href={submenu.link}>{submenu.name}</a>
-                                                    </div>
-                                                )}
-                                                {/* Secondary Submenu (menusubL) */}
-                                                {dksecsubmenu === submenuIndex && submenu.menusubL && Array.isArray(submenu.menusubL) && (
-                                                    <div className="min-w-64 absolute top-0 left-full bg-[#560606] text-white  shadow-lg z-64">
-                                                        {submenu.menusubL.map((subData, submenuLindex) => (
-                                                            <a href={subData.link} className="">
-                                                                <h1 key={submenuLindex} className="px-4 py-4 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                    {subData.name}
+                                    <div className="absolute top-full -left-20 -right-20 bg-none text-white shadow-lg z-50 pt-4 max-h-[100vh] overflow-y-auto">
+                                        <div className="relative"></div>
+                                        <div className='absolute inset-0 bg-black opacity-90 mt-4'></div>
+                                        <div className="p-8 relative">
+                                            <div className="grid grid-cols-4 gap-4">
+                                            {data.submenu.map((submenu, submenuIndex) => (
+                                                <div className="">
+                                                    {submenu.menusubL && Array.isArray(submenu.menusubL) && submenu.menusubL.length > 0 ? (
+                                                        <div className=" py-4">
+                                                            <h1 className='text-xl'>{submenu.name}</h1>
+                                                            <p className="mt-2 ml-2">
+                                                                {submenu.menusubL.map((subData, submenuLindex) => (
+                                                                    <a href={subData.link} className="">
+                                                                        <h1 key={submenuLindex} className="px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                            {subData.name}
+                                                                        </h1>
+                                                                    </a>
+                                                                ))}
+                                                            </p>
+                                                        </div>
+                                                    ) : (
+                                                        <div className="py-4">
+                                                            <a href={submenu.link} className="">
+                                                                <h1 className="px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                    {submenu.name}
                                                                 </h1>
                                                             </a>
-                                                        ))}
-                                                    </div>
-                                                )}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            ))}
                                             </div>
-                                        ))}
+                                        </div>
                                     </div>
                                 )}
 
