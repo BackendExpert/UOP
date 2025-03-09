@@ -1,8 +1,9 @@
 import React from 'react'
-import { newsdata } from '../../components/News/News'
+import useNEWSData from '../../components/News/News'
 import { MdDateRange } from "react-icons/md";
 
 const News = () => {
+    const newsdata = useNEWSData()
   return (
     <div className='px-4 ' >
         <h1 className="font-semibold text-2xl text-[#560606] mb-1 mt-4">NEWS</h1>
@@ -14,14 +15,14 @@ const News = () => {
                             <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white my-2 p-4 rounded shadow-xl`} key={index}>
                                 <div className="">
                                     <div className="">
-                                        <img src={news.img} alt="" className='mb-2'/>
+                                        <img src={`${import.meta.env.VITE_APP_API}/${news.news_img}`} alt="" className='mb-2'/>
                                     </div>
                                     <div className="w-full xl:my-0 my-2">
-                                        <h1 className="font-semibold text-xl">{news.name}</h1>
+                                        <h1 className="font-semibold text-xl">{news.news_title}</h1>
                                         <div className="flex justify-between pt-2">
                                             <div className="flex">
                                                 <div className=""><MdDateRange className='h-4 w-auto fill-gray-500' /></div>
-                                                <p className="text-sm text-gray-500 pl-2">{news.date}</p>
+                                                <p className="text-sm text-gray-500 pl-2">{news.news_date}</p>
                                             </div>
                                             <div className="">
                                                 <a href={news.link}>
