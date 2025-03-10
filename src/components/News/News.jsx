@@ -1,87 +1,29 @@
-import newsimg from '../../assets/NEWS.jpg'
-const newsdata = [
-    {
-        id: 1,
-        name: 'NEWS 1',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 2,
-        name: 'NEWS 2',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 3,
-        name: 'NEWS 3',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 4,
-        name: 'NEWS 4',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-        {
-        id: 5,
-        name: 'NEWS 1',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 6,
-        name: 'NEWS 2',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 7,
-        name: 'NEWS 3',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 8,
-        name: 'NEWS 4',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-    {
-        id: 9,
-        name: 'NEWS 4',
-        img: 'https://wallpapercave.com/wp/wp14925950.jpg',
-        desc: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Hic, officia dignissimos voluptatum maiores sunt nisi. Veniam sapiente quidem a sed hic voluptatum fugiat, modi, illum quis saepe eveniet, sequi obcaecati.',
-        date: 'Febrary 5, 2025',
-        img: newsimg,
-        link: '#'
-    },
-]
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-export { newsdata }
+const useNEWSData = () => {
+    const [newsdata, setnewsdata] = useState([]);
 
+    useEffect(() => {
+        axios.get(import.meta.env.VITE_APP_API + "/news.php", {
+            params: { action: "getallNEWS" },
+            headers: { "Content-Type": "application/json" },
+        })
+        .then(res => {
+            console.log(res.data);
+            if (res.data.Result) {
+                setnewsdata(res.data.Result);
+            } else {
+                setnewsdata([]);
+            }
+        })
+        .catch(err => {
+            console.error(err);
+            setnewsdata([]);
+        });
+    }, []);
+
+    return newsdata;
+};
+
+export default useNEWSData;

@@ -1,9 +1,12 @@
 import React from 'react'
 import BarChart from '../../components/Charts/BarChart'
-import { allresearchdata } from '../../components/ReseachSection/ResearchAllData'
 import { researchstats } from './ResearchStatus'
+import useResData from '../../components/ReseachSection/ResearchAllData'
 
 const RsearchAll = () => {
+    const researchdata = useResData()
+
+ 
   return (
     <div className='xl:px-24 px-4 mt-16 bg-gray-200'>
         <div className="py-16">
@@ -47,25 +50,23 @@ const RsearchAll = () => {
 
             <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-8 mt-8">
                 {
-                    allresearchdata.map((research, index) => {
+                    researchdata.map((research, index) => {
                         return (
                             <div data-aos="zoom-in" className="max-h-full bg-white rounded-xl shadow-xl max-h-auto" key={index}>
-                                <img src={research.img} alt="" className='h-auto w-full rounded-t-xl'/>
+                                <img src={`${import.meta.env.VITE_APP_API}/${research.res_img}`} alt="" className='h-60 w-full rounded-t-xl'/>
             
                                 <div className="p-4">
-                                    <h1 className="font-semibold uppercase text-[#560606] pb-2">{research.name}</h1>
-                                    <p className="text-gray-500">{research.desc}</p>
+                                    <h1 className="font-semibold uppercase text-[#560606] pb-2">{research.res_titile}</h1>
+                                    <p className="text-gray-500">{research.res_desc}</p>
             
                                     <div className="mt-4 flex justify-between">
-                                        <div className="">
+                                        <div className="w-full">
                                             <a href={research.link}>
                                                 <button className='bg-[#560606] py-2 px-4 text-white rounded-full shadow-xl duration-500 hover:px-6'>Read More</button>
                                             </a>
                                         </div>
-                                        <div className="mt-2">
-                                            <a href={research.facultyLink}>
-                                                <p className="text-gray-500 duration-500 hover:text-[#560606] hover:font-semibold">{research.faculty}</p>
-                                            </a>
+                                        <div className="mt-2 w-full">
+                                            <p className="text-gray-500 duration-500 hover:text-[#560606] hover:font-semibold">{research.res_faculty}</p>
                                         </div>
                                     </div>
                                 </div>

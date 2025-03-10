@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import Slider from '../../components/SliderImg/Slider'
 import DataCount from '../../components/DataCount/DataCount';
-import Events from '../Events/OldEvents';
+// import Events from '../Events/OldEvents';
 import News from '../News/News';
 import SeasonsGreetings from '../SeasonsGreetings/SeasonsGreetings';
 import Programs from '../Programs/Programs';
