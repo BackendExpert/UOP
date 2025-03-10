@@ -33,7 +33,7 @@ const MainNav = () => {
 
                         <div className="">
                             <div className="flex">
-                                <input type="text" name="" id="" className='mr-2 h-8 rounded pl-2' placeholder='Search...'/>
+                                <input type="text" name="" id="" className='text-gray-500 mr-2 h-8 rounded pl-2' placeholder='Search...'/>
                                 <div className="mt-1"><FaSearch className='h-6 w-auto'/></div>
                             </div>
                         </div>
