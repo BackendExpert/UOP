@@ -1,21 +1,40 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useNEWSData from '../../components/News/News'
 import { MdDateRange } from "react-icons/md";
 
 const News = () => {
     const newsdata = useNEWSData()
+    const [visibaleNEWS, setvisibaleNEWS] = useState([]);
+    useEffect(() => {
+        const updateVisibleNEWS = () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth >= 1280) { // Extra-large screens (desktop)
+                setvisibaleNEWS(newsdata.slice(0, 9)); // Show first 9 events
+            } else if (screenWidth < 768) { // Mobile screens
+                setvisibaleNEWS(newsdata.slice(0, 1)); // Show only 1 event
+            } else { // Medium screens (tablet)
+                setvisibaleNEWS(newsdata.slice(0, 9)); // Show first 9 events
+            }
+        };
+
+        updateVisibleNEWS();
+        window.addEventListener('resize', updateVisibleNEWS);
+
+        return () => window.removeEventListener('resize', updateVisibleNEWS);
+    }, [newsdata]);    
   return (
     <div className='px-4 ' >
         <h1 className="font-semibold text-2xl text-[#560606] mb-1 mt-4">NEWS</h1>
         <div className="xl:flex">
             <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
                 {
-                    newsdata.map((news, index) => {
+                    visibaleNEWS.map((news, index) => {
                         return (
                             <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white my-2 p-4 rounded shadow-xl`} key={index}>
                                 <div className="">
                                     <div className="">
-                                        <img src={`${import.meta.env.VITE_APP_API}/${news.news_img}`} alt="" className='mb-2'/>
+                                        <img src={`${import.meta.env.VITE_APP_API}/${news.news_img}`} alt="" className='mb-2 h-60 w-auto'/>
                                     </div>
                                     <div className="w-full xl:my-0 my-2">
                                         <h1 className="font-semibold text-xl">{news.news_title}</h1>

@@ -1,16 +1,36 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import useNoticeData from '../../components/Notice/NoticeData'
 import DefaultBtn from '../../components/Buttons/DefaultBtn'
 
 const Notice = () => {
     const noticedata = useNoticeData();
+
+    const [visibaleNotice, setvisibaleNotice] = useState([]);
+    useEffect(() => {
+        const updateVisibleNotice = () => {
+            const screenWidth = window.innerWidth;
+
+            if (screenWidth >= 1280) { // Extra-large screens (desktop)
+                setvisibaleNotice(noticedata.slice(0, 9)); // Show first 9 events
+            } else if (screenWidth < 768) { // Mobile screens
+                setvisibaleNotice(noticedata.slice(0, 1)); // Show only 1 event
+            } else { // Medium screens (tablet)
+                setvisibaleNotice(noticedata.slice(0, 9)); // Show first 9 events
+            }
+        };
+
+        updateVisibleNotice();
+        window.addEventListener('resize', updateVisibleNotice);
+
+        return () => window.removeEventListener('resize', updateVisibleNotice);
+    }, [noticedata]);     
   return (
     <div>
         <h1 className="text-2xl font-semibold uppercase text-[#560606] mt-4">Notice</h1>
 
         <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
             {
-                noticedata.map((notice, index) => {
+                visibaleNotice.map((notice, index) => {
                     return (
                         <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white p-4 rounded my-4 shadow-xl duration-500 hover:border hover:border-[#560606]/20`} key={index}>
                             <h1 className="text-[#560606] font-semibold text-xl">{notice.notice_title}</h1>
