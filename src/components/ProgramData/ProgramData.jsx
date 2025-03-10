@@ -1,3 +1,16 @@
+import shortcourse from '../../assets/workshop.jpg'
+import certificate from '../../assets/certificates.jpg'
+import degree from '../../assets/degrees.jpg'
+import PGAI from '../../assets/PGIA.jpg'
+import PGIS from '../../assets/PGIS.jpg'
+import PGIHS from '../../assets/PGIHS.jpg'
+import PGIMS from '../../assets/PGIMS.jpg'
+import AHS from '../../assets/AHS.jpg'
+import VETERNERY from '../../assets/VETERNERY.jpg'
+import MANAGEMENT from '../../assets/MANAGEMENT.jpg'
+import ENGINEERING from '../../assets/ENGINEERING.jpg'
+
+
 const programData = [
     {
         id: 1,
@@ -8,7 +21,7 @@ const programData = [
             {
                 id: 1,
                 name: 'External-Degree Programs',
-                img: 'https://wallpapercave.com/wp/wp13669334.jpg',
+                img: degree,
                 link: '#'
             },
             {
@@ -20,13 +33,13 @@ const programData = [
             {
                 id: 3,
                 name: 'Certificate Programs',
-                img: 'https://wallpapercave.com/wp/wp1895394.jpg',
+                img: certificate,
                 link: '#'
             },
             {
                 id: 4,
                 name: 'Short Courses & Workshops',
-                img: 'https://wallpapercave.com/wp/wp1895394.jpg',
+                img: shortcourse,
                 link: '#'
             },
         ]
@@ -40,55 +53,55 @@ const programData = [
             {
                 id: 1,
                 name: 'Postgraduate Institute of Agriculture (PGIA)',
-                img: 'https://wallpapercave.com/wp/wp2351063.jpg',
+                img: PGAI,
                 link: '#',
             },
             {
                 id: 2,
                 name: 'Postgraduate Institute of Science (PGIS)',
-                img: 'https://wallpapercave.com/wp/wp14925950.jpg',
+                img: PGIS,
                 link: '#',
             },
             {
                 id: 3,
                 name: 'Postgraduate Institute of Humanities and Social Sciences (PGIHS)',
-                img: 'https://wallpapercave.com/wp/wp8538015.jpg',
+                img: PGIHS,
                 link: '#',
             },
             {
                 id: 4,
                 name: 'Postgraduate Institute of Medical Science (PGIMS)',
-                img: 'https://wallpapercave.com/wp/wp9452673.jpg',
+                img: PGIMS,
                 link: '#',
             },
             {
                 id: 5,
                 name: "Postgraduate Programs in Faculty of Allied Health Sciences",
-                img: 'https://wallpapercave.com/wp/wp12624870.jpg',
+                img: AHS,
                 link: '#',
             },
             {
                 id: 6,
                 name: 'Postgraduate Programs in Faculty of Dental Sciences',
-                img: 'https://wallpapercave.com/wp/wp4907573.jpg',
+                img: 'https://wallpapercave.com/wp/wp1957138.jpg',
                 link: '#',
             },
             {
                 id: 7,
                 name: 'Postgraduate Programs in Faculty of Engineering',
-                img: 'https://wallpapercave.com/wp/wp2172545.jpg',
+                img: ENGINEERING,
                 link: '#',
             },
             {
                 id: 8,
                 name: 'Postgraduate Programs in Faculty of Management',
-                img: 'https://wallpapercave.com/wp/wp4907573.jpg',
+                img: MANAGEMENT,
                 link: '#',
             },
             {
                 id: 9,
                 name: 'Postgraduate Programs in Faculty of Veterinary Medicine and Animal Science',
-                img: 'https://wallpapercave.com/wp/wp2172545.jpg',
+                img: VETERNERY,
                 link: '#',
             }
         ]
