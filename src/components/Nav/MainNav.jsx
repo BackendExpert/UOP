@@ -1,6 +1,7 @@
 import React from 'react'
 import UopLogo from '../../assets/uoplogo.png'
 import {MainNavData} from './DataNav'
+import { FaSearch } from 'react-icons/fa'
 
 const MainNav = () => {
   return (
@@ -29,6 +30,13 @@ const MainNav = () => {
                                 )
                             })
                         }
+
+                        <div className="">
+                            <div className="flex">
+                                <input type="text" name="" id="" className='mr-2 h-8 rounded pl-2' placeholder='Search...'/>
+                                <div className="mt-1"><FaSearch className='h-6 w-auto'/></div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
