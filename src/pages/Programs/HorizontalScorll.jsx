@@ -97,8 +97,8 @@ export default function HorizontalScroll() {
             className="relative xl:min-w-[calc(100%/4)] md:min-w-[calc(100%/3)] min-w-[calc(100%/1)] aspect-[2/3] bg-cover bg-center flex-shrink-0 group rounded-lg overflow-hidden shadow-lg"
             style={{ backgroundImage: `url(${program.image})`, scrollSnapAlign: "start" }}
           >
-            {/* Overlay with Program Details */}
-            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2 transition-transform transform translate-y-full group-hover:translate-y-0 duration-300">
+            {/* Always Visible Overlay with Program Details */}
+            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2">
               <h3 className="text-lg font-bold">{program.title}</h3>
               <p className="text-sm opacity-80">{program.description}</p>
             </div>

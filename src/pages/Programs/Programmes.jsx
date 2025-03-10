@@ -15,7 +15,7 @@ const Programmes = () => {
       <div className="flex mb-4 justify-between" data-aos="zoom-in">
         <div className="w-full">
           <a href="">
-            <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full mr-2'>International Programs for Sri Lankan Students</button>
+            <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full mr-2'>Programs for Sri Lankan Students</button>
           </a>
         </div>
         <div className="w-full">

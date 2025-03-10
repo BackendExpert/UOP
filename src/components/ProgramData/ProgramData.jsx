@@ -25,7 +25,7 @@ const programData = [
             },
             {
                 id: 4,
-                name: 'Short Courses',
+                name: 'Short Courses & Workshops',
                 img: 'https://wallpapercave.com/wp/wp1895394.jpg',
                 link: '#'
             },
