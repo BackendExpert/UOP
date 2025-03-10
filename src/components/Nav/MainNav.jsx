@@ -4,7 +4,7 @@ import {MainNavData} from './DataNav'
 
 const MainNav = () => {
   return (
-    <div className='xl:px-28 px-4 py-4 bg-[#560606] text-white'>        
+    <div className='xl:px-20 px-4 py-4 bg-[#560606] text-white'>        
         <div className="flex justify-between">
             <div className="">
                 <img src={UopLogo} alt="" className='xl:h-20 h-12 w-auto'/>

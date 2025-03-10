@@ -38,7 +38,7 @@ const SecNav = () => {
 
   return (
     <div className="border-t border-[#e8b910]">
-        <div className='xl:px-[6%] px-4 py-4 bg-[#560606] text-white'>
+        <div className='xl:px-20 px-4 py-4 bg-[#560606] text-white'>
 
 
         <div className=''>
@@ -109,7 +109,7 @@ const SecNav = () => {
                                                 <div className="">
                                                     {submenu.menusubL && Array.isArray(submenu.menusubL) && submenu.menusubL.length > 0 ? (
                                                         <div className=" py-4">
-                                                            <h1 className='text-xl'>{submenu.name}</h1>
+                                                            <h1 className='text-xl text-[#e8b910]'>{submenu.name}</h1>
                                                             <p className="mt-2 ml-2">
                                                                 {submenu.menusubL.map((subData, submenuLindex) => (
                                                                     <a href={subData.link} className="">
@@ -123,7 +123,7 @@ const SecNav = () => {
                                                     ) : (
                                                         <div className="py-4">
                                                             <a href={submenu.link} className="">
-                                                                <h1 className="text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                <h1 className="text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
                                                                     {submenu.name}
                                                                 </h1>
                                                             </a>
