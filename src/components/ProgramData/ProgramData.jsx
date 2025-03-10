@@ -7,7 +7,7 @@ const programData = [
         courses: [
             {
                 id: 1,
-                name: 'Degree Programs',
+                name: 'External-Degree Programs',
                 img: 'https://wallpapercave.com/wp/wp13669334.jpg',
                 link: '#'
             },
