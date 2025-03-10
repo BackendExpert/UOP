@@ -21,15 +21,10 @@ const MainNavData = [
     },
     {
         id: 5,
-        name: 'ONLINE PAYMENTS',
+        name: 'IT Services',
         link: '#',
     },
-    {
-        id: 6,
-        name: 'Donate Now',
-        link: '#',
-    },
-        
+
 ]
 
 const secNavData = [
