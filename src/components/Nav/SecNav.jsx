@@ -80,9 +80,10 @@ const SecNav = () => {
                                     <div className="flex cursor-pointer">
                                         {data.id && Array.isArray(data.submenu) && data.submenu.length ? (
                                             <div className="flex">
-                                                <h1 className={`${atTop ? '' : ''} font-semibold uppercase`}>
+                                                <h1 className={`font-semibold uppercase ${dksubmenu === data.id ? 'text-[#e8b910]' : ''}`}>
                                                     {data.name}
                                                 </h1>
+
                                                 <p className="mt-2 ml-2">
                                                     <FaChevronDown className="h-3 w-auto" />
                                                 </p>
@@ -104,13 +105,13 @@ const SecNav = () => {
                                         <div className="relative"></div>
                                         <div className='absolute inset-0 bg-black opacity-80 mt-4'></div>
                                         <div className="p-8 relative">
-                                            <div className="grid grid-cols-4 gap-4">
+                                            <div className="grid grid-cols-4 gap-0">
                                             {data.submenu.map((submenu, submenuIndex) => (
                                                 <div className="">
                                                     {submenu.menusubL && Array.isArray(submenu.menusubL) && submenu.menusubL.length > 0 ? (
                                                         <div className=" py-4">
                                                             <h1 className='text-xl text-[#e8b910]'>{submenu.name}</h1>
-                                                            <p className="mt-2 ml-2">
+                                                            <p className="">
                                                                 {submenu.menusubL.map((subData, submenuLindex) => (
                                                                     <a href={subData.link} className="">
                                                                         <h1 key={submenuLindex} className="px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">

@@ -24,6 +24,11 @@ const MainNavData = [
         name: 'IT Services',
         link: '#',
     },
+    {
+        id: 6,
+        name: 'FAQ',
+        link: '#',
+    },
 
 ]
 
