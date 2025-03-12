@@ -152,7 +152,9 @@ const secNavData = [
             {
                 id: 7,
                 name: 'Scholarships',
-                link: '#'
+                menusubL: [
+                    { id:1, link: '#', name: 'Academic Awards & Prizes'}
+                ]
             },
         ]
     },
@@ -174,6 +176,7 @@ const secNavData = [
             { id: 7, name: 'Student Services', link: '#' },
             { id: 8, name: 'Counselling & Psychological Support', link: '#' },
             { id: 9, name: 'Religious Activities', link: '#' },
+            { id: 10, name: 'Student Discipline', link: '#'},
         ]
     },
 
@@ -258,7 +261,7 @@ const secNavData = [
                     menusubL: [
                         { id: 1, link: '#', name: 'Capital Works'}, 
                         { id: 2, link: '#', name: 'Maintenance'}, 
-                        { id: 3, link: '#', name: 'Marshals'}, 
+                        { id: 3, link: '#', name: 'Marshal Division'}, 
                         { id: 4, link: '#', name: 'Landscape'}, 
                         { id: 5, link: '#', name: 'Physical Education'}, 
                         { id: 6, link: '#', name: 'Public Relations'}, 

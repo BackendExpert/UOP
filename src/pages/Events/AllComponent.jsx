@@ -72,13 +72,13 @@ const AllComponent = () => {
                 <div className="xl:my-0 my-4 xl:w-1/3">
                     <div className="bg-white mx-4 shado mb-4">
                         <a href="#">
-                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 border-b border-[#560606]/20 duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
+                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#560606] border-b border-[#e8b910] text-[#e8b910] duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
                                 <div className="mt-2"><FaLink className='h-4 w-auto' /> </div>
                                 <h1 className="text-lg pl-2">ONLINE PAYMENTS</h1>
                             </div>
                         </a>
                         <a href="#">
-                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 border-b border-[#560606]/20 duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
+                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#560606] text-[#e8b910] duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
                                 <div className="mt-2"><FaLink className='h-4 w-auto' /> </div>
                                 <h1 className="text-lg pl-2">Donate Now</h1>
                             </div>
