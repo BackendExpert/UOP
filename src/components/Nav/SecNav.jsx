@@ -48,8 +48,15 @@ const SecNav = () => {
                     <div className="xl:hidden block">
                         <img src={uoplogo} alt="" className='h-8 w-auto'/>
                     </div>  
-                    <div className="xl:hidden block flex justify-end">
 
+                    <div className="xl:hidden block flex justify-end">
+                        <div className="mr-4 xl:hidden ">
+                            <div className="flex">
+                                <div className="mx-2">සිං</div>
+                                <div className="mx-2">த</div>
+                                <div className="mx-2">A</div>
+                            </div>
+                        </div>
                         {
                             menuopen === false ? 
                             <div className="cursor-pointer">
