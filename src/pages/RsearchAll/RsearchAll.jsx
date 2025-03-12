@@ -2,6 +2,7 @@ import React from 'react'
 import BarChart from '../../components/Charts/BarChart'
 import { researchstats } from './ResearchStatus'
 import useResData from '../../components/ReseachSection/ResearchAllData'
+import { FaCheck } from "react-icons/fa";
 
 const RsearchAll = () => {
     const researchdata = useResData()
@@ -47,51 +48,51 @@ const RsearchAll = () => {
                         <div className="bg-white md:p-8 p-4 rounded-xl shadow-md">
                             <table className='w-full text-gray-500'>
                                 <tr>
-                                    <td className='font-semibold'>Research Publications</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span> Research Publications</td>
                                     <td>13,000+</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Citations </td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Citations </td>
                                     <td>269,000+</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Research Ranking</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Ranking</td>
                                     <td>Ranked 1,879</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Research Disciplines</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Disciplines</td>
                                     <td>Ranked 63rd globally for Classics and Ancient History, 194th for Publishing. </td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Number of researchers in the top 2% of world scientists</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Number of researchers in the top 2% of world scientists</td>
                                     <td>9</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Annual Research Conferences</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Annual Research Conferences</td>
                                     <td>600+ abstracts </td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Research Collaborations</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Collaborations</td>
                                     <td>20 +</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Postgraduate Research Programmes</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Postgraduate Research Programmes</td>
                                     <td>50+</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Research Awards and Recognitions</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Awards and Recognitions</td>
                                     <td>10-15 (National and international)</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Number of Patents Filed</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Number of Patents Filed</td>
                                     <td>15-10 patents filed annually</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Major Annual Conferences</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Major Annual Conferences</td>
                                     <td>6+</td>
                                 </tr>
                                 <tr>
-                                    <td className='font-semibold'>Workshops/Seminars</td>
+                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Workshops/Seminars</td>
                                     <td>15+ workshops/seminars annually </td>
                                 </tr>
                             </table>
