@@ -1,7 +1,7 @@
 import { useRef, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
-const universityPrograms = [
+const universityProgrammes = [
   { 
     title: "BSc in Computer Science", 
     description: "A four-year program covering algorithms, AI, software engineering, and full-stack development.", 
@@ -85,13 +85,13 @@ export default function HorizontalScroll() {
         <ChevronLeft size={24} />
       </button>
 
-      {/* Scrollable University Programs Container */}
+      {/* Scrollable University Programmes Container */}
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto scroll-smooth w-full no-scrollbar px-6"
         style={{ scrollSnapType: "x mandatory", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {[...universityPrograms, ...universityPrograms].map((program, index) => (
+        {[...universityProgrammes, ...universityProgrammes].map((program, index) => (
           <div
             key={index}
             className="relative xl:min-w-[calc(100%/4)] md:min-w-[calc(100%/3)] min-w-[calc(100%/1)] aspect-[2/3] bg-cover bg-center flex-shrink-0 group rounded-lg overflow-hidden shadow-lg"

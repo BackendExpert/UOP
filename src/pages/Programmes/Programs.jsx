@@ -1,11 +1,11 @@
 import React from 'react'
 import { programData } from '../../components/ProgramData/ProgramData'
 
-const Programs = () => {
+const Programmes = () => {
   return (
     <div className="bg-gray-200">
         <div className="xl:px-28 px-4 py-20">
-            <h1 className="my-8 text-center font-semibold text-3xl text-[#560606]">Programs</h1>
+            <h1 className="my-8 text-center font-semibold text-3xl text-[#560606]">Programmes</h1>
             <div className="xl:grid grid-cols-3 gap-8">
                 {
                     programData.map((program, index) => {
@@ -39,4 +39,4 @@ const Programs = () => {
   )
 }
 
-export default Programs
+export default Programmes

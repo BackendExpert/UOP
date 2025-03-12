@@ -27,7 +27,7 @@ const RSPage = () => {
   return (
     <div className='xl:px-28 px-4 my-8 bg-gray-200 py-16'>
         <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">Research and Innovation</h1>
-        <div className="text-center py-8">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis optio dolorum exercitationem labore consectetur deleniti, sint possimus sequi est alias dolor, repellendus reiciendis! Nobis debitis placeat delectus, tempore esse ab.</div>
+        <div className="text-center py-8">The University of Peradeniya pioneers transformative research and creative innovations, advancing knowledge to address global and local challenges.</div>
 
         <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-8">
             {

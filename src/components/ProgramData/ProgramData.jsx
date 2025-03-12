@@ -20,19 +20,19 @@ const programData = [
         courses: [
             {
                 id: 1,
-                name: 'External-Degree Programs',
+                name: 'External-Degree Programmes',
                 img: degree,
                 link: '#'
             },
             {
                 id: 2,
-                name: 'Diploma Programs',
+                name: 'Diploma Programmes',
                 img: 'https://wallpapercave.com/wp/wp8722693.jpg',
                 link: '#'
             },
             {
                 id: 3,
-                name: 'Certificate Programs',
+                name: 'Certificate Programmes',
                 img: certificate,
                 link: '#'
             },
@@ -46,8 +46,8 @@ const programData = [
     },
     {
         id: 2,
-        name: 'Postgraduate Programs',
-        desc: 'Postgraduate Programs of University of Peradeniya',
+        name: 'Postgraduate Programmes',
+        desc: 'Postgraduate Programmes of University of Peradeniya',
         link: '#',
         courses: [
             {
@@ -76,31 +76,31 @@ const programData = [
             },
             {
                 id: 5,
-                name: "Postgraduate Programs in Faculty of Allied Health Sciences",
+                name: "Postgraduate Programmes in Faculty of Allied Health Sciences",
                 img: AHS,
                 link: '#',
             },
             {
                 id: 6,
-                name: 'Postgraduate Programs in Faculty of Dental Sciences',
+                name: 'Postgraduate Programmes in Faculty of Dental Sciences',
                 img: 'https://wallpapercave.com/wp/wp1957138.jpg',
                 link: '#',
             },
             {
                 id: 7,
-                name: 'Postgraduate Programs in Faculty of Engineering',
+                name: 'Postgraduate Programmes in Faculty of Engineering',
                 img: ENGINEERING,
                 link: '#',
             },
             {
                 id: 8,
-                name: 'Postgraduate Programs in Faculty of Management',
+                name: 'Postgraduate Programmes in Faculty of Management',
                 img: MANAGEMENT,
                 link: '#',
             },
             {
                 id: 9,
-                name: 'Postgraduate Programs in Faculty of Veterinary Medicine and Animal Science',
+                name: 'Postgraduate Programmes in Faculty of Veterinary Medicine and Animal Science',
                 img: VETERNERY,
                 link: '#',
             }
