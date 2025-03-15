@@ -31,8 +31,8 @@ const Programmes = () => {
         if(program.name === "Postgraduate Programmes"){
           return (
             <div key={index} className='mb-10'>
-            <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-0'>
-              <div className='w-full h-64 flex'>
+            <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-4'>
+              <div className='w-full h-64 flex rounded-md'>
                 <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                   <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
                   <p>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
@@ -44,7 +44,7 @@ const Programmes = () => {
                   <div
                     data-aos='zoom-in'
                     style={{ backgroundImage: `url(${course.img})` }}
-                    className='w-full relative h-64 bg-cover bg-center py-24 text-center text-white group overflow-hidden'
+                    className='rounded-md w-full relative h-64 bg-cover bg-center py-24 text-center text-white group overflow-hidden'
                   >
                     <div className='absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500'></div>
   
@@ -72,8 +72,8 @@ const Programmes = () => {
         }
         return (
           <div key={index} className='mb-10'>
-          <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-0'>
-            <div className='w-full h-64 flex'>
+          <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-4'>
+            <div className='w-full h-64 flex rounded'>
               <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                 <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
                 <p>{program.desc}</p>
@@ -85,7 +85,7 @@ const Programmes = () => {
                 <div
                   data-aos='zoom-in'
                   style={{ backgroundImage: `url(${course.img})` }}
-                  className='w-full relative h-64 bg-cover bg-center py-24 text-center text-white group overflow-hidden'
+                  className='rounded-md w-full relative h-64 bg-cover bg-center py-24 text-center text-white group overflow-hidden'
                 >
                   <div className='absolute inset-0 bg-black opacity-40 group-hover:opacity-80 transition-opacity duration-500'></div>
 
