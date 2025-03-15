@@ -31,17 +31,23 @@ const MainNav = () => {
                             })
                         }
 
-                        <div className="mr-4">
-                            <div className="flex">
-                                <div className="mx-2">සිං</div>
-                                <div className="mx-2">த</div>
-                                <div className="mx-2">A</div>
-                            </div>
-                        </div>
+
                         <div className="">
                             <div className="flex">
-                                <input type="text" name="" id="" className='text-gray-500 mr-2 h-8 rounded pl-2' placeholder='Search...'/>
-                                <div className="mt-1"><FaSearch className='h-6 w-auto'/></div>
+                                <div className="">
+                                    <div className="flex">
+                                        <input type="text" name="" id="" className='text-gray-500 mr-2 h-8 rounded pl-2' placeholder='Search...'/>
+                                        <div className="mt-1"><FaSearch className='h-6 w-auto'/></div>
+                                    </div>
+                                    <div className="flex">
+                                        <div className="mx-2">සිං</div>
+                                        <div className="mx-2">த</div>
+                                        <div className="mx-2">A</div>
+                                    </div>
+                                </div>
+                                </div>
+                                <div className="mr-4">
+
                             </div>
                         </div>
                     </div>

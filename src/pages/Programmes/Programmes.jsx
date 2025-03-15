@@ -31,14 +31,11 @@ const Programmes = () => {
         if(program.name === "Postgraduate Programmes"){
           return (
             <div key={index} className='mb-10'>
-            <h1 className="text-center font-semibold text-xl mb-4">
-              The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.
-            </h1>
             <div className='grid xl:grid-cols-5 md:grid-cols-2 gap-0'>
               <div className='w-full h-64 flex'>
                 <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                   <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
-                  <p>{program.desc}</p>
+                  <p>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
                 </div>
               </div>
   
