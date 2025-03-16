@@ -1,51 +1,29 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-
-const universityProgrammes = [
-  { 
-    title: "BSc in Computer Science", 
-    description: "A four-year program covering algorithms, AI, software engineering, and full-stack development.", 
-    image: "https://wallpapercave.com/wp/wp4991568.jpg"
-  },
-  { 
-    title: "BBA in Business Administration", 
-    description: "Develop leadership, management, and financial skills with hands-on case studies.", 
-    image: "https://wallpapercave.com/wp/wp4991569.jpg"
-  },
-  { 
-    title: "BEng in Civil Engineering", 
-    description: "Learn structural design, geotechnical engineering, and sustainable construction practices.", 
-    image: "https://wallpapercave.com/wp/wp4327154.jpg"
-  },
-  { 
-    title: "MBBS in Medicine", 
-    description: "A six-year intensive medical program focusing on anatomy, pathology, and clinical practice.", 
-    image: "https://wallpapercave.com/wp/wp4991580.jpg"
-  },
-  { 
-    title: "BSc in Data Science", 
-    description: "Explore big data, machine learning, and statistical analysis for decision-making.", 
-    image: "https://wallpapercave.com/wp/wp4991602.jpg"
-  },
-  { 
-    title: "BSc in Artificial Intelligence", 
-    description: "Dive deep into AI, neural networks, deep learning, and automation technologies.", 
-    image: "https://wallpapercave.com/wp/wp4991580.jpg"
-  },
-  { 
-    title: "LLB in Law", 
-    description: "Gain expertise in legal studies, international law, and constitutional policies.", 
-    image: "https://wallpapercave.com/wp/wp4991602.jpg"
-  },
-  { 
-    title: "BA in Psychology", 
-    description: "Understand human behavior, cognitive processes, and mental health research.", 
-    image: "https://wallpapercave.com/wp/wp4991569.jpg"
-  }
-];
+import axios from "axios";
 
 export default function HorizontalScroll() {
   const scrollRef = useRef(null);
+  const [imagedata, setimagedata] = useState([]);
+
+  useEffect(() => {
+    axios.get(import.meta.env.VITE_APP_API + '/programsilder.php', {
+        params: { action: "getallImages" },
+        headers: { 'Content-Type': 'multipart/form-data' },
+    })
+    .then(res => {
+        console.log(res.data);
+        if (res.data.Result) {
+            setimagedata(res.data.Result);
+        } else {
+            setimagedata([]);
+        }
+    })
+    .catch(err => {
+        console.log(err);
+        setimagedata([]);
+    });
+  }, []);
 
   useEffect(() => {
     if (scrollRef.current) {
@@ -91,16 +69,16 @@ export default function HorizontalScroll() {
         className="flex gap-4 overflow-x-auto scroll-smooth w-full no-scrollbar px-6"
         style={{ scrollSnapType: "x mandatory", scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
-        {[...universityProgrammes, ...universityProgrammes].map((program, index) => (
+        {imagedata.map((image, index) => (
           <div
             key={index}
             className="relative xl:min-w-[calc(100%/4)] md:min-w-[calc(100%/3)] min-w-[calc(100%/1)] aspect-[2/3] bg-cover bg-center flex-shrink-0 group rounded-lg overflow-hidden shadow-lg"
-            style={{ backgroundImage: `url(${program.image})`, scrollSnapAlign: "start" }}
+            style={{ backgroundImage: `url(${import.meta.env.VITE_APP_API}/${image.img})`, scrollSnapAlign: "start" }}
           >
             {/* Always Visible Overlay with Program Details */}
-            <div className="absolute bottom-0 left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2">
-              <h3 className="text-lg font-bold">{program.title}</h3>
-              <p className="text-sm opacity-80">{program.description}</p>
+            <div className="absolute bottom-0 h-40 left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2">
+              <h3 className="text-lg font-bold">{image.title}</h3>
+              <p className="text-sm opacity-80">{image.pdesc}</p>
             </div>
           </div>
         ))}
