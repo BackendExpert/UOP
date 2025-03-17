@@ -8,7 +8,9 @@ const MainNav = () => {
         <div className='xl:px-20 px-4 py-4 bg-[#560606] text-white'>
             <div className="flex justify-between">
                 <div className="">
-                    <img src={UopLogo} alt="" className='xl:h-20 h-12 w-auto' />
+                    <a href="/">
+                        <img src={UopLogo} alt="" className='xl:h-20 h-12 w-auto' />
+                    </a>
                 </div>
                 <div className="py-6">
                     <div className="xl:block hidden">

@@ -20,7 +20,7 @@ const Programmes = () => {
           </a>
         </div>
         <div className="w-full">
-          <a href="">
+          <a href="/InternationalProgrammes">
             <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full ml-2'>Programmes for International Students</button>
           </a>
         </div>
