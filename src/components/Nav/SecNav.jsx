@@ -86,8 +86,8 @@ const SecNav = () => {
                                 >
                                     <div className="flex cursor-pointer">
                                         {data.id && Array.isArray(data.submenu) && data.submenu.length ? (
-                                            <div className="flex">
-                                                <h1 className={`font-semibold uppercase ${dksubmenu === data.id ? 'text-[#e8b910]' : ''}`}>
+                                            <div className={`flex `}>
+                                                <h1 className={`font-semibold uppercase ${dksubmenu === data.id ? 'text-[#e8b910] border-b border-white' : ''}`}>
                                                     {data.name}
                                                 </h1>
 

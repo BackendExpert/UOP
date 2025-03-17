@@ -28,7 +28,7 @@ const HomePage = () => {
           };
       }, []);
   return (
-    <div className={`${ atTop ? 'mt-8' : 'mt-0'}`}>
+    <div className={`${ atTop ? 'mt-6' : 'mt-0'}`}>
       <Slider />
 
       {/* <Events /> */}

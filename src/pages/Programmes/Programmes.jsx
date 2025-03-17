@@ -9,7 +9,7 @@ const Programmes = () => {
       <div data-aos='zoom-in' className='xl:mb-0 mb-8 w-full xl:px-16 px-8 xl:flex items-center justify-center'>
         <div>
           <h1 className='uppercase text-center text-[#560606] font-semibold text-3xl mb-8'>Study at UOP</h1>
-          <p className="mb-4">The University of Peradeniya welcomes both Sri Lankan and international students to experience globally recognized education, pioneering research, and a dynamic campus environment.</p>
+          <p className="mb-4 font-semibold text-center">The University of Peradeniya welcomes both Sri Lankan and international students to experience globally recognized education, pioneering research, and a dynamic campus environment.</p>
         </div>
       </div>
 
@@ -35,7 +35,7 @@ const Programmes = () => {
               <div className='w-full h-64 flex rounded-md'>
                 <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                   <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
-                  <p>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
+                  <p className=''>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
                 </div>
               </div>
   
