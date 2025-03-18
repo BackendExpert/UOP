@@ -34,9 +34,9 @@ const Notice = () => {
                     return (
                         <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white p-4 rounded my-4 shadow-xl duration-500 hover:border hover:border-[#560606]/20`} key={index}>
                             <h1 className="text-[#560606] font-semibold text-xl">{notice.notice_title}</h1>
-                            <p className="mt-2">
+                            {/* <p className="mt-2">
                                 {notice.notice_desc}
-                            </p>
+                            </p> */}
 
                             <div className="flex justify-between">
                                 <div className="mt-4">

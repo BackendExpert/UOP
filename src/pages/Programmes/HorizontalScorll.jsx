@@ -76,7 +76,7 @@ export default function HorizontalScroll() {
             style={{ backgroundImage: `url(${import.meta.env.VITE_APP_API}/${image.img})`, scrollSnapAlign: "start" }}
           >
             {/* Always Visible Overlay with Program Details */}
-            <div className="absolute bottom-0 h-40 left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2">
+            <div className="absolute bottom-0 h-auto left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2">
               <h3 className="text-lg font-bold">{image.title}</h3>
               <p className="text-sm opacity-80">{image.pdesc}</p>
             </div>

@@ -80,17 +80,11 @@ const secNavData = [
             {
                 id: 4,
                 name: 'Sustainability',
-                link: '#'
-            },
-            {
-                id: 5,
-                name: 'Policies',
-                link: '#'
-            },
-            {
-                id: 6,
-                name: 'International Collaborations',
-                link: '#'
+                link: '#',
+                menusubL: [
+                    { id: 1, link: '#',  name: 'Policies'},
+                    { id: 2, link: '#',  name: 'International Collaborations'},
+                ]
             },
         ]
     },

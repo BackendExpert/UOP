@@ -35,7 +35,7 @@ const Programmes = () => {
               <div className='w-full h-64 flex rounded-md'>
                 <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                   <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
-                  <p className=''>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
+                  <p className='text-sm'>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
                 </div>
               </div>
   

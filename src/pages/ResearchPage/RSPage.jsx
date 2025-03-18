@@ -33,24 +33,6 @@ const RSPage = () => {
 
 
             <div className="flex mb-8">
-                <div data-aos="zoom-in" className="p-4 py-8 md:my-0 my-2 w-full bg-white p-4 md:mr-2 rounded shadow-md">
-                    <div className="grid xl:grid-cols-3 md:grid-cols-3 gap-6">
-                        {
-                            researchstats.map((data, index) => {
-                                return (
-                                    <div className="" key={index}>
-                                        <center>
-                                            <data.icon className='h-12 w-full fill-[#560606]' />
-                                            <a href={data.link}>
-                                                <h1 className="mt-8 text-xl text-gray-500 font-semibold duration-500 hover:text-[#e8b910]">{data.name}</h1>
-                                            </a>
-                                        </center>
-                                    </div>
-                                )
-                            })
-                        }
-                    </div>
-                </div>
                 <div data-aos="zoom-in" className="md:my-0 my-2 w-full bg-white p-4 md:ml-2 rounded shadow-md">
                     <div className="bg-white md:p-8 p-4 rounded-xl shadow-md">
                         <table className='w-full text-gray-500'>
