@@ -51,7 +51,7 @@ const Events = () => {
                                         <h1 className="">{month}</h1>
                                         <h1 className="">{day}</h1>
                                     </div>
-                                    <h1 className="text-xl font-semibold text-white">{event.event_title}</h1>
+                                    <h1 className="px-2 text-xl text-center font-semibold text-white">{event.event_title}</h1>
                                 </div>
                                 <div className="p-4 absolute bg-[#e8b910] inset-0 flex items-center justify-center -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                                     <div className="relative">
