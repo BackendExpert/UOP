@@ -76,7 +76,7 @@ const Slider = () => {
                 {imagedata[currentIndex]?.link && (
                     <a
                         href={imagedata[currentIndex].link}
-                        className="px-3 sm:px-6 py-2 sm:py-3 bg-[#560606] text-white rounded text-sm sm:text-lg hover:bg-[#800000] transition duration-300"
+                        className="px-3 sm:px-6 py-2 sm:py-3 bg-[#e8b910] text-white rounded text-sm sm:text-lg hover:bg-[#800000] transition duration-300"
                     >
                         Learn More
                     </a>

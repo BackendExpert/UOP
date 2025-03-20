@@ -23,13 +23,13 @@ const AllComponent = () => {
                 <div className="w-full xl:mr-4">
                     <div className="bg-gray-200">
                         <div className="flex text-xl font-semibold uppercase justify-around text-[#560606]">
-                            <div className={`${menuflex === "Events" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#560606]'}  md:mr-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Events" })}>
+                            <div className={`${menuflex === "Events" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#e8b910] bg-[#e8b910] '}md:mr-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Events" })}>
                                 <h1 className="" >Events</h1>
                             </div>
-                            <div className={`${menuflex === "News" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#560606]'}  md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "News" })}>
+                            <div className={`${menuflex === "News" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#e8b910] bg-[#e8b910]'}   md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "News" })}>
                                 <h1 className="" >News</h1>
                             </div>
-                            <div className={`${menuflex === "Notice" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#560606]'}  md:ml-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Notice" })}>
+                            <div className={`${menuflex === "Notice" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#e8b910] bg-[#e8b910]'}   md:ml-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Notice" })}>
                                 <h1 className="" >Notice</h1>
                             </div>
                         </div>

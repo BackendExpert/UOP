@@ -10,12 +10,15 @@ const Events = () => {
         const updateVisibleEvents = () => {
             const screenWidth = window.innerWidth;
 
+            // Sort the events by date (highest date first)
+            const sortedEvents = eventdata.sort((a, b) => new Date(b.event_date) - new Date(a.event_date));
+
             if (screenWidth >= 1280) { // Extra-large screens (desktop)
-                setVisibleEvents(eventdata.slice(0, 9)); // Show first 9 events
+                setVisibleEvents(sortedEvents.slice(0, 9)); // Show first 9 events
             } else if (screenWidth < 768) { // Mobile screens
-                setVisibleEvents(eventdata.slice(0, 1)); // Show only 1 event
+                setVisibleEvents(sortedEvents.slice(0, 1)); // Show only 1 event
             } else { // Medium screens (tablet)
-                setVisibleEvents(eventdata.slice(0, 9)); // Show first 9 events
+                setVisibleEvents(sortedEvents.slice(0, 9)); // Show first 9 events
             }
         };
 
@@ -51,7 +54,10 @@ const Events = () => {
                                         <h1 className="">{month}</h1>
                                         <h1 className="">{day}</h1>
                                     </div>
-                                    <h1 className="px-2 text-xl text-center font-semibold text-white">{event.event_title}</h1>
+                                    <div className="backdrop-blur-md bg-opacity-20 rounded-md bg-white text-center p-3 mx-2">
+                                        <h1 className="text-white font-semibold text-xl">{event.event_title}</h1>
+                                    </div>
+                                  
                                 </div>
                                 <div className="p-4 absolute bg-[#e8b910] inset-0 flex items-center justify-center -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                                     <div className="relative">

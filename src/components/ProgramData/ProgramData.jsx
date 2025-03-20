@@ -4,17 +4,18 @@ import degree from '../../assets/degrees.jpg'
 import PGAI from '../../assets/PGIA.jpg'
 import PGIS from '../../assets/PGIS.jpg'
 import PGIHS from '../../assets/PGIHS.jpg'
-import PGIMS from '../../assets/PGIMS.jpg'
+import PGIMS from '../../assets/medicine.jpg'
 import AHS from '../../assets/AHS.jpg'
-import VETERNERY from '../../assets/VETERNERY.jpg'
+import VETERNERY from '../../assets/VET.jpg'
 import MANAGEMENT from '../../assets/MANAGEMENT.jpg'
 import ENGINEERING from '../../assets/ENGINEERING.jpg'
+import dental2 from '../../assets/dental2.jpg'
 
 
 const programData = [
     {
         id: 1,
-        name: 'Distance Education',
+        name: 'Undergraduate Programmes & Other Courses.',
         desc: 'The University of Peradeniya is the pioneering institution that initiated offering external degrees in the country since 1964.',
         link: '#',
         courses: [
@@ -83,7 +84,7 @@ const programData = [
             {
                 id: 6,
                 name: 'Postgraduate Programmes in Faculty of Dental Sciences',
-                img: 'https://wallpapercave.com/wp/wp1957138.jpg',
+                img: dental2,
                 link: '#',
             },
             {

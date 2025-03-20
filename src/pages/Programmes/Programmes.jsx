@@ -8,15 +8,15 @@ const Programmes = () => {
     <div className='bg-white py-8 xl:px-24 px-4'>
       <div data-aos='zoom-in' className='xl:mb-0 mb-8 w-full xl:px-16 px-8 xl:flex items-center justify-center'>
         <div>
-          <h1 className='uppercase text-center text-[#560606] font-semibold text-3xl mb-8'>Study at UOP</h1>
+          <h1 className='uppercase text-center text-[#560606] font-semibold text-3xl mb-8'>Study at Peradeniya</h1>
           <p className="mb-4 font-semibold text-center">The University of Peradeniya welcomes both Sri Lankan and international students to experience globally recognized education, pioneering research, and a dynamic campus environment.</p>
         </div>
       </div>
 
       <div className="flex mb-4 justify-between" data-aos="zoom-in">
         <div className="w-full">
-          <a href="">
-            <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full mr-2'>Programmes for Sri Lankan Students</button>
+          <a href="https://www.pdn.ac.lk/academics__trashed/university-admissions/">
+            <button className='bg-[#560606] text-[#e8b910] py-2 rounded w-full mr-2'>Admission to Programmes Through the UGC</button>
           </a>
         </div>
         <div className="w-full">
@@ -35,7 +35,7 @@ const Programmes = () => {
               <div className='w-full h-64 flex rounded-md'>
                 <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                   <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
-                  <p className='text-sm'>The University of Peradeniya offers over 100 postgraduate programs, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
+                  <p className='text-sm'>The University of Peradeniya offers over 100 postgraduate programmes, including Master's, M.Phil., and Ph.D. degrees across diverse fields, fostering research excellence.</p>
                 </div>
               </div>
   
@@ -76,7 +76,7 @@ const Programmes = () => {
             <div className='w-full h-64 flex rounded'>
               <div data-aos='zoom-in' className='w-full p-6 shadow-xl text-center bg-gray-200'>
                 <h1 className='uppercase text-[#560606] font-semibold text-center py-4'>{program.name}</h1>
-                <p>{program.desc}</p>
+                <p className='text-sm'>{program.desc}</p>
               </div>
             </div>
 
@@ -113,6 +113,7 @@ const Programmes = () => {
       })}
 
       <div className="mt-8">
+        <h1 className="pb-4 uppercase font-semibold text-[#560606] text-center text-2xl">Upcoming programmes and Events</h1>  
         <HorizontalScorll />
       </div>
     </div>

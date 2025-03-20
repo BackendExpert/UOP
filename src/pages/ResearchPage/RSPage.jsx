@@ -35,6 +35,7 @@ const RSPage = () => {
             {/* Research Stats Section */}
             <div className="flex mb-8">
                 <div data-aos="zoom-in" className="md:my-0 my-2 w-full bg-white p-4 md:ml-2 rounded shadow-md">
+                    <h1 className="text-xl font-semibold text-[#560606]">Research Highlights</h1>
                     <div className="bg-white md:p-8 p-4 rounded-xl shadow-md">
                         <table className='w-full text-gray-500'>
                             <tbody>
