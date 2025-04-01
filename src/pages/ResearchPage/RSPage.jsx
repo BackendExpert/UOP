@@ -10,11 +10,11 @@ const RSPage = () => {
         const updateVisiblRes = () => {
             const screenWidth = window.innerWidth;
             if (screenWidth >= 1280) {
-                setvisiableRes(researchdata.slice(0, 8));
+                setvisiableRes(researchdata.slice(0, 4));
             } else if (screenWidth < 768) {
                 setvisiableRes(researchdata.slice(0, 1));
             } else {
-                setvisiableRes(researchdata.slice(0, 8));
+                setvisiableRes(researchdata.slice(0, 4));
             }
         };
 
