@@ -2,50 +2,27 @@ import { useRef, useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import axios from "axios";
 
-export default function HorizontalScroll() {
+const HorizontalScroll = ({ setSelectedImage }) => {
   const scrollRef = useRef(null);
-  const [imagedata, setimagedata] = useState([]);
-  const [isModalOpen, setIsModalOpen] = useState(false);
-  const [selectedImage, setSelectedImage] = useState(null);
+  const [imagedata, setImagedata] = useState([]);
 
   useEffect(() => {
     axios.get(import.meta.env.VITE_APP_API + '/programsilder.php', {
-        params: { action: "getallImages" },
-        headers: { 'Content-Type': 'multipart/form-data' },
+      params: { action: "getallImages" },
+      headers: { 'Content-Type': 'multipart/form-data' },
     })
-    .then(res => {
-        console.log(res.data);
+      .then(res => {
         if (res.data.Result) {
-            setimagedata(res.data.Result);
+          setImagedata(res.data.Result);
         } else {
-            setimagedata([]);
+          setImagedata([]);
         }
-    })
-    .catch(err => {
+      })
+      .catch(err => {
         console.log(err);
-        setimagedata([]);
-    });
+        setImagedata([]);
+      });
   }, []);
-
-  useEffect(() => {
-    if (scrollRef.current) {
-      const container = scrollRef.current;
-      container.addEventListener("scroll", handleInfiniteScroll);
-      return () => container.removeEventListener("scroll", handleInfiniteScroll);
-    }
-  }, []);
-
-  const handleInfiniteScroll = () => {
-    const container = scrollRef.current;
-    if (!container) return;
-
-    if (container.scrollLeft === 0) {
-      container.scrollLeft = container.scrollWidth / 2;
-    }
-    if (container.scrollLeft + container.clientWidth >= container.scrollWidth - 1) {
-      container.scrollLeft = container.scrollWidth / 4;
-    }
-  };
 
   const scroll = (direction) => {
     if (scrollRef.current) {
@@ -55,23 +32,8 @@ export default function HorizontalScroll() {
     }
   };
 
-  // Create a reversed version of the image data
-  const reversedImages = imagedata.slice().reverse();
-
-  // Open Modal with selected image
-  const openModal = (image) => {
-    setSelectedImage(image);
-    setIsModalOpen(true);
-  };
-
-  // Close the modal
-  const closeModal = () => {
-    setIsModalOpen(false);
-    setSelectedImage(null);
-  };
-
   return (
-    <div data-aos="zoom-in" className="relative w-full mx-auto overflow-hidden">
+    <div className="relative w-full mx-auto overflow-hidden">
       {/* Left Scroll Button */}
       <button
         className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10"
@@ -80,26 +42,31 @@ export default function HorizontalScroll() {
         <ChevronLeft size={24} />
       </button>
 
-      {/* Scrollable University Programmes Container */}
+      {/* Scrollable Images Container */}
       <div
         ref={scrollRef}
         className="flex gap-4 overflow-x-auto scroll-smooth w-full no-scrollbar px-6"
-        style={{ scrollSnapType: "x mandatory", scrollbarWidth: "none", msOverflowStyle: "none" }}
+        style={{
+          scrollSnapType: "x mandatory",
+          scrollbarWidth: "none",
+          msOverflowStyle: "none"
+        }}
       >
-        {reversedImages.map((image, index) => (
-          <div
-            key={index}
-            className="relative xl:min-w-[calc(100%/4)] md:min-w-[calc(100%/3)] min-w-[calc(100%/1)] aspect-[2/3] bg-cover bg-center flex-shrink-0 group rounded-lg overflow-hidden shadow-lg cursor-pointer"
-            style={{ backgroundImage: `url(${import.meta.env.VITE_APP_API}/${image.img})`, scrollSnapAlign: "start" }}
-            onClick={() => openModal(image)} // Open modal on click
-          >
-            {/* Always Visible Overlay with Program Details */}
-            <div className="absolute bottom-0 h-auto left-0 w-full bg-black bg-opacity-70 text-white text-center py-4 px-2">
-              <h3 className="text-lg font-bold">{image.title}</h3>
-              <p className="text-sm opacity-80">{image.pdesc}</p>
-            </div>
-          </div>
-        ))}
+        {imagedata.map((image, index) => {
+          const imgeview = `${import.meta.env.VITE_APP_API}/${image.img}`; // Define image URL
+
+          return (
+            <img
+              key={index}
+              src={imgeview} // Use the image URL variable
+              alt={`Event ${image.id}`}
+              className="w-60 h-80 mx-2 cursor-pointer rounded-md transition-transform transform hover:scale-105"
+              onClick={() => setSelectedImage(imgeview)} // Pass the image URL to the modal
+              onError={(e) => e.target.src = '/path/to/fallback-image.jpg'} // Fallback image
+            />
+          );
+        })}
+
       </div>
 
       {/* Right Scroll Button */}
@@ -109,26 +76,8 @@ export default function HorizontalScroll() {
       >
         <ChevronRight size={24} />
       </button>
-
-      {/* Modal for Image (Full Screen) */}
-      {isModalOpen && selectedImage && (
-        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-75 z-20">
-          <div className="relative w-full h-full flex justify-center items-center">
-            <button
-              className="absolute top-4 right-4 text-white text-4xl font-bold"
-              onClick={closeModal}
-            >
-              X
-            </button>
-            {/* Image in full-screen */}
-            <img
-              src={`${import.meta.env.VITE_APP_API}/${selectedImage.img}`}
-              alt={selectedImage.title}
-              className="w-full h-full object-contain"
-            />
-          </div>
-        </div>
-      )}
     </div>
   );
-}
+};
+
+export default HorizontalScroll;
