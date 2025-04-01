@@ -40,18 +40,16 @@ const RSPage = () => {
                         <table className='w-full text-gray-500'>
                             <tbody>
                                 {[
-                                    { label: 'Research Publications', value: '13,000+' },
-                                    { label: 'Citations', value: '269,000+' },
-                                    { label: 'Research Ranking', value: 'Ranked 1,879' },
-                                    { label: 'Research Disciplines', value: 'Ranked 63rd globally for Classics and Ancient History, 194th for Publishing.' },
-                                    { label: 'Number of researchers in the top 2% of world scientists', value: '9' },
-                                    { label: 'Annual Research Conferences', value: '600+ abstracts' },
-                                    { label: 'Research Collaborations', value: '20+' },
-                                    { label: 'Postgraduate Research Programmes', value: '50+' },
-                                    { label: 'Research Awards and Recognitions', value: '10-15 (National and international)' },
-                                    { label: 'Number of Patents Filed', value: '10-15 patents filed annually' },
-                                    { label: 'Major Annual Conferences', value: '6+' },
-                                    { label: 'Workshops/Seminars', value: '15+ workshops/seminars annually' }
+                                    { label: 'Research Journals', value: '' },
+                                    { label: 'Research Publications', value: '' },
+                                    { label: 'Citations', value: '' },
+                                    { label: 'Research Ranking', value: '' },
+                                    { label: 'Number of researchers in the top 2% of world scientists (2023)', value: '9' },
+                                    { label: 'Annual Research Conferences', value: '' },
+                                    { label: 'Annual Research Collaborations', value: '' },
+                                    { label: 'Research Awards and Recognitions', value: '' },
+                                    { label: 'Annual Workshops/Seminars', value: '' },
+                                    { label: 'Capital grants for Research', value: '' },
                                 ].map((item, index) => (
                                     <tr key={index}>
                                         <td className='font-semibold flex items-center'>

@@ -47,54 +47,28 @@ const RsearchAll = () => {
                     <div className="md:w-1/2 md:ml-2 md:mt-0 mt-4">
                         <div className="bg-white md:p-8 p-4 rounded-xl shadow-md">
                             <table className='w-full text-gray-500'>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span> Research Publications</td>
-                                    <td>13,000+</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Citations </td>
-                                    <td>269,000+</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Ranking</td>
-                                    <td>Ranked 1,879</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Disciplines</td>
-                                    <td>Ranked 63rd globally for Classics and Ancient History, 194th for Publishing. </td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Number of researchers in the top 2% of world scientists</td>
-                                    <td>9</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Annual Research Conferences</td>
-                                    <td>600+ abstracts </td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Collaborations</td>
-                                    <td>20 +</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Postgraduate Research Programmes</td>
-                                    <td>50+</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Research Awards and Recognitions</td>
-                                    <td>10-15 (National and international)</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Number of Patents Filed</td>
-                                    <td>15-10 patents filed annually</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Major Annual Conferences</td>
-                                    <td>6+</td>
-                                </tr>
-                                <tr>
-                                    <td className='font-semibold flex'><span className='mr-2'><FaCheck /></span>Workshops/Seminars</td>
-                                    <td>15+ workshops/seminars annually </td>
-                                </tr>
+                            <tbody>
+                                {[
+                                    { label: 'Research Journals', value: '' },
+                                    { label: 'Research Publications', value: '' },
+                                    { label: 'Citations', value: '' },
+                                    { label: 'Research Ranking', value: '' },
+                                    { label: 'Number of researchers in the top 2% of world scientists (2023)', value: '9' },
+                                    { label: 'Annual Research Conferences', value: '' },
+                                    { label: 'Annual Research Collaborations', value: '' },
+                                    { label: 'Research Awards and Recognitions', value: '' },
+                                    { label: 'Annual Workshops/Seminars', value: '' },
+                                    { label: 'Capital grants for Research', value: '' },
+                                ].map((item, index) => (
+                                    <tr key={index}>
+                                        <td className='font-semibold flex items-center'>
+                                            <FaCheck className="mr-2 text-green-600" />
+                                            {item.label}
+                                        </td>
+                                        <td>{item.value}</td>
+                                    </tr>
+                                ))}
+                            </tbody>
                             </table>
                         </div>
                     </div>

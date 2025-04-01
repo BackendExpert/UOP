@@ -119,12 +119,6 @@ const Footer = () => {
                     </a>
                     <a href="#" className='duration-500 hover:text-[#e8b910]'>
                         <div className="flex">
-                            <p className="px-2"><img src={Inster} alt="" className='h-8 w-auto' /></p>
-                            <h1 className="mt-1">Instagram</h1>
-                        </div>
-                    </a>
-                    <a href="#" className='duration-500 hover:text-[#e8b910]'>
-                        <div className="flex">
                             <p className="px-2"><img src={Youtube} alt="" className='h-8 w-auto' /></p>
                             <h1 className="mt-1">Youtube</h1>
                         </div>

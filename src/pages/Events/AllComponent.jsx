@@ -23,13 +23,13 @@ const AllComponent = () => {
                 <div className="w-full xl:mr-4">
                     <div className="bg-gray-200">
                         <div className="flex text-xl font-semibold uppercase justify-around text-[#560606]">
-                            <div className={`${menuflex === "Events" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#e8b910] bg-[#e8b910] '}md:mr-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Events" })}>
+                            <div className={`${menuflex === "Events" ? 'bg-gradient-to-r from-blue-600 to-sky-500 text-white shadow-xl' : 'text-white border border-[#1E3A8A] bg-[#1E3A8A] '}md:mr-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Events" })}>
                                 <h1 className="" >Events</h1>
                             </div>
-                            <div className={`${menuflex === "News" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#e8b910] bg-[#e8b910]'}   md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "News" })}>
+                            <div className={`${menuflex === "News" ? 'bg-gradient-to-r from-orange-500 to-orange-700 text-white shadow-xl' : 'text-white border border-[#1E3A8A] bg-[#1E3A8A]'}   md:mx-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "News" })}>
                                 <h1 className="" >News</h1>
                             </div>
-                            <div className={`${menuflex === "Notice" ? 'bg-[#560606] text-white shadow-xl' : 'border border-[#e8b910] bg-[#e8b910]'}   md:ml-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Notice" })}>
+                            <div className={`${menuflex === "Notice" ? 'bg-gradient-to-r from-green-600 to-green-800 text-white shadow-xl' : 'text-white border border-[#1E3A8A] bg-[#1E3A8A]'}   md:ml-4 py-4 px-6 w-full text-center rounded-xl cursor-pointer`} onClick={() => headlemenuflex({ name: "Notice" })}>
                                 <h1 className="" >Notice</h1>
                             </div>
                         </div>
@@ -72,13 +72,13 @@ const AllComponent = () => {
                 <div className="xl:my-0 my-4 xl:w-1/3">
                     <div className="bg-white mx-4 shado mb-4">
                         <a href="#">
-                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#560606] border-b border-[#e8b910] text-[#e8b910] duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
+                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#1E3A8A] border-b border-[#FF9800] text-white duration-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 hover:text-white hover:border-blue-500">
                                 <div className="mt-2"><FaLink className='h-4 w-auto' /> </div>
                                 <h1 className="text-lg pl-2">ONLINE PAYMENTS</h1>
                             </div>
                         </a>
                         <a href="#">
-                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#560606] text-[#e8b910] duration-500 hover:bg-[#e8b910] hover:text-[#560606]">
+                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#1E3A8A] border-b border-[#FF9800] text-white duration-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 hover:text-white hover:border-blue-500">
                                 <div className="mt-2"><FaLink className='h-4 w-auto' /> </div>
                                 <h1 className="text-lg pl-2">Donate Now</h1>
                             </div>
