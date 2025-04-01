@@ -120,9 +120,12 @@ const SecNav = () => {
                                                                         <h1 className='text-xl text-[#e8b910]'>{
                                                                             submenu.name === "Sustainability" ?
                                                                                 <div className="">
-                                                                                    <h1 className="text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                        {submenu.name}
-                                                                                    </h1>
+                                                                                    <a href={submenu.link}>
+                                                                                        <h1 className="text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                                            {submenu.name}
+                                                                                        </h1>
+                                                                                    </a>
+
                                                                                 </div>
                                                                                 :
                                                                                 <div className="">
@@ -131,11 +134,30 @@ const SecNav = () => {
                                                                         }</h1>
                                                                         <p className="">
                                                                             {submenu.menusubL.map((subData, submenuLindex) => (
-                                                                                <a href={subData.link} className="">
-                                                                                    <h1 key={submenuLindex} className="px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                        {subData.name}
-                                                                                    </h1>
-                                                                                </a>
+                                                                                <div className="">                                                                                                                                                                    {
+                                                                                    (() => {
+                                                                                        if (subData.name === "Policies" || subData.name === "International Collaborations") {
+                                                                                            return (
+                                                                                                <a href={subData.link} className="">
+                                                                                                    <h1 className="my-4 text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                                                        {subData.name}
+                                                                                                    </h1>
+                                                                                                </a>
+                                                                                            )
+                                                                                        }
+                                                                                        else {
+                                                                                            return (
+                                                                                                <a href={subData.link} className="">
+                                                                                                    <h1 key={submenuLindex} className="px-4 py-1 hover:bg-[#e8b910] hover:text-[#560606]">
+                                                                                                        {subData.name}
+                                                                                                    </h1>
+                                                                                                </a>
+                                                                                            )
+                                                                                        }
+                                                                                    })()
+                                                                                }
+                                                                                </div>
+
                                                                             ))}
                                                                         </p>
                                                                     </div>
@@ -143,7 +165,7 @@ const SecNav = () => {
                                                                     <div className="py-4">
                                                                         <a href={submenu.link} className="">
                                                                             <h1 className="text-[#e8b910] text-xl px-4 hover:bg-[#e8b910] hover:text-[#560606]">
-                                                                                {submenu.name} 
+                                                                                {submenu.name}
                                                                             </h1>
                                                                         </a>
                                                                     </div>
