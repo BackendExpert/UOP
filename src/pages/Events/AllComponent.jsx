@@ -72,13 +72,13 @@ const AllComponent = () => {
                 <div className="xl:my-0 my-4 xl:w-1/3">
                     <div className="bg-white mx-4 shado mb-4">
                         <a href="#">
-                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#1E3A8A] border-b border-[#FF9800] text-white duration-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 hover:text-white hover:border-blue-500">
+                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-gradient-to-r from-blue-900 to-sky-600 border-b border-white text-white duration-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 hover:text-white hover:border-blue-500">
                                 <div className="mt-2"><FaLink className='h-4 w-auto' /> </div>
                                 <h1 className="text-lg pl-2">ONLINE PAYMENTS</h1>
                             </div>
                         </a>
                         <a href="#">
-                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-[#1E3A8A] border-b border-[#FF9800] text-white duration-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 hover:text-white hover:border-blue-500">
+                            <div data-tooltip-target="tooltip-top" data-tooltip-placement="top" className="flex p-4 bg-gradient-to-r from-blue-900 to-sky-600 border-b border-white text-white duration-500 hover:bg-gradient-to-r hover:from-blue-600 hover:to-sky-500 hover:text-white hover:border-blue-500">
                                 <div className="mt-2"><FaLink className='h-4 w-auto' /> </div>
                                 <h1 className="text-lg pl-2">Donate Now</h1>
                             </div>
