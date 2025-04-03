@@ -22,13 +22,27 @@ const HorizontalScroll = ({ setSelectedImage }) => {
         console.log(err);
         setImagedata([]);
       });
+
+    const interval = setInterval(() => {
+      scroll("right"); // Auto-scroll to the right every 3 seconds
+    }, 3000);
+
+    return () => clearInterval(interval); // Cleanup interval on component unmount
   }, []);
 
   const scroll = (direction) => {
     if (scrollRef.current) {
-      const { scrollLeft, clientWidth } = scrollRef.current;
+      const { scrollLeft, scrollWidth, clientWidth } = scrollRef.current;
       const scrollAmount = direction === "left" ? -clientWidth / 3 : clientWidth / 3;
-      scrollRef.current.scrollTo({ left: scrollLeft + scrollAmount, behavior: "smooth" });
+
+      // If the scroll reaches the end, reset to the start (infinite scroll)
+      if (scrollLeft + scrollAmount >= scrollWidth - clientWidth) {
+        scrollRef.current.scrollTo({ left: 0, behavior: "smooth" });
+      } else if (scrollLeft + scrollAmount <= 0) {
+        scrollRef.current.scrollTo({ left: scrollWidth, behavior: "smooth" });
+      } else {
+        scrollRef.current.scrollTo({ left: scrollLeft + scrollAmount, behavior: "smooth" });
+      }
     }
   };
 
