@@ -62,9 +62,8 @@ export default function App() {
           <Route path="*" element={<ErrorPage /> } />
           <Route path="/" element={<HomePage /> } />
           <Route path="/RsearchAll" element={<ResearchAll />} />
-          <Route path="/InternationalProgrammes" element={<InternationalPro /> } />
         </Routes>
-        <Footer />
+        {/* <Footer /> */}
       </BrowserRouter>
   )
 }
