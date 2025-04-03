@@ -88,21 +88,20 @@ const Programmes = () => {
       </div>
 
       {selectedImage && (
-  <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-90 z-50">
-    <button
-      className="absolute top-4 right-4 text-white text-4xl font-bold z-50"
-      onClick={() => setSelectedImage(null)}
-    >
-      &times;
-    </button>
-    <img
-      src={selectedImage}
-      alt="Selected Event"
-      className="max-w-full max-h-[90vh] object-contain" // Adjust size to fit the image, set max height to 90% of the viewport height
-    />
-  </div>
-)}
-
+        <div className="fixed inset-0 flex justify-center items-center bg-black bg-opacity-90 z-50">
+          <button
+            className="absolute top-4 right-4 text-white text-4xl font-bold z-50"
+            onClick={() => setSelectedImage(null)}
+          >
+            &times;
+          </button>
+          <img
+            src={selectedImage}
+            alt="Selected Event"
+            className="max-w-4xl max-h-80 object-contain" // Adjust size to fit the image
+          />
+        </div>
+      )}
 
 
 

@@ -24,7 +24,7 @@ const RSPage = () => {
     }, [researchdata]);
 
     return (
-        <div className='xl:px-28 px-4 my-8 bg-gray-200 py-16'>
+        <div className='xl:px-28 px-4 my-8 bg-gray-200 py-16 '>
             <h1 className="uppercase text-center text-[#560606] font-semibold text-3xl">
                 Research and Innovation
             </h1>
