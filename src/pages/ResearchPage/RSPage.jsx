@@ -10,7 +10,7 @@ const RSPage = () => {
         const updateVisiblRes = () => {
             const screenWidth = window.innerWidth;
             if (screenWidth >= 1280) {
-                setvisiableRes(researchdata.slice(0, 4));
+                setvisiableRes(researchdata.slice(0, 5));
             } else if (screenWidth < 768) {
                 setvisiableRes(researchdata.slice(0, 1));
             } else {
@@ -71,17 +71,17 @@ const RSPage = () => {
                             <div>
                                 <div
                                     style={{
-                                        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0)), url(${import.meta.env.VITE_APP_API}/${visiableRes[1]?.res_img})`
+                                        backgroundImage: `linear-gradient(to right, rgba(255,255,255,0.7), rgba(255,255,255,0)), url(${import.meta.env.VITE_APP_API}/${visiableRes[visiableRes.length - 1]?.res_img})`
                                     }}
                                     className="rounded-t-xl w-full relative bg-cover bg-center py-28 text-center text-white group overflow-hidden"
                                 >
                                     <div className="absolute inset-0 bg-black opacity-20 transition-opacity duration-500"></div>
                                 </div>
                                 <div className="p-4 border border-gray-100">
-                                    <h1 className="text-xl font-semibold">{visiableRes[1]?.res_titile}</h1>
-                                    <p>{visiableRes[1]?.res_desc}</p>
+                                    <h1 className="text-xl font-semibold">{visiableRes[visiableRes.length - 1]?.res_titile}</h1>
+                                    <p>{visiableRes[visiableRes.length - 1]?.res_desc}</p>
                                     <div className="mt-4">
-                                        <a href={visiableRes[1]?.res_link} target='_blank'>
+                                        <a href={visiableRes[visiableRes.length - 1]?.res_link} target='_blank'>
                                             <button className='bg-[#560606] py-2 px-4 rounded-full shadow-xl text-white duration-500 hover:px-6'>
                                                 Read More
                                             </button>
@@ -94,9 +94,9 @@ const RSPage = () => {
                 )}
             </div>
 
-            {/* Research List */}
+            {/* Research List (Last 4) */}
             <div className="grid xl:grid-cols-4 md:grid-cols-2 gap-8">
-                {visiableRes.map((data, index) => (
+                {researchdata.slice(-5, -1).map((data, index) => (
                     <div data-aos="zoom-in" className="bg-white shadow-2xl" key={index}>
                         <div>
                             <div
@@ -111,7 +111,7 @@ const RSPage = () => {
                                 <h1 className="text-xl font-semibold">{data.res_titile}</h1>
                                 <p>{data.res_desc}</p>
                                 <div className="mt-4">
-                                    <a href={data.res_link} target='_blank'>
+                                    <a href={data.res_link} target='_blank' rel="noopener noreferrer">
                                         <button className='bg-[#560606] py-2 px-4 rounded-full shadow-xl text-white duration-500 hover:px-6'>
                                             Read More
                                         </button>

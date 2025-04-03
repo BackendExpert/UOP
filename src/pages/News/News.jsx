@@ -4,17 +4,21 @@ import { MdDateRange } from "react-icons/md";
 
 const News = () => {
     const newsdata = useNEWSData()
-    const [visibaleNEWS, setvisibaleNEWS] = useState([]);
+    const [visibleNEWS, setVisibleNEWS] = useState([]);
+
     useEffect(() => {
         const updateVisibleNEWS = () => {
             const screenWidth = window.innerWidth;
 
+            // Get the last 6 records
+            const lastSixNews = newsdata.slice(0, 6);
+
             if (screenWidth >= 1280) { // Extra-large screens (desktop)
-                setvisibaleNEWS(newsdata.slice(0, 9)); // Show first 9 events
+                setVisibleNEWS(lastSixNews); // Show the last 6 news
             } else if (screenWidth < 768) { // Mobile screens
-                setvisibaleNEWS(newsdata.slice(0, 1)); // Show only 1 event
+                setVisibleNEWS(lastSixNews.slice(0, 1)); // Show only 1 news
             } else { // Medium screens (tablet)
-                setvisibaleNEWS(newsdata.slice(0, 9)); // Show first 9 events
+                setVisibleNEWS(lastSixNews); // Show the last 6 news
             }
         };
 
@@ -23,13 +27,14 @@ const News = () => {
 
         return () => window.removeEventListener('resize', updateVisibleNEWS);
     }, [newsdata]);
+
     return (
-        <div className='px-4 ' >
+        <div className='px-4'>
             <h1 className="font-semibold text-2xl text-[#560606] mb-1 mt-4">NEWS</h1>
             <div className="xl:flex">
                 <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
                     {
-                        visibaleNEWS.map((news, index) => {
+                        visibleNEWS.map((news, index) => {
                             return (
                                 <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white my-2 p-4 rounded shadow-xl`} key={index}>
                                     <div className="">
@@ -69,4 +74,4 @@ const News = () => {
     )
 }
 
-export default News
+export default News;

@@ -56,17 +56,32 @@ const HorizontalScroll = ({ setSelectedImage }) => {
           const imgeview = `${import.meta.env.VITE_APP_API}/${image.img}`; // Define image URL
 
           return (
-            <img
-              key={index}
-              src={imgeview} // Use the image URL variable
-              alt={`Event ${image.id}`}
-              className="w-60 h-80 mx-2 cursor-pointer rounded-md transition-transform transform hover:scale-105"
-              onClick={() => setSelectedImage(imgeview)} // Pass the image URL to the modal
-              onError={(e) => e.target.src = '/path/to/fallback-image.jpg'} // Fallback image
-            />
+            <div key={index} className="relative">
+              {/* Image Button with Link */}
+              <button
+                className="w-60 h-80 mx-2 cursor-pointer rounded-md transition-transform transform hover:scale-105"
+                onClick={() => setSelectedImage(imgeview)} // Pass the image URL to the modal
+              >
+                <img
+                  src={imgeview} // Use the image URL variable
+                  alt={`Event ${image.id}`}
+                  className="w-full h-full object-cover rounded-md"
+                  onError={(e) => e.target.src = '/path/to/fallback-image.jpg'} // Fallback image
+                />
+              </button>
+
+              {/* Button to open image in a new tab */}
+              <a
+                href={image.link} // Link to the image
+                target="_blank"
+                rel="noopener noreferrer"
+                className="absolute bottom-2 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white py-1 px-3 rounded-full text-xs"
+              >
+                View More
+              </a>
+            </div>
           );
         })}
-
       </div>
 
       {/* Right Scroll Button */}

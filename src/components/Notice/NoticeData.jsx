@@ -12,7 +12,9 @@ const useNoticeData = () => {
         .then(res => {
             console.log(res.data);
             if (res.data.Result) {
-                setnoticedata(res.data.Result);
+                // Get the last 6 records from the fetched data
+                const lastSixNotice = res.data.Result.slice(-9);
+                setnoticedata(lastSixNotice);
             } else {
                 setnoticedata([]);
             }

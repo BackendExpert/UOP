@@ -12,7 +12,9 @@ const useNEWSData = () => {
         .then(res => {
             console.log(res.data);
             if (res.data.Result) {
-                setnewsdata(res.data.Result);
+                // Get the last 6 records from the fetched data
+                const lastSixNews = res.data.Result.slice(-6);
+                setnewsdata(lastSixNews);
             } else {
                 setnewsdata([]);
             }
