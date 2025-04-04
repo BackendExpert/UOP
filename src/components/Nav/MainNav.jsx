@@ -1,27 +1,92 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import UopLogo from '../../assets/uoplogo.png';
 import { MainNavData } from './DataNav';
 import { FaSearch } from 'react-icons/fa';
+
+
 
 const MainNav = () => {
   const [searchText, setSearchText] = useState('');
   const [showModal, setShowModal] = useState(false);
   const [isTextFound, setIsTextFound] = useState(null);
+  const [resultIndex, setResultIndex] = useState(0);
+  const [results, setResults] = useState([]);
 
-  // Function to check if text exists in the document
+  // Function to check if text exists in the document and find the positions of all matches
   const checkTextInWebsite = () => {
     const pageText = document.body.innerText.toLowerCase(); // Get all text from the page
-    setIsTextFound(pageText.includes(searchText.toLowerCase())); // Check if the text exists
-    setShowModal(true);
+    const regex = new RegExp(searchText.toLowerCase(), 'g'); // Create a regex to match all instances of search text
+    const matches = [...pageText.matchAll(regex)]; // Find all matches
+
+    setResults(matches); // Set the results array with the match positions
+    setIsTextFound(matches.length > 0); // Check if there are any results
+    setResultIndex(0); // Reset to the first result
+    setShowModal(true); // Show the modal
   };
 
+  // Function to handle search text changes
   const handleSearch = (e) => {
     setSearchText(e.target.value);
   };
 
+  // Function to close the modal
   const closeModal = () => {
     setShowModal(false);
+    removeHighlights(); // Remove any highlights when closing modal
   };
+
+  // Function to remove the highlight from all matched elements
+  const removeHighlights = () => {
+    const highlightedElements = document.querySelectorAll('.highlighted');
+    highlightedElements.forEach((element) => {
+      element.classList.remove('highlighted');
+    });
+  };
+
+  // Function to add the highlight to the matching elements
+  const highlightText = (index) => {
+    const elements = Array.from(document.querySelectorAll('*'));
+    const result = elements.filter((el) => {
+      return el.innerText && el.innerText.toLowerCase().includes(searchText.toLowerCase());
+    });
+
+    // Remove any existing highlights
+    removeHighlights();
+
+    // Add the highlight to the current result
+    if (result[index]) {
+      result[index].classList.add('highlighted');
+    }
+  };
+
+  // Navigate to the next search result
+  const goToNextResult = () => {
+    if (results.length > 0) {
+      const nextIndex = (resultIndex + 1) % results.length; // Loop through results
+      setResultIndex(nextIndex);
+
+      // Highlight the next matching element
+      highlightText(nextIndex);
+
+      // Scroll to the next matching element
+      const targetElement = document.querySelector('.highlighted');
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  };
+
+  useEffect(() => {
+    if (results.length > 0) {
+      highlightText(resultIndex);
+
+      // Scroll to the highlighted element
+      const targetElement = document.querySelector('.highlighted');
+      if (targetElement) {
+        targetElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      }
+    }
+  }, [resultIndex, results, searchText]);
 
   return (
     <div className='xl:px-20 px-4 py-4 bg-[#560606] text-white'>
@@ -64,7 +129,15 @@ const MainNav = () => {
             <h3 className="text-xl font-semibold mb-4">Search Results</h3>
             {isTextFound !== null ? (
               isTextFound ? (
-                <p>✅ The text "<strong>{searchText}</strong>" was found on the page!</p>
+                <>
+                  <p>✅ The text "<strong>{searchText}</strong>" was found on the page!</p>
+                  <button
+                    onClick={goToNextResult}
+                    className="mt-4 bg-blue-500 text-white px-4 py-2 rounded"
+                  >
+                    Go to Next Result
+                  </button>
+                </>
               ) : (
                 <p>❌ The text "<strong>{searchText}</strong>" was not found on this page.</p>
               )
