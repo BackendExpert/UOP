@@ -63,7 +63,7 @@ export default function App() {
           <Route path="/" element={<HomePage /> } />
           <Route path="/RsearchAll" element={<ResearchAll />} />
         </Routes>
-        {/* <Footer /> */}
+        <Footer />
       </BrowserRouter>
   )
 }
