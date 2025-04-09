@@ -1,20 +1,57 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react';
 import useEventData from '../../components/Events/EventData';
-
 
 const AllEvents = () => {
     const eventdata = useEventData();
     const [visibleEvents, setVisibleEvents] = useState([]);
+    const [searchTerm, setSearchTerm] = useState('');
+    const [sortOrder, setSortOrder] = useState('desc');
 
     useEffect(() => {
-        const sortedEvents = eventdata.sort((a, b) => new Date(b.event_date) - new Date(a.event_date));
-        setVisibleEvents(sortedEvents);
-    }, [eventdata]);
+        filterAndSortEvents();
+    }, [eventdata, searchTerm, sortOrder]);
+
+    const filterAndSortEvents = () => {
+        let filtered = eventdata;
+
+        if (searchTerm.trim()) {
+            filtered = filtered.filter(event =>
+                event.event_title.toLowerCase().includes(searchTerm.toLowerCase())
+            );
+        }
+
+        const sorted = filtered.sort((a, b) => {
+            const dateA = new Date(a.event_date);
+            const dateB = new Date(b.event_date);
+            return sortOrder === 'asc' ? dateA - dateB : dateB - dateA;
+        });
+
+        setVisibleEvents(sorted);
+    };
 
     return (
         <div className='xl:px-24 px-4 mt-14 bg-gray-200'>
             <div className="py-8">
-                <div className=""></div>
+                {/* Search and Sort Controls */}
+                <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 bg-white p-4 rounded-md shadow mb-6">
+                    <input
+                        type="text"
+                        placeholder="Search by event title..."
+                        className="w-full md:w-1/2 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                        value={searchTerm}
+                        onChange={(e) => setSearchTerm(e.target.value)}
+                    />
+                    <select
+                        className="w-full md:w-1/4 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-yellow-400"
+                        value={sortOrder}
+                        onChange={(e) => setSortOrder(e.target.value)}
+                    >
+                        <option value="desc">Newest First</option>
+                        <option value="asc">Oldest First</option>
+                    </select>
+                </div>
+
+                {/* Events Grid */}
                 <div className="mt-8">
                     <div className="grid grid-cols-4 gap-4">
                         {
@@ -41,7 +78,6 @@ const AllEvents = () => {
                                             <div className="backdrop-blur-md bg-opacity-20 rounded-md bg-white text-center p-3 mx-2">
                                                 <h1 className="text-white font-semibold text-xl">{event.event_title}</h1>
                                             </div>
-
                                         </div>
                                         <div className="p-4 absolute bg-[#e8b910] inset-0 flex items-center justify-center -translate-x-full opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 ease-in-out">
                                             <div className="relative">
@@ -60,7 +96,7 @@ const AllEvents = () => {
                 </div>
             </div>
         </div>
-    )
-}
+    );
+};
 
-export default AllEvents
+export default AllEvents;
