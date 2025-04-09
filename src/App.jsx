@@ -9,6 +9,7 @@ import ResearchAll from './pages/RsearchAll/RsearchAll'
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import InternationalPro from "./pages/InterNationalP/InternationalPro";
 import AllEvents from "./pages/Events/AllEvents";
+import Society from "./pages/Society/Society";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -64,6 +65,7 @@ export default function App() {
           <Route path="/" element={<HomePage /> } />
           <Route path="/RsearchAll" element={<ResearchAll />} />
           <Route path="/AllEvents" element={<AllEvents /> } />
+          <Route path="/Societies" element={<Society /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
