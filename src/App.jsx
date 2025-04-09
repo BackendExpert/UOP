@@ -8,6 +8,7 @@ import 'aos/dist/aos.css';
 import ResearchAll from './pages/RsearchAll/RsearchAll'
 import ErrorPage from "./components/ErrorPage/ErrorPage";
 import InternationalPro from "./pages/InterNationalP/InternationalPro";
+import AllEvents from "./pages/Events/AllEvents";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -62,6 +63,7 @@ export default function App() {
           <Route path="*" element={<ErrorPage /> } />
           <Route path="/" element={<HomePage /> } />
           <Route path="/RsearchAll" element={<ResearchAll />} />
+          <Route path="/AllEvents" element={<AllEvents /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
