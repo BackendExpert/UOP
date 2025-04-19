@@ -35,30 +35,37 @@ const News = () => {
                 <div className="grid xl:grid-cols-3 md:grid-cols-2 gap-4">
                     {
                         visibleNEWS.map((news, index) => {
-                            return (
-                                <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white my-2 p-4 rounded shadow-xl`} key={index}>
-                                    <div className="">
-                                        <div
-                                            className="mb-2 h-60 w-auto bg-cover bg-center"
-                                            style={{ backgroundImage: `url(${import.meta.env.VITE_APP_API}/${news.news_img})` }}
-                                        ></div>
-                                        <div className="w-full xl:my-0 my-2">
-                                            <h1 className="font-semibold text-xl">{news.news_title}</h1>
-                                            <div className="flex justify-between pt-2">
-                                                <div className="flex">
-                                                    <div className=""><MdDateRange className='h-4 w-auto fill-gray-500' /></div>
-                                                    <p className="text-sm text-gray-500 pl-2">{news.news_date}</p>
-                                                </div>
-                                                <div className="">
-                                                    <a href={news.link}>
-                                                        <p className="text-[#e8b910] font-semibold">Read More</p>
-                                                    </a>
+                            if(news.is_active === 1){
+                                return (
+                                    <div data-aos="zoom-in" className={`${index !== 0 ? 'hidden md:block' : ''} bg-white my-2 p-4 rounded shadow-xl`} key={index}>
+                                        <div className="">
+                                            <div
+                                                className="mb-2 h-60 w-auto bg-cover bg-center"
+                                                style={{ backgroundImage: `url(${import.meta.env.VITE_APP_API}/${news.news_img})` }}
+                                            ></div>
+                                            <div className="w-full xl:my-0 my-2">
+                                                <h1 className="font-semibold text-xl">{news.news_title}</h1>
+                                                <div className="flex justify-between pt-2">
+                                                    <div className="flex">
+                                                        <div className=""><MdDateRange className='h-4 w-auto fill-gray-500' /></div>
+                                                        <p className="text-sm text-gray-500 pl-2">{news.news_date}</p>
+                                                    </div>
+                                                    <div className="">
+                                                        <a href={news.link}>
+                                                            <p className="text-[#e8b910] font-semibold">Read More</p>
+                                                        </a>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                            )
+                                )
+                            }
+                            else{
+                                return (
+                                    <div className=""></div>
+                                )
+                            }
                         })
                     }
                 </div>
