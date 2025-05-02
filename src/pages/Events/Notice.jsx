@@ -55,7 +55,7 @@ const Notice = () => {
 
             </div>
             <center>
-                <a href="#">
+                <a href="/Notices">
                     <button className='bg-[#e8b910] py-2 px-8 rounded font-semibold duration-500 hover:px-4'>All Notices</button>
                 </a>
             </center>

@@ -72,7 +72,7 @@ const News = () => {
             </div>
             <div className="">
                 <center>
-                    <a href="#">
+                    <a href="/News">
                         <button className='bg-[#e8b910] py-2 px-8 rounded font-semibold duration-500 hover:px-4'>All NEWS</button>
                     </a>
                 </center>

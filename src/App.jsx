@@ -10,6 +10,9 @@ import ErrorPage from "./components/ErrorPage/ErrorPage";
 import InternationalPro from "./pages/InterNationalP/InternationalPro";
 import AllEvents from "./pages/Events/AllEvents";
 import Society from "./pages/Society/Society";
+import MoreNews from "./pages/News/MoreNews";
+import ViewOneNews from "./pages/News/ViewOneNews";
+import MoreNotice from "./pages/Events/MoreNotice";
 
 export default function App() {
   const [showNavBar, setShowNavBar] = useState(true);
@@ -66,6 +69,9 @@ export default function App() {
           <Route path="/RsearchAll" element={<ResearchAll />} />
           <Route path="/AllEvents" element={<AllEvents /> } />
           <Route path="/Societies" element={<Society /> } />
+          <Route path="/News" element={<MoreNews /> } /> 
+          <Route path="/ViewOneNews/:id" element={<ViewOneNews /> } />
+          <Route path="/Notices" element={<MoreNotice /> } />
         </Routes>
         <Footer />
       </BrowserRouter>
